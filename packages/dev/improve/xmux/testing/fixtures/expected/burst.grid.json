@@ -1,0 +1,46 @@
+{
+  "scenario": "burst",
+  "terminals": [
+    {
+      "cmux_id": "term_a6a4f1a0ae7754d6180e389c3b27b1b3",
+      "grid": {
+        "cols": 80,
+        "rows": 24,
+        "default_fg": 4294967295,
+        "default_bg": 4278190080,
+        "cursor": {
+          "row": 23,
+          "col": 10,
+          "visible": true
+        },
+        "lines": [
+          "burst 2977: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2978: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2979: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2980: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2981: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2982: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2983: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2984: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2985: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2986: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2987: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2988: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2989: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2990: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2991: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2992: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2993: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2994: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2995: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2996: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2997: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2998: the quick brown fox jumps over the lazy dog                         ",
+          "burst 2999: the quick brown fox jumps over the lazy dog                         ",
+          "burst done                                                                      "
+        ],
+        "styles": []
+      }
+    }
+  ]
+}

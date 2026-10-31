@@ -1,0 +1,12 @@
+{
+  "name": "@-/com.npmjs.execa",
+  "private": true,
+  "type": "module",
+  "imports": {},
+  "exports": {
+    ".": "./+.ts"
+  },
+  "dependencies": {
+    "execa": "catalog:"
+  }
+}

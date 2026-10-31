@@ -1,0 +1,16 @@
+{
+  "name": "@-/dev.improve.xmux.configs.github.workflows.android",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#android-wac": "./android.wac.ts"
+  },
+  "exports": {
+    ".": "./+.ts"
+  },
+  "dependencies": {
+    "@-/dev.improve.xmux.configs.github.workflows._steps": "workspace:*",
+    "@github-actions-workflow-ts/lib": "catalog:"
+  }
+}

@@ -1,0 +1,14 @@
+* text=auto eol=lf
+
+gradlew text eol=lf
+*.bat text eol=crlf
+
+*.bin binary
+*.jar binary
+*.ttf binary
+*.png binary
+
+# Generated from packages/dev/improve/xmux/configs/github/workflows/**/*.wac.ts on `vp install`.
+.github/workflows/*.yml linguist-generated
+# Checked by `apiCheck`; regenerate with `vpr android:api-dump`.
+packages/dev/improve/xmux/android/*/api/*.api linguist-generated

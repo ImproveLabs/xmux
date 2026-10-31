@@ -1,0 +1,50 @@
+{
+  "name": "-",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ],
+    "catalog": {
+      "@appium/logger": "2.0.12",
+      "@github-actions-workflow-ts/cli": "2.6.1",
+      "@github-actions-workflow-ts/lib": "2.6.1",
+      "@types/bun": "1.4.4",
+      "@types/node": "26.6.6",
+      "appium-adb": "16.2.0",
+      "citty-universal": "0.2.2",
+      "consola": "3.4.2",
+      "execa": "10.2.1",
+      "pathe": "2.0.3",
+      "smol-toml": "1.9.1",
+      "typescript": "7.0.2",
+      "vite": "8.3.5",
+      "vite-plus": "1.4.0",
+      "vitest": "5.0.5"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "postinstall": "bun ./packages/dev/improve/xmux/configs/github/workflows/_gwf.ts"
+  },
+  "devDependencies": {
+    "@-/dev.improve.xmux.configs.android.gradle": "workspace:*",
+    "@-/dev.improve.xmux.configs.github.workflows": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest.capture": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest.install": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest.stats": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest.stress": "workspace:*",
+    "@-/dev.improve.xmux.configs.typescript": "workspace:*",
+    "@github-actions-workflow-ts/cli": "catalog:",
+    "@types/bun": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plus": "catalog:",
+    "vitest": "catalog:"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "packageManager": "bun@1.4.4"
+}

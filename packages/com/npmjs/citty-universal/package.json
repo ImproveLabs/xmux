@@ -1,0 +1,12 @@
+{
+  "name": "@-/com.npmjs.citty-universal",
+  "private": true,
+  "type": "module",
+  "imports": {},
+  "exports": {
+    ".": "./+.ts"
+  },
+  "dependencies": {
+    "citty-universal": "catalog:"
+  }
+}

@@ -1,0 +1,346 @@
+public final class dev/xmux/core/Attr {
+	public static final field BLINK I
+	public static final field BOLD I
+	public static final field DIM I
+	public static final field INSTANCE Ldev/xmux/core/Attr;
+	public static final field INVERSE I
+	public static final field INVISIBLE I
+	public static final field ITALIC I
+	public static final field STRIKE I
+	public static final field UNDERLINE I
+	public static final field WIDE_SPACER I
+}
+
+public final class dev/xmux/core/CellGrid {
+	public static final field Companion Ldev/xmux/core/CellGrid$Companion;
+	public static final field DEFAULT_BG I
+	public static final field DEFAULT_FG I
+	public fun <init> (II)V
+	public final fun anyDirty ()Z
+	public final fun cellText (II)Ljava/lang/String;
+	public final fun clearDirty ()V
+	public final fun fill (IIIIII)V
+	public static synthetic fun fill$default (Ldev/xmux/core/CellGrid;IIIIIIILjava/lang/Object;)V
+	public final fun getAttrs ()[I
+	public final fun getBg ()[I
+	public final fun getClusters ()[Ljava/lang/String;
+	public final fun getCodepoints ()[I
+	public final fun getCols ()I
+	public final fun getCursorCol ()I
+	public final fun getCursorRow ()I
+	public final fun getCursorShape ()Ldev/xmux/core/CursorShape;
+	public final fun getCursorVisible ()Z
+	public final fun getDefaultBg ()I
+	public final fun getDefaultFg ()I
+	public final fun getDirtyRows ()[Z
+	public final fun getFg ()[I
+	public final fun getRows ()I
+	public final fun index (II)I
+	public final fun markAllDirty ()V
+	public final fun markDirty (I)V
+	public final fun put (IIIIII)V
+	public static synthetic fun put$default (Ldev/xmux/core/CellGrid;IIIIIIILjava/lang/Object;)V
+	public final fun putCluster (IILjava/lang/String;III)V
+	public static synthetic fun putCluster$default (Ldev/xmux/core/CellGrid;IILjava/lang/String;IIIILjava/lang/Object;)V
+	public final fun rowText (I)Ljava/lang/String;
+	public final fun setCursor (II)V
+	public final fun setCursorShape (Ldev/xmux/core/CursorShape;)V
+	public final fun setCursorVisible (Z)V
+	public final fun setDefaultBg (I)V
+	public final fun setDefaultFg (I)V
+	public final fun write (IILjava/lang/String;III)I
+	public static synthetic fun write$default (Ldev/xmux/core/CellGrid;IILjava/lang/String;IIIILjava/lang/Object;)I
+}
+
+public final class dev/xmux/core/CellGrid$Companion {
+}
+
+public final class dev/xmux/core/CellStyle {
+	public static final field INSTANCE Ldev/xmux/core/CellStyle;
+	public static final field STYLE_MASK I
+	public final fun effectiveBg (IIII)I
+	public final fun effectiveFg (IIIII)I
+	public final fun isDefault (I)Z
+	public final fun resolveFg (II)I
+	public final fun styleBits (I)I
+}
+
+public final class dev/xmux/core/CursorShape : java/lang/Enum {
+	public static final field Bar Ldev/xmux/core/CursorShape;
+	public static final field Block Ldev/xmux/core/CursorShape;
+	public static final field Underline Ldev/xmux/core/CursorShape;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/xmux/core/CursorShape;
+	public static fun values ()[Ldev/xmux/core/CursorShape;
+}
+
+public abstract interface annotation class dev/xmux/core/ExperimentalXmuxApi : java/lang/annotation/Annotation {
+}
+
+public final class dev/xmux/core/Glyph {
+	public fun <init> (Landroid/graphics/fonts/Font;I)V
+	public final fun getFont ()Landroid/graphics/fonts/Font;
+	public final fun getId ()I
+}
+
+public abstract interface annotation class dev/xmux/core/InternalXmuxApi : java/lang/annotation/Annotation {
+}
+
+public final class dev/xmux/core/KeyEncoder {
+	public static final field ALT I
+	public static final field CTRL I
+	public static final field INSTANCE Ldev/xmux/core/KeyEncoder;
+	public static final field META I
+	public static final field SHIFT I
+	public final fun encode (III)Ldev/xmux/core/KeyInput;
+	public final fun encode (Landroid/view/KeyEvent;)Ldev/xmux/core/KeyInput;
+	public final fun mods (I)I
+}
+
+public abstract interface class dev/xmux/core/KeyInput {
+}
+
+public final class dev/xmux/core/KeyInput$Key : dev/xmux/core/KeyInput {
+	public fun <init> (Ljava/lang/String;I)V
+	public synthetic fun <init> (Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()I
+	public final fun copy (Ljava/lang/String;I)Ldev/xmux/core/KeyInput$Key;
+	public static synthetic fun copy$default (Ldev/xmux/core/KeyInput$Key;Ljava/lang/String;IILjava/lang/Object;)Ldev/xmux/core/KeyInput$Key;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMods ()I
+	public final fun getName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/core/KeyInput$Text : dev/xmux/core/KeyInput {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Ldev/xmux/core/KeyInput$Text;
+	public static synthetic fun copy$default (Ldev/xmux/core/KeyInput$Text;Ljava/lang/String;ILjava/lang/Object;)Ldev/xmux/core/KeyInput$Text;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class dev/xmux/core/LayoutTree {
+}
+
+public final class dev/xmux/core/LayoutTree$Columns : dev/xmux/core/LayoutTree {
+	public fun <init> (Ljava/util/List;Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;Ljava/util/List;)Ldev/xmux/core/LayoutTree$Columns;
+	public static synthetic fun copy$default (Ldev/xmux/core/LayoutTree$Columns;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Ldev/xmux/core/LayoutTree$Columns;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getColumns ()Ljava/util/List;
+	public final fun getWidths ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/core/LayoutTree$Leaf : dev/xmux/core/LayoutTree {
+	public fun <init> (I)V
+	public final fun component1 ()I
+	public final fun copy (I)Ldev/xmux/core/LayoutTree$Leaf;
+	public static synthetic fun copy$default (Ldev/xmux/core/LayoutTree$Leaf;IILjava/lang/Object;)Ldev/xmux/core/LayoutTree$Leaf;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPane ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/core/LayoutTree$Split : dev/xmux/core/LayoutTree {
+	public fun <init> (ZFLdev/xmux/core/LayoutTree;Ldev/xmux/core/LayoutTree;)V
+	public final fun component1 ()Z
+	public final fun component2 ()F
+	public final fun component3 ()Ldev/xmux/core/LayoutTree;
+	public final fun component4 ()Ldev/xmux/core/LayoutTree;
+	public final fun copy (ZFLdev/xmux/core/LayoutTree;Ldev/xmux/core/LayoutTree;)Ldev/xmux/core/LayoutTree$Split;
+	public static synthetic fun copy$default (Ldev/xmux/core/LayoutTree$Split;ZFLdev/xmux/core/LayoutTree;Ldev/xmux/core/LayoutTree;ILjava/lang/Object;)Ldev/xmux/core/LayoutTree$Split;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFirst ()Ldev/xmux/core/LayoutTree;
+	public final fun getHorizontal ()Z
+	public final fun getRatio ()F
+	public final fun getSecond ()Ldev/xmux/core/LayoutTree;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/core/LayoutTree$Stack : dev/xmux/core/LayoutTree {
+	public fun <init> (Ljava/util/List;I)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()I
+	public final fun copy (Ljava/util/List;I)Ldev/xmux/core/LayoutTree$Stack;
+	public static synthetic fun copy$default (Ldev/xmux/core/LayoutTree$Stack;Ljava/util/List;IILjava/lang/Object;)Ldev/xmux/core/LayoutTree$Stack;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getExpanded ()I
+	public final fun getPanes ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/core/PxRect {
+	public fun <init> (IIII)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun contains (II)Z
+	public final fun copy (IIII)Ldev/xmux/core/PxRect;
+	public static synthetic fun copy$default (Ldev/xmux/core/PxRect;IIIIILjava/lang/Object;)Ldev/xmux/core/PxRect;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBottom ()I
+	public final fun getHeight ()I
+	public final fun getLeft ()I
+	public final fun getRight ()I
+	public final fun getTop ()I
+	public final fun getWidth ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/core/PxSize {
+	public fun <init> (II)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun copy (II)Ldev/xmux/core/PxSize;
+	public static synthetic fun copy$default (Ldev/xmux/core/PxSize;IIILjava/lang/Object;)Ldev/xmux/core/PxSize;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getHeight ()I
+	public final fun getWidth ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/core/ScreenLayoutEngine {
+	public static final field DIVIDER_PX I
+	public static final field INSTANCE Ldev/xmux/core/ScreenLayoutEngine;
+	public static final field STACK_HEADER_PX I
+	public final fun dividers (Ldev/xmux/core/LayoutTree;Lkotlin/jvm/functions/Function1;II)Ljava/util/List;
+	public static synthetic fun dividers$default (Ldev/xmux/core/ScreenLayoutEngine;Ldev/xmux/core/LayoutTree;Lkotlin/jvm/functions/Function1;IIILjava/lang/Object;)Ljava/util/List;
+	public final fun measure (Ldev/xmux/core/LayoutTree;Lkotlin/jvm/functions/Function1;)Ldev/xmux/core/PxSize;
+	public final fun place (Ldev/xmux/core/LayoutTree;Lkotlin/jvm/functions/Function1;II)Ljava/util/Map;
+	public static synthetic fun place$default (Ldev/xmux/core/ScreenLayoutEngine;Ldev/xmux/core/LayoutTree;Lkotlin/jvm/functions/Function1;IIILjava/lang/Object;)Ljava/util/Map;
+}
+
+public final class dev/xmux/core/ScreenView : android/view/ViewGroup {
+	public static final field Companion Ldev/xmux/core/ScreenView$Companion;
+	public static final field DEFAULT_PADDING_PX F
+	public static final field TAB_STRIP_PX I
+	public fun <init> (Landroid/content/Context;Ldev/xmux/core/TerminalFont;)V
+	public final fun getActiveTabColor ()I
+	public final fun getBodyColor ()I
+	public final fun getDividerColor ()I
+	public final fun getFocusColor ()I
+	public final fun getFocusedPane ()I
+	public final fun getFont ()Ldev/xmux/core/TerminalFont;
+	public final fun getLabelColor ()I
+	public final fun getListener ()Ldev/xmux/core/ScreenView$Listener;
+	public final fun getTabColor ()I
+	public final fun gridView (I)Ldev/xmux/core/TerminalGridView;
+	public final fun hit (FF)Ldev/xmux/core/ScreenView$Hit;
+	public final fun naturalSize ()Ldev/xmux/core/PxSize;
+	public fun onCheckIsTextEditor ()Z
+	public fun onCreateInputConnection (Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+	public fun onGenericMotionEvent (Landroid/view/MotionEvent;)Z
+	public fun onKeyDown (ILandroid/view/KeyEvent;)Z
+	public fun onTouchEvent (Landroid/view/MotionEvent;)Z
+	public final fun refreshIfDirty ()V
+	public final fun setActiveTabColor (I)V
+	public final fun setBodyColor (I)V
+	public final fun setDividerColor (I)V
+	public final fun setFocusColor (I)V
+	public final fun setFocusedPane (I)V
+	public final fun setLabelColor (I)V
+	public final fun setListener (Ldev/xmux/core/ScreenView$Listener;)V
+	public final fun setTabColor (I)V
+	public final fun tabAt (FF)Lkotlin/Pair;
+	public final fun update (Ldev/xmux/core/LayoutTree;Ljava/util/List;I)V
+}
+
+public final class dev/xmux/core/ScreenView$Companion {
+	public final fun measure (Ldev/xmux/core/TerminalFont;Ldev/xmux/core/LayoutTree;Ljava/util/List;)Ldev/xmux/core/PxSize;
+	public final fun paneSize (Ldev/xmux/core/TerminalFont;Ldev/xmux/core/ScreenView$Pane;F)Ldev/xmux/core/PxSize;
+	public static synthetic fun paneSize$default (Ldev/xmux/core/ScreenView$Companion;Ldev/xmux/core/TerminalFont;Ldev/xmux/core/ScreenView$Pane;FILjava/lang/Object;)Ldev/xmux/core/PxSize;
+}
+
+public final class dev/xmux/core/ScreenView$Hit {
+	public fun <init> (III)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun copy (III)Ldev/xmux/core/ScreenView$Hit;
+	public static synthetic fun copy$default (Ldev/xmux/core/ScreenView$Hit;IIIILjava/lang/Object;)Ldev/xmux/core/ScreenView$Hit;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCol ()I
+	public final fun getPane ()I
+	public final fun getRow ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class dev/xmux/core/ScreenView$Listener {
+	public abstract fun onKey (Landroid/view/KeyEvent;)Z
+	public abstract fun onPointer (Ldev/xmux/core/ScreenView$Hit;I)V
+	public abstract fun onScroll (Ldev/xmux/core/ScreenView$Hit;I)V
+	public abstract fun onTab (II)V
+	public abstract fun onText (Ljava/lang/String;)V
+}
+
+public final class dev/xmux/core/ScreenView$Listener$DefaultImpls {
+	public static fun onKey (Ldev/xmux/core/ScreenView$Listener;Landroid/view/KeyEvent;)Z
+	public static fun onPointer (Ldev/xmux/core/ScreenView$Listener;Ldev/xmux/core/ScreenView$Hit;I)V
+	public static fun onScroll (Ldev/xmux/core/ScreenView$Listener;Ldev/xmux/core/ScreenView$Hit;I)V
+	public static fun onTab (Ldev/xmux/core/ScreenView$Listener;II)V
+	public static fun onText (Ldev/xmux/core/ScreenView$Listener;Ljava/lang/String;)V
+}
+
+public final class dev/xmux/core/ScreenView$Pane {
+	public fun <init> (ILdev/xmux/core/CellGrid;Ljava/util/List;ILjava/lang/String;)V
+	public synthetic fun <init> (ILdev/xmux/core/CellGrid;Ljava/util/List;ILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getActiveTab ()I
+	public final fun getGrid ()Ldev/xmux/core/CellGrid;
+	public final fun getId ()I
+	public final fun getTabs ()Ljava/util/List;
+	public final fun getTitle ()Ljava/lang/String;
+}
+
+public final class dev/xmux/core/TerminalFont {
+	public static final field Companion Ldev/xmux/core/TerminalFont$Companion;
+	public static final field DEFAULT_ASSET Ljava/lang/String;
+	public fun <init> (Landroid/content/Context;FLjava/lang/String;)V
+	public synthetic fun <init> (Landroid/content/Context;FLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getBaseline ()F
+	public final fun getCellHeight ()F
+	public final fun getCellWidth ()F
+	public final fun getFont ()Landroid/graphics/fonts/Font;
+	public final fun getPaint ()Landroid/graphics/Paint;
+	public final fun getTypeface ()Landroid/graphics/Typeface;
+	public final fun glyph (I)Ldev/xmux/core/Glyph;
+}
+
+public final class dev/xmux/core/TerminalFont$Companion {
+}
+
+public final class dev/xmux/core/TerminalGridView : android/view/View {
+	public fun <init> (Landroid/content/Context;Ldev/xmux/core/CellGrid;Ldev/xmux/core/TerminalFont;)V
+	public final fun cellAt (FF)Lkotlin/Pair;
+	public final fun getBodyColor ()I
+	public final fun getContentHeight ()I
+	public final fun getContentWidth ()I
+	public final fun getCursorColor ()I
+	public final fun getDrawnFrames ()J
+	public final fun getFont ()Ldev/xmux/core/TerminalFont;
+	public final fun getGrid ()Ldev/xmux/core/CellGrid;
+	public final fun getLastDrawCalls ()I
+	public final fun getPaddingPx ()F
+	public final fun refreshIfDirty ()V
+	public final fun setBodyColor (I)V
+	public final fun setCursorColor (I)V
+	public final fun setGrid (Ldev/xmux/core/CellGrid;)V
+	public final fun setPaddingPx (F)V
+}
+

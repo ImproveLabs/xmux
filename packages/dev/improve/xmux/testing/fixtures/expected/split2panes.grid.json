@@ -1,0 +1,87 @@
+{
+  "scenario": "split2panes",
+  "terminals": [
+    {
+      "cmux_id": "term_e7f45449294c84f30bb9cb691c830681",
+      "grid": {
+        "cols": 80,
+        "rows": 24,
+        "default_fg": 4294967295,
+        "default_bg": 4278190080,
+        "cursor": {
+          "row": 2,
+          "col": 0,
+          "visible": true
+        },
+        "lines": [
+          "left pane                                                                       ",
+          "left again                                                                      ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                "
+        ],
+        "styles": []
+      }
+    },
+    {
+      "cmux_id": "term_81b91667b554a394485295326f66366e",
+      "grid": {
+        "cols": 80,
+        "rows": 24,
+        "default_fg": 4294967295,
+        "default_bg": 4278190080,
+        "cursor": {
+          "row": 2,
+          "col": 0,
+          "visible": true
+        },
+        "lines": [
+          "right pane                                                                      ",
+          "right again                                                                     ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                "
+        ],
+        "styles": []
+      }
+    }
+  ]
+}

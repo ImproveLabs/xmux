@@ -1,0 +1,46 @@
+{
+  "scenario": "unicode",
+  "terminals": [
+    {
+      "cmux_id": "term_32eea3f198dda17a4c53e35f3341c938",
+      "grid": {
+        "cols": 80,
+        "rows": 24,
+        "default_fg": 4294967295,
+        "default_bg": 4278190080,
+        "cursor": {
+          "row": 5,
+          "col": 0,
+          "visible": true
+        },
+        "lines": [
+          "CJK: 你好世界 日本語 한국어                                                     ",
+          "emoji: 🙂 🚀 👍🏽 👨‍👩‍👧 🇨🇦                                                           ",
+          "combining: é ñ ä                                                                ",
+          "box: ┌──┬──┐ │a │b │ └──┴──┘                                                    ",
+          "mixed: a你b🙂c                                                                  ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                "
+        ],
+        "styles": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,746 @@
+public final class dev/xmux/client/AttachStatus : java/lang/Enum {
+	public static final field Attached Ldev/xmux/client/AttachStatus;
+	public static final field Attaching Ldev/xmux/client/AttachStatus;
+	public static final field Detached Ldev/xmux/client/AttachStatus;
+	public static final field Error Ldev/xmux/client/AttachStatus;
+	public static final field Stalled Ldev/xmux/client/AttachStatus;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/xmux/client/AttachStatus;
+	public static fun values ()[Ldev/xmux/client/AttachStatus;
+}
+
+public final class dev/xmux/client/BridgeAdvert {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()I
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Ldev/xmux/client/BridgeAdvert;
+	public static synthetic fun copy$default (Ldev/xmux/client/BridgeAdvert;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/xmux/client/BridgeAdvert;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFingerprint ()Ljava/lang/String;
+	public final fun getHost ()Ljava/lang/String;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getPort ()I
+	public final fun getSession ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class dev/xmux/client/BridgeConnection : java/lang/AutoCloseable {
+	public abstract fun getIncoming ()Lkotlinx/coroutines/flow/Flow;
+	public abstract fun getPeerFingerprint ()Ljava/lang/String;
+	public abstract fun send ([BLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class dev/xmux/client/BridgeSession : dev/xmux/client/XmuxSession {
+	public fun <init> (Lkotlinx/coroutines/CoroutineScope;Lkotlin/jvm/functions/Function1;Ldev/xmux/client/PairingStore;Ljava/lang/String;Ljava/lang/String;Ldev/xmux/client/BridgeSession$Policy;Lkotlin/random/Random;Lkotlin/jvm/functions/Function0;)V
+	public synthetic fun <init> (Lkotlinx/coroutines/CoroutineScope;Lkotlin/jvm/functions/Function1;Ldev/xmux/client/PairingStore;Ljava/lang/String;Ljava/lang/String;Ldev/xmux/client/BridgeSession$Policy;Lkotlin/random/Random;Lkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun close ()V
+	public fun focusDirection-K2-g8BI (ILdev/xmux/client/Direction;)V
+	public fun focusPane-_HHsyzM (I)V
+	public fun focusTab-0NEvSNA (I)V
+	public fun getEvents ()Lkotlinx/coroutines/flow/Flow;
+	public fun getSessionName ()Ljava/lang/String;
+	public fun getState ()Lkotlinx/coroutines/flow/StateFlow;
+	public fun getTopology ()Lkotlinx/coroutines/flow/StateFlow;
+	public fun terminal-W6jk3ho (I)Ldev/xmux/client/TerminalHandle;
+}
+
+public final class dev/xmux/client/BridgeSession$Policy {
+	public fun <init> ()V
+	public fun <init> (JJJJ)V
+	public synthetic fun <init> (JJJJILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()J
+	public final fun component2 ()J
+	public final fun component3 ()J
+	public final fun component4 ()J
+	public final fun copy (JJJJ)Ldev/xmux/client/BridgeSession$Policy;
+	public static synthetic fun copy$default (Ldev/xmux/client/BridgeSession$Policy;JJJJILjava/lang/Object;)Ldev/xmux/client/BridgeSession$Policy;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getInitialBackoffMs ()J
+	public final fun getMaxBackoffMs ()J
+	public final fun getPingMs ()J
+	public final fun getStallMs ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/BridgeTarget {
+	public static final field Companion Ldev/xmux/client/BridgeTarget$Companion;
+	public static final field DEFAULT_PORT I
+	public fun <init> (Ljava/lang/String;ILjava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;ILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()I
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;ILjava/lang/String;)Ldev/xmux/client/BridgeTarget;
+	public static synthetic fun copy$default (Ldev/xmux/client/BridgeTarget;Ljava/lang/String;ILjava/lang/String;ILjava/lang/Object;)Ldev/xmux/client/BridgeTarget;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAddress ()Ljava/lang/String;
+	public final fun getFingerprint ()Ljava/lang/String;
+	public final fun getHost ()Ljava/lang/String;
+	public final fun getPort ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/BridgeTarget$Companion {
+	public final fun of (Ldev/xmux/client/BridgeAdvert;)Ldev/xmux/client/BridgeTarget;
+}
+
+public abstract interface class dev/xmux/client/ConnectionState {
+}
+
+public final class dev/xmux/client/ConnectionState$Closed : dev/xmux/client/ConnectionState {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Ldev/xmux/client/ConnectionState$Closed;
+	public static synthetic fun copy$default (Ldev/xmux/client/ConnectionState$Closed;Ljava/lang/String;ILjava/lang/Object;)Ldev/xmux/client/ConnectionState$Closed;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getReason ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/ConnectionState$Connecting : dev/xmux/client/ConnectionState {
+	public static final field INSTANCE Ldev/xmux/client/ConnectionState$Connecting;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/ConnectionState$Online : dev/xmux/client/ConnectionState {
+	public static final field INSTANCE Ldev/xmux/client/ConnectionState$Online;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/ConnectionState$Pairing : dev/xmux/client/ConnectionState {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Ldev/xmux/client/ConnectionState$Pairing;
+	public static synthetic fun copy$default (Ldev/xmux/client/ConnectionState$Pairing;Ljava/lang/String;ILjava/lang/Object;)Ldev/xmux/client/ConnectionState$Pairing;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCode ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/ConnectionState$Reconnecting : dev/xmux/client/ConnectionState {
+	public fun <init> (ILjava/lang/String;)V
+	public synthetic fun <init> (ILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (ILjava/lang/String;)Ldev/xmux/client/ConnectionState$Reconnecting;
+	public static synthetic fun copy$default (Ldev/xmux/client/ConnectionState$Reconnecting;ILjava/lang/String;ILjava/lang/Object;)Ldev/xmux/client/ConnectionState$Reconnecting;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAttempt ()I
+	public final fun getReason ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/ConnectionState$Stalled : dev/xmux/client/ConnectionState {
+	public fun <init> (J)V
+	public final fun component1 ()J
+	public final fun copy (J)Ldev/xmux/client/ConnectionState$Stalled;
+	public static synthetic fun copy$default (Ldev/xmux/client/ConnectionState$Stalled;JILjava/lang/Object;)Ldev/xmux/client/ConnectionState$Stalled;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getSinceMs ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/Cursor {
+	public fun <init> (IIZ)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()Z
+	public final fun copy (IIZ)Ldev/xmux/client/Cursor;
+	public static synthetic fun copy$default (Ldev/xmux/client/Cursor;IIZILjava/lang/Object;)Ldev/xmux/client/Cursor;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCol ()I
+	public final fun getRow ()I
+	public final fun getVisible ()Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/DecodedFrame {
+	public fun <init> (Ldev/xmux/client/FrameHeader;Ldev/xmux/proto/Frame;I)V
+	public final fun getConsumed ()I
+	public final fun getFrame ()Ldev/xmux/proto/Frame;
+	public final fun getHeader ()Ldev/xmux/client/FrameHeader;
+}
+
+public final class dev/xmux/client/Direction : java/lang/Enum {
+	public static final field Down Ldev/xmux/client/Direction;
+	public static final field Left Ldev/xmux/client/Direction;
+	public static final field Right Ldev/xmux/client/Direction;
+	public static final field Up Ldev/xmux/client/Direction;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/xmux/client/Direction;
+	public static fun values ()[Ldev/xmux/client/Direction;
+}
+
+public final class dev/xmux/client/Fingerprint {
+	public static final field INSTANCE Ldev/xmux/client/Fingerprint;
+	public final fun sha256 ([B)Ljava/lang/String;
+}
+
+public final class dev/xmux/client/Fnv1a {
+	public static final field Companion Ldev/xmux/client/Fnv1a$Companion;
+	public fun <init> ()V
+	public final fun bytes ([B)V
+	public final fun u32 (I)V
+	public final fun value ()J
+}
+
+public final class dev/xmux/client/Fnv1a$Companion {
+	public final fun rows (Ljava/lang/Iterable;)J
+}
+
+public final class dev/xmux/client/FrameCodec {
+	public static final field COMPRESS_THRESHOLD I
+	public static final field FLAG_LZ4 I
+	public static final field HEADER_LENGTH I
+	public static final field INSTANCE Ldev/xmux/client/FrameCodec;
+	public static final field MAX_BODY I
+	public static final field PROTOCOL_VERSION I
+	public final fun decode ([BI)Ldev/xmux/client/DecodedFrame;
+	public static synthetic fun decode$default (Ldev/xmux/client/FrameCodec;[BIILjava/lang/Object;)Ldev/xmux/client/DecodedFrame;
+	public final fun encode (Ldev/xmux/proto/Frame;II)[B
+	public final fun parseHeader ([BI)Ldev/xmux/client/FrameHeader;
+	public static synthetic fun parseHeader$default (Ldev/xmux/client/FrameCodec;[BIILjava/lang/Object;)Ldev/xmux/client/FrameHeader;
+	public final fun read (Ljava/io/InputStream;)Ldev/xmux/client/DecodedFrame;
+}
+
+public final class dev/xmux/client/FrameHeader {
+	public fun <init> (IIIIII)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun component5 ()I
+	public final fun component6 ()I
+	public final fun copy (IIIIII)Ldev/xmux/client/FrameHeader;
+	public static synthetic fun copy$default (Ldev/xmux/client/FrameHeader;IIIIIIILjava/lang/Object;)Ldev/xmux/client/FrameHeader;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBodyLength ()I
+	public final fun getFlags ()I
+	public final fun getId ()I
+	public final fun getKind ()I
+	public final fun getSequence ()I
+	public final fun getVersion ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/FramingException : java/lang/RuntimeException {
+	public fun <init> (Ljava/lang/String;Ljava/lang/Throwable;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class dev/xmux/client/InMemoryPairingStore : dev/xmux/client/PairingStore {
+	public fun <init> ()V
+	public fun fingerprintAt (Ljava/lang/String;)Ljava/lang/String;
+	public fun setFingerprintAt (Ljava/lang/String;Ljava/lang/String;)V
+	public fun setToken (Ljava/lang/String;Ljava/lang/String;)V
+	public fun token (Ljava/lang/String;)Ljava/lang/String;
+}
+
+public final class dev/xmux/client/Key {
+	public fun <init> (Ljava/lang/String;Ljava/util/Set;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Set;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/Set;
+	public final fun copy (Ljava/lang/String;Ljava/util/Set;)Ldev/xmux/client/Key;
+	public static synthetic fun copy$default (Ldev/xmux/client/Key;Ljava/lang/String;Ljava/util/Set;ILjava/lang/Object;)Ldev/xmux/client/Key;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getModifiers ()Ljava/util/Set;
+	public final fun getName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class dev/xmux/client/LayoutNode {
+}
+
+public final class dev/xmux/client/LayoutNode$Leaf : dev/xmux/client/LayoutNode {
+	public synthetic fun <init> (ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-NMv1kv0 ()I
+	public final fun copy-_HHsyzM (I)Ldev/xmux/client/LayoutNode$Leaf;
+	public static synthetic fun copy-_HHsyzM$default (Ldev/xmux/client/LayoutNode$Leaf;IILjava/lang/Object;)Ldev/xmux/client/LayoutNode$Leaf;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPane-NMv1kv0 ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/LayoutNode$Split : dev/xmux/client/LayoutNode {
+	public fun <init> (ZFLdev/xmux/client/LayoutNode;Ldev/xmux/client/LayoutNode;)V
+	public final fun component1 ()Z
+	public final fun component2 ()F
+	public final fun component3 ()Ldev/xmux/client/LayoutNode;
+	public final fun component4 ()Ldev/xmux/client/LayoutNode;
+	public final fun copy (ZFLdev/xmux/client/LayoutNode;Ldev/xmux/client/LayoutNode;)Ldev/xmux/client/LayoutNode$Split;
+	public static synthetic fun copy$default (Ldev/xmux/client/LayoutNode$Split;ZFLdev/xmux/client/LayoutNode;Ldev/xmux/client/LayoutNode;ILjava/lang/Object;)Ldev/xmux/client/LayoutNode$Split;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFirst ()Ldev/xmux/client/LayoutNode;
+	public final fun getHorizontal ()Z
+	public final fun getRatio ()F
+	public final fun getSecond ()Ldev/xmux/client/LayoutNode;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/LayoutNode$Stack : dev/xmux/client/LayoutNode {
+	public synthetic fun <init> (Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2-NMv1kv0 ()I
+	public final fun copy-1OyoguI (Ljava/util/List;I)Ldev/xmux/client/LayoutNode$Stack;
+	public static synthetic fun copy-1OyoguI$default (Ldev/xmux/client/LayoutNode$Stack;Ljava/util/List;IILjava/lang/Object;)Ldev/xmux/client/LayoutNode$Stack;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getExpanded-NMv1kv0 ()I
+	public final fun getPanes ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/LayoutNode$Viewport : dev/xmux/client/LayoutNode {
+	public fun <init> (Ljava/util/List;Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;Ljava/util/List;)Ldev/xmux/client/LayoutNode$Viewport;
+	public static synthetic fun copy$default (Ldev/xmux/client/LayoutNode$Viewport;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Ldev/xmux/client/LayoutNode$Viewport;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getColumns ()Ljava/util/List;
+	public final fun getWidths ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/Modifier : java/lang/Enum {
+	public static final field Alt Ldev/xmux/client/Modifier;
+	public static final field Ctrl Ldev/xmux/client/Modifier;
+	public static final field Meta Ldev/xmux/client/Modifier;
+	public static final field Shift Ldev/xmux/client/Modifier;
+	public final fun getBit ()I
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/xmux/client/Modifier;
+	public static fun values ()[Ldev/xmux/client/Modifier;
+}
+
+public final class dev/xmux/client/MouseAction : java/lang/Enum {
+	public static final field Move Ldev/xmux/client/MouseAction;
+	public static final field Press Ldev/xmux/client/MouseAction;
+	public static final field Release Ldev/xmux/client/MouseAction;
+	public static final field Scroll Ldev/xmux/client/MouseAction;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/xmux/client/MouseAction;
+	public static fun values ()[Ldev/xmux/client/MouseAction;
+}
+
+public final class dev/xmux/client/MouseEvent {
+	public fun <init> (Ldev/xmux/client/MouseAction;IIILjava/util/Set;II)V
+	public synthetic fun <init> (Ldev/xmux/client/MouseAction;IIILjava/util/Set;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ldev/xmux/client/MouseAction;
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun component5 ()Ljava/util/Set;
+	public final fun component6 ()I
+	public final fun component7 ()I
+	public final fun copy (Ldev/xmux/client/MouseAction;IIILjava/util/Set;II)Ldev/xmux/client/MouseEvent;
+	public static synthetic fun copy$default (Ldev/xmux/client/MouseEvent;Ldev/xmux/client/MouseAction;IIILjava/util/Set;IIILjava/lang/Object;)Ldev/xmux/client/MouseEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAction ()Ldev/xmux/client/MouseAction;
+	public final fun getButton ()I
+	public final fun getCol ()I
+	public final fun getDx ()I
+	public final fun getDy ()I
+	public final fun getModifiers ()Ljava/util/Set;
+	public final fun getRow ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class dev/xmux/client/PairingStore {
+	public abstract fun fingerprintAt (Ljava/lang/String;)Ljava/lang/String;
+	public abstract fun setFingerprintAt (Ljava/lang/String;Ljava/lang/String;)V
+	public abstract fun setToken (Ljava/lang/String;Ljava/lang/String;)V
+	public abstract fun token (Ljava/lang/String;)Ljava/lang/String;
+}
+
+public final class dev/xmux/client/Pane {
+	public synthetic fun <init> (ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-NMv1kv0 ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4-0b1LfDI ()I
+	public final fun copy-OiVXQY8 (ILjava/lang/String;Ljava/util/List;I)Ldev/xmux/client/Pane;
+	public static synthetic fun copy-OiVXQY8$default (Ldev/xmux/client/Pane;ILjava/lang/String;Ljava/util/List;IILjava/lang/Object;)Ldev/xmux/client/Pane;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getActiveTab-0b1LfDI ()I
+	public final fun getActiveTerminal-PPC8cKU ()Ldev/xmux/client/TerminalId;
+	public final fun getCmuxId ()Ljava/lang/String;
+	public final fun getId-NMv1kv0 ()I
+	public final fun getTabs ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/PaneId {
+	public static final synthetic fun box-impl (I)Ldev/xmux/client/PaneId;
+	public static fun constructor-impl (I)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public final class dev/xmux/client/PinningTrustManager : javax/net/ssl/X509TrustManager {
+	public fun <init> (Ljava/lang/String;)V
+	public fun checkClientTrusted ([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
+	public fun checkServerTrusted ([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
+	public fun getAcceptedIssuers ()[Ljava/security/cert/X509Certificate;
+	public final fun getSeen ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/RowApplier {
+	public fun <init> ()V
+	public final fun apply (Ldev/xmux/proto/Cursor;)V
+	public final fun apply (Ldev/xmux/proto/Rows;)Ldev/xmux/client/RowApplier$Result;
+	public final fun check (Ldev/xmux/proto/Checksum;)Z
+	public final fun checksum ()J
+	public final fun getGeneration ()I
+	public final fun getGrid ()Ldev/xmux/core/CellGrid;
+	public final fun getSequence ()I
+	public final fun getSynced ()Z
+	public final fun invalidate ()V
+}
+
+public final class dev/xmux/client/RowApplier$Result : java/lang/Enum {
+	public static final field Applied Ldev/xmux/client/RowApplier$Result;
+	public static final field NeedsSnapshot Ldev/xmux/client/RowApplier$Result;
+	public static final field Resized Ldev/xmux/client/RowApplier$Result;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/xmux/client/RowApplier$Result;
+	public static fun values ()[Ldev/xmux/client/RowApplier$Result;
+}
+
+public final class dev/xmux/client/Screen {
+	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/String;ILdev/xmux/client/LayoutNode;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-sMhxZYc ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4-q6oy39U ()I
+	public final fun component5 ()Ldev/xmux/client/LayoutNode;
+	public final fun component6 ()Ljava/util/List;
+	public final fun component7-NMv1kv0 ()I
+	public final fun copy-85UNx1Y (ILjava/lang/String;Ljava/lang/String;ILdev/xmux/client/LayoutNode;Ljava/util/List;I)Ldev/xmux/client/Screen;
+	public static synthetic fun copy-85UNx1Y$default (Ldev/xmux/client/Screen;ILjava/lang/String;Ljava/lang/String;ILdev/xmux/client/LayoutNode;Ljava/util/List;IILjava/lang/Object;)Ldev/xmux/client/Screen;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCmuxId ()Ljava/lang/String;
+	public final fun getFocusedPane-NMv1kv0 ()I
+	public final fun getId-sMhxZYc ()I
+	public final fun getLayout ()Ldev/xmux/client/LayoutNode;
+	public final fun getPanes ()Ljava/util/List;
+	public final fun getTitle ()Ljava/lang/String;
+	public final fun getWorkspace-q6oy39U ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/ScreenId {
+	public static final synthetic fun box-impl (I)Ldev/xmux/client/ScreenId;
+	public static fun constructor-impl (I)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public final class dev/xmux/client/ScreenModels {
+	public static final field INSTANCE Ldev/xmux/client/ScreenModels;
+	public final fun panes (Ldev/xmux/client/Screen;Ldev/xmux/client/XmuxSession;)Ljava/util/List;
+	public final fun terminals (Ldev/xmux/client/Screen;)Ljava/util/Set;
+	public final fun tree (Ldev/xmux/client/LayoutNode;)Ldev/xmux/core/LayoutTree;
+}
+
+public abstract interface class dev/xmux/client/SessionEvent {
+}
+
+public final class dev/xmux/client/SessionEvent$Attach : dev/xmux/client/SessionEvent {
+	public synthetic fun <init> (ILdev/xmux/client/AttachStatus;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-Ud5WjTo ()I
+	public final fun component2 ()Ldev/xmux/client/AttachStatus;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy-dD3Zfd0 (ILdev/xmux/client/AttachStatus;Ljava/lang/String;)Ldev/xmux/client/SessionEvent$Attach;
+	public static synthetic fun copy-dD3Zfd0$default (Ldev/xmux/client/SessionEvent$Attach;ILdev/xmux/client/AttachStatus;Ljava/lang/String;ILjava/lang/Object;)Ldev/xmux/client/SessionEvent$Attach;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMessage ()Ljava/lang/String;
+	public final fun getStatus ()Ldev/xmux/client/AttachStatus;
+	public final fun getTerminal-Ud5WjTo ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/SessionEvent$FocusChanged : dev/xmux/client/SessionEvent {
+	public synthetic fun <init> (IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-sMhxZYc ()I
+	public final fun component2-NMv1kv0 ()I
+	public final fun copy-zDb1XYw (II)Ldev/xmux/client/SessionEvent$FocusChanged;
+	public static synthetic fun copy-zDb1XYw$default (Ldev/xmux/client/SessionEvent$FocusChanged;IIILjava/lang/Object;)Ldev/xmux/client/SessionEvent$FocusChanged;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPane-NMv1kv0 ()I
+	public final fun getScreen-sMhxZYc ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/SessionEvent$Latency : dev/xmux/client/SessionEvent {
+	public fun <init> (I)V
+	public final fun component1 ()I
+	public final fun copy (I)Ldev/xmux/client/SessionEvent$Latency;
+	public static synthetic fun copy$default (Ldev/xmux/client/SessionEvent$Latency;IILjava/lang/Object;)Ldev/xmux/client/SessionEvent$Latency;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getRttMs ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/SessionEvent$ScreenAdded : dev/xmux/client/SessionEvent {
+	public synthetic fun <init> (ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-sMhxZYc ()I
+	public final fun copy-6RXsB0Y (I)Ldev/xmux/client/SessionEvent$ScreenAdded;
+	public static synthetic fun copy-6RXsB0Y$default (Ldev/xmux/client/SessionEvent$ScreenAdded;IILjava/lang/Object;)Ldev/xmux/client/SessionEvent$ScreenAdded;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getScreen-sMhxZYc ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/SessionEvent$ScreenRemoved : dev/xmux/client/SessionEvent {
+	public synthetic fun <init> (ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-sMhxZYc ()I
+	public final fun copy-6RXsB0Y (I)Ldev/xmux/client/SessionEvent$ScreenRemoved;
+	public static synthetic fun copy-6RXsB0Y$default (Ldev/xmux/client/SessionEvent$ScreenRemoved;IILjava/lang/Object;)Ldev/xmux/client/SessionEvent$ScreenRemoved;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getScreen-sMhxZYc ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/SessionEvent$ScreenRenamed : dev/xmux/client/SessionEvent {
+	public synthetic fun <init> (ILjava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-sMhxZYc ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy-K2-g8BI (ILjava/lang/String;)Ldev/xmux/client/SessionEvent$ScreenRenamed;
+	public static synthetic fun copy-K2-g8BI$default (Ldev/xmux/client/SessionEvent$ScreenRenamed;ILjava/lang/String;ILjava/lang/Object;)Ldev/xmux/client/SessionEvent$ScreenRenamed;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getScreen-sMhxZYc ()I
+	public final fun getTitle ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/SharedPreferencesPairingStore : dev/xmux/client/PairingStore {
+	public fun <init> (Landroid/content/Context;Ljava/lang/String;)V
+	public synthetic fun <init> (Landroid/content/Context;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun fingerprintAt (Ljava/lang/String;)Ljava/lang/String;
+	public fun setFingerprintAt (Ljava/lang/String;Ljava/lang/String;)V
+	public fun setToken (Ljava/lang/String;Ljava/lang/String;)V
+	public fun token (Ljava/lang/String;)Ljava/lang/String;
+}
+
+public final class dev/xmux/client/Tab {
+	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-0b1LfDI ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4-Ud5WjTo ()I
+	public final fun copy-ibZp_-k (ILjava/lang/String;Ljava/lang/String;I)Ldev/xmux/client/Tab;
+	public static synthetic fun copy-ibZp_-k$default (Ldev/xmux/client/Tab;ILjava/lang/String;Ljava/lang/String;IILjava/lang/Object;)Ldev/xmux/client/Tab;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCmuxId ()Ljava/lang/String;
+	public final fun getId-0b1LfDI ()I
+	public final fun getTerminal-Ud5WjTo ()I
+	public final fun getTitle ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/TabId {
+	public static final synthetic fun box-impl (I)Ldev/xmux/client/TabId;
+	public static fun constructor-impl (I)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public abstract interface class dev/xmux/client/TerminalHandle : java/lang/AutoCloseable {
+	public abstract fun getAttach ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun getCursor ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun getGrid ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun getId-Ud5WjTo ()I
+	public abstract fun keys ([Ldev/xmux/client/Key;)V
+	public abstract fun mouse (Ldev/xmux/client/MouseEvent;)V
+	public abstract fun resize (II)V
+	public abstract fun send (Ldev/xmux/core/KeyInput;)V
+	public abstract fun write (Ljava/lang/String;)V
+}
+
+public final class dev/xmux/client/TerminalId {
+	public static final synthetic fun box-impl (I)Ldev/xmux/client/TerminalId;
+	public static fun constructor-impl (I)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public final class dev/xmux/client/TerminalInfo {
+	public synthetic fun <init> (ILjava/lang/String;IILjava/lang/String;ZLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-Ud5WjTo ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Z
+	public final fun copy-wyjOD_I (ILjava/lang/String;IILjava/lang/String;Z)Ldev/xmux/client/TerminalInfo;
+	public static synthetic fun copy-wyjOD_I$default (Ldev/xmux/client/TerminalInfo;ILjava/lang/String;IILjava/lang/String;ZILjava/lang/Object;)Ldev/xmux/client/TerminalInfo;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCmuxId ()Ljava/lang/String;
+	public final fun getCols ()I
+	public final fun getId-Ud5WjTo ()I
+	public final fun getRows ()I
+	public final fun getRunning ()Z
+	public final fun getTitle ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/TlsBridgeConnection : dev/xmux/client/BridgeConnection {
+	public static final field Companion Ldev/xmux/client/TlsBridgeConnection$Companion;
+	public synthetic fun <init> (Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun close ()V
+	public fun getIncoming ()Lkotlinx/coroutines/flow/Flow;
+	public fun getPeerFingerprint ()Ljava/lang/String;
+	public fun send ([BLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class dev/xmux/client/TlsBridgeConnection$Companion {
+	public final fun connect (Ljava/lang/String;ILjava/lang/String;ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun connect$default (Ldev/xmux/client/TlsBridgeConnection$Companion;Ljava/lang/String;ILjava/lang/String;ILkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+}
+
+public final class dev/xmux/client/Topology {
+	public static final field Companion Ldev/xmux/client/Topology$Companion;
+	public synthetic fun <init> (ILjava/util/List;Ljava/util/List;Ljava/util/Map;Ldev/xmux/client/ScreenId;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Ljava/util/List;
+	public final fun component4 ()Ljava/util/Map;
+	public final fun component5-s1LLKI8 ()Ldev/xmux/client/ScreenId;
+	public final fun copy-UScgXRI (ILjava/util/List;Ljava/util/List;Ljava/util/Map;Ldev/xmux/client/ScreenId;)Ldev/xmux/client/Topology;
+	public static synthetic fun copy-UScgXRI$default (Ldev/xmux/client/Topology;ILjava/util/List;Ljava/util/List;Ljava/util/Map;Ldev/xmux/client/ScreenId;ILjava/lang/Object;)Ldev/xmux/client/Topology;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getActiveScreen-s1LLKI8 ()Ldev/xmux/client/ScreenId;
+	public final fun getRevision ()I
+	public final fun getScreens ()Ljava/util/List;
+	public final fun getTerminals ()Ljava/util/Map;
+	public final fun getWorkspaces ()Ljava/util/List;
+	public fun hashCode ()I
+	public final fun screen-6RXsB0Y (I)Ldev/xmux/client/Screen;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/Topology$Companion {
+	public final fun getEMPTY ()Ldev/xmux/client/Topology;
+}
+
+public final class dev/xmux/client/TopologyMapper {
+	public static final field INSTANCE Ldev/xmux/client/TopologyMapper;
+	public final fun layout (Ldev/xmux/proto/LayoutNode;)Ldev/xmux/client/LayoutNode;
+	public final fun map (Ldev/xmux/proto/Topology;)Ldev/xmux/client/Topology;
+}
+
+public final class dev/xmux/client/Workspace {
+	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-q6oy39U ()I
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy-4ACfg00 (ILjava/lang/String;Ljava/lang/String;)Ldev/xmux/client/Workspace;
+	public static synthetic fun copy-4ACfg00$default (Ldev/xmux/client/Workspace;ILjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ldev/xmux/client/Workspace;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCmuxId ()Ljava/lang/String;
+	public final fun getId-q6oy39U ()I
+	public final fun getTitle ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/client/WorkspaceId {
+	public static final synthetic fun box-impl (I)Ldev/xmux/client/WorkspaceId;
+	public static fun constructor-impl (I)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (ILjava/lang/Object;)Z
+	public static final fun equals-impl0 (II)Z
+	public final fun getValue ()I
+	public fun hashCode ()I
+	public static fun hashCode-impl (I)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (I)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()I
+}
+
+public final class dev/xmux/client/XmuxClient {
+	public static final field Companion Ldev/xmux/client/XmuxClient$Companion;
+	public static final field SERVICE_TYPE Ljava/lang/String;
+	public fun <init> (Landroid/content/Context;Ldev/xmux/client/PairingStore;)V
+	public synthetic fun <init> (Landroid/content/Context;Ldev/xmux/client/PairingStore;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun connect (Ldev/xmux/client/BridgeTarget;Lkotlinx/coroutines/CoroutineScope;Ljava/lang/String;)Ldev/xmux/client/XmuxSession;
+	public static synthetic fun connect$default (Ldev/xmux/client/XmuxClient;Ldev/xmux/client/BridgeTarget;Lkotlinx/coroutines/CoroutineScope;Ljava/lang/String;ILjava/lang/Object;)Ldev/xmux/client/XmuxSession;
+	public final fun discover ()Lkotlinx/coroutines/flow/Flow;
+	public final fun getStore ()Ldev/xmux/client/PairingStore;
+}
+
+public final class dev/xmux/client/XmuxClient$Companion {
+}
+
+public abstract interface class dev/xmux/client/XmuxSession : java/lang/AutoCloseable {
+	public abstract fun focusDirection-K2-g8BI (ILdev/xmux/client/Direction;)V
+	public abstract fun focusPane-_HHsyzM (I)V
+	public abstract fun focusTab-0NEvSNA (I)V
+	public abstract fun getEvents ()Lkotlinx/coroutines/flow/Flow;
+	public abstract fun getSessionName ()Ljava/lang/String;
+	public abstract fun getState ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun getTopology ()Lkotlinx/coroutines/flow/StateFlow;
+	public abstract fun terminal-W6jk3ho (I)Ldev/xmux/client/TerminalHandle;
+}
+

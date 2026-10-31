@@ -1,0 +1,7 @@
+{
+  "extends": "./packages/dev/improve/xmux/configs/typescript/base.json",
+  "compilerOptions": {
+    "types": ["bun"]
+  },
+  "include": ["*.ts", "packages/**/*"]
+}

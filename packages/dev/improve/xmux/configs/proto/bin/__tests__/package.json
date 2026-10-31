@@ -1,0 +1,9 @@
+{
+  "name": "@-/dev.improve.xmux.configs.proto.bin.__tests__",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@-/dev.improve.xmux.configs.proto.bin": "workspace:*",
+    "vitest": "catalog:"
+  }
+}

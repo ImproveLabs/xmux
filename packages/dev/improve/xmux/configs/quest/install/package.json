@@ -1,0 +1,21 @@
+{
+  "name": "@-/dev.improve.xmux.configs.quest.install",
+  "version": "0.0.0",
+  "private": true,
+  "bin": {
+    "_quest-install": "./_quest-install.ts"
+  },
+  "type": "module",
+  "imports": {
+    "#install-command": "./install-command.ts"
+  },
+  "dependencies": {
+    "@-/com.npmjs.citty-universal": "workspace:*",
+    "@-/com.npmjs.consola": "workspace:*",
+    "@-/com.npmjs.pathe": "workspace:*",
+    "@-/dev.improve.xmux.configs.android.gradle": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest.apps": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest.device": "workspace:*",
+    "@-/dev.improve.xmux.constants.paths": "workspace:*"
+  }
+}

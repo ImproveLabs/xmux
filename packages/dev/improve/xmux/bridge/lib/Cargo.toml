@@ -1,0 +1,30 @@
+[package]
+name = "xmux-bridge"
+description = "xmux bridge library: cmux session state -> xmux frames, and input back"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+xmux-proto = { workspace = true }
+cmux = { workspace = true }
+tokio = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+unicode-width = "0.2"
+unicode-segmentation = "1"
+
+[dev-dependencies]
+insta = { workspace = true }
+proptest = { workspace = true }
+
+[features]
+# Integration tests against a running cmux-tui daemon (M0).
+daemon = []
+
+[lints]
+workspace = true

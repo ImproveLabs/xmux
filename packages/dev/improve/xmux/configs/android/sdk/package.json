@@ -1,0 +1,15 @@
+{
+  "name": "@-/dev.improve.xmux.configs.android.sdk",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#android-sdk": "./android-sdk.ts"
+  },
+  "exports": {
+    ".": "./+.ts"
+  },
+  "dependencies": {
+    "@-/com.npmjs.pathe": "workspace:*"
+  }
+}

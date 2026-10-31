@@ -1,0 +1,46 @@
+{
+  "scenario": "full_reset",
+  "terminals": [
+    {
+      "cmux_id": "term_3b4d2813be1fc284b835ef8f6b4c70f6",
+      "grid": {
+        "cols": 80,
+        "rows": 24,
+        "default_fg": 4294967295,
+        "default_bg": 4278190080,
+        "cursor": {
+          "row": 1,
+          "col": 0,
+          "visible": true
+        },
+        "lines": [
+          "after RIS                                                                       ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                "
+        ],
+        "styles": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@-/com.npmjs.consola",
+  "private": true,
+  "type": "module",
+  "imports": {},
+  "exports": {
+    ".": "./+.ts"
+  },
+  "dependencies": {
+    "consola": "catalog:"
+  }
+}

@@ -1,0 +1,20 @@
+[package]
+name = "xmux-view"
+description = "xmux dev tools: record cmux traces, replay them into grids, dump frame streams"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+
+[dependencies]
+xmux-bridge = { workspace = true }
+xmux-proto = { workspace = true }
+cmux = { workspace = true }
+anyhow = { workspace = true }
+clap = { workspace = true }
+serde_json = { workspace = true }
+
+[lints]
+workspace = true

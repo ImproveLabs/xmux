@@ -1,0 +1,46 @@
+{
+  "scenario": "scroll",
+  "terminals": [
+    {
+      "cmux_id": "term_63a00832c2e1e6bf3275403da4b6f3ba",
+      "grid": {
+        "cols": 80,
+        "rows": 24,
+        "default_fg": 4294967295,
+        "default_bg": 4278190080,
+        "cursor": {
+          "row": 23,
+          "col": 0,
+          "visible": true
+        },
+        "lines": [
+          "line 98 of the scroll test                                                      ",
+          "line 99 of the scroll test                                                      ",
+          "line 100 of the scroll test                                                     ",
+          "line 101 of the scroll test                                                     ",
+          "line 102 of the scroll test                                                     ",
+          "line 103 of the scroll test                                                     ",
+          "line 104 of the scroll test                                                     ",
+          "line 105 of the scroll test                                                     ",
+          "line 106 of the scroll test                                                     ",
+          "line 107 of the scroll test                                                     ",
+          "line 108 of the scroll test                                                     ",
+          "line 109 of the scroll test                                                     ",
+          "line 110 of the scroll test                                                     ",
+          "line 111 of the scroll test                                                     ",
+          "line 112 of the scroll test                                                     ",
+          "line 113 of the scroll test                                                     ",
+          "line 114 of the scroll test                                                     ",
+          "line 115 of the scroll test                                                     ",
+          "line 116 of the scroll test                                                     ",
+          "line 117 of the scroll test                                                     ",
+          "line 118 of the scroll test                                                     ",
+          "line 119 of the scroll test                                                     ",
+          "line 120 of the scroll test                                                     ",
+          "                                                                                "
+        ],
+        "styles": []
+      }
+    }
+  ]
+}

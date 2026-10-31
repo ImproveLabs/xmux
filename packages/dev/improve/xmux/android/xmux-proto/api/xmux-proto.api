@@ -1,0 +1,3113 @@
+public final class dev/xmux/proto/AttachState : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/AttachStateOrBuilder {
+	public static final field MESSAGE_FIELD_NUMBER I
+	public static final field STATUS_FIELD_NUMBER I
+	public static final field TERMINAL_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/AttachState;
+	public fun getMessage ()Ljava/lang/String;
+	public fun getMessageBytes ()Lcom/google/protobuf/ByteString;
+	public fun getStatus ()Ldev/xmux/proto/AttachStatus;
+	public fun getStatusValue ()I
+	public fun getTerminal ()I
+	public static fun newBuilder ()Ldev/xmux/proto/AttachState$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/AttachState;)Ldev/xmux/proto/AttachState$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/AttachState;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/AttachState;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/AttachState;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/AttachState;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/AttachState;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/AttachState;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/AttachState;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/AttachState;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/AttachState;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/AttachState;
+	public static fun parseFrom ([B)Ldev/xmux/proto/AttachState;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/AttachState;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/AttachState$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/AttachStateOrBuilder {
+	public fun clearMessage ()Ldev/xmux/proto/AttachState$Builder;
+	public fun clearStatus ()Ldev/xmux/proto/AttachState$Builder;
+	public fun clearTerminal ()Ldev/xmux/proto/AttachState$Builder;
+	public fun getMessage ()Ljava/lang/String;
+	public fun getMessageBytes ()Lcom/google/protobuf/ByteString;
+	public fun getStatus ()Ldev/xmux/proto/AttachStatus;
+	public fun getStatusValue ()I
+	public fun getTerminal ()I
+	public fun setMessage (Ljava/lang/String;)Ldev/xmux/proto/AttachState$Builder;
+	public fun setMessageBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/AttachState$Builder;
+	public fun setStatus (Ldev/xmux/proto/AttachStatus;)Ldev/xmux/proto/AttachState$Builder;
+	public fun setStatusValue (I)Ldev/xmux/proto/AttachState$Builder;
+	public fun setTerminal (I)Ldev/xmux/proto/AttachState$Builder;
+}
+
+public final class dev/xmux/proto/AttachStateKt {
+	public static final field INSTANCE Ldev/xmux/proto/AttachStateKt;
+}
+
+public final class dev/xmux/proto/AttachStateKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/AttachStateKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/AttachState$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/AttachState;
+	public final fun clearMessage ()V
+	public final fun clearStatus ()V
+	public final fun clearTerminal ()V
+	public final fun getMessage ()Ljava/lang/String;
+	public final fun getStatus ()Ldev/xmux/proto/AttachStatus;
+	public final fun getStatusValue ()I
+	public final fun getTerminal ()I
+	public final fun setMessage (Ljava/lang/String;)V
+	public final fun setStatus (Ldev/xmux/proto/AttachStatus;)V
+	public final fun setStatusValue (I)V
+	public final fun setTerminal (I)V
+}
+
+public final class dev/xmux/proto/AttachStateKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/AttachState$Builder;)Ldev/xmux/proto/AttachStateKt$Dsl;
+}
+
+public final class dev/xmux/proto/AttachStateKtKt {
+	public static final fun -initializeattachState (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/AttachState;
+	public static final fun copy (Ldev/xmux/proto/AttachState;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/AttachState;
+}
+
+public abstract interface class dev/xmux/proto/AttachStateOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getMessage ()Ljava/lang/String;
+	public abstract fun getMessageBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun getStatus ()Ldev/xmux/proto/AttachStatus;
+	public abstract fun getStatusValue ()I
+	public abstract fun getTerminal ()I
+}
+
+public final class dev/xmux/proto/AttachStatus : java/lang/Enum, com/google/protobuf/Internal$EnumLite {
+	public static final field ATTACH_STATUS_ATTACHED Ldev/xmux/proto/AttachStatus;
+	public static final field ATTACH_STATUS_ATTACHED_VALUE I
+	public static final field ATTACH_STATUS_ATTACHING Ldev/xmux/proto/AttachStatus;
+	public static final field ATTACH_STATUS_ATTACHING_VALUE I
+	public static final field ATTACH_STATUS_DETACHED Ldev/xmux/proto/AttachStatus;
+	public static final field ATTACH_STATUS_DETACHED_VALUE I
+	public static final field ATTACH_STATUS_ERROR Ldev/xmux/proto/AttachStatus;
+	public static final field ATTACH_STATUS_ERROR_VALUE I
+	public static final field ATTACH_STATUS_STALLED Ldev/xmux/proto/AttachStatus;
+	public static final field ATTACH_STATUS_STALLED_VALUE I
+	public static final field UNRECOGNIZED Ldev/xmux/proto/AttachStatus;
+	public static fun forNumber (I)Ldev/xmux/proto/AttachStatus;
+	public final fun getNumber ()I
+	public static fun internalGetValueMap ()Lcom/google/protobuf/Internal$EnumLiteMap;
+	public static fun internalGetVerifier ()Lcom/google/protobuf/Internal$EnumVerifier;
+	public static fun valueOf (I)Ldev/xmux/proto/AttachStatus;
+	public static fun valueOf (Ljava/lang/String;)Ldev/xmux/proto/AttachStatus;
+	public static fun values ()[Ldev/xmux/proto/AttachStatus;
+}
+
+public final class dev/xmux/proto/AttachTerminal : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/AttachTerminalOrBuilder {
+	public static final field TERMINAL_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/AttachTerminal;
+	public fun getTerminal ()I
+	public static fun newBuilder ()Ldev/xmux/proto/AttachTerminal$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/AttachTerminal;)Ldev/xmux/proto/AttachTerminal$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/AttachTerminal;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/AttachTerminal;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/AttachTerminal;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/AttachTerminal;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/AttachTerminal;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/AttachTerminal;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/AttachTerminal;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/AttachTerminal;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/AttachTerminal;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/AttachTerminal;
+	public static fun parseFrom ([B)Ldev/xmux/proto/AttachTerminal;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/AttachTerminal;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/AttachTerminal$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/AttachTerminalOrBuilder {
+	public fun clearTerminal ()Ldev/xmux/proto/AttachTerminal$Builder;
+	public fun getTerminal ()I
+	public fun setTerminal (I)Ldev/xmux/proto/AttachTerminal$Builder;
+}
+
+public final class dev/xmux/proto/AttachTerminalKt {
+	public static final field INSTANCE Ldev/xmux/proto/AttachTerminalKt;
+}
+
+public final class dev/xmux/proto/AttachTerminalKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/AttachTerminalKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/AttachTerminal$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/AttachTerminal;
+	public final fun clearTerminal ()V
+	public final fun getTerminal ()I
+	public final fun setTerminal (I)V
+}
+
+public final class dev/xmux/proto/AttachTerminalKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/AttachTerminal$Builder;)Ldev/xmux/proto/AttachTerminalKt$Dsl;
+}
+
+public final class dev/xmux/proto/AttachTerminalKtKt {
+	public static final fun -initializeattachTerminal (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/AttachTerminal;
+	public static final fun copy (Ldev/xmux/proto/AttachTerminal;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/AttachTerminal;
+}
+
+public abstract interface class dev/xmux/proto/AttachTerminalOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getTerminal ()I
+}
+
+public final class dev/xmux/proto/Bye : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/ByeOrBuilder {
+	public static final field REASON_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Bye;
+	public fun getReason ()Ljava/lang/String;
+	public fun getReasonBytes ()Lcom/google/protobuf/ByteString;
+	public static fun newBuilder ()Ldev/xmux/proto/Bye$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Bye;)Ldev/xmux/proto/Bye$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Bye;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Bye;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Bye;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Bye;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Bye;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Bye;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Bye;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Bye;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Bye;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Bye;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Bye;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Bye;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Bye$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/ByeOrBuilder {
+	public fun clearReason ()Ldev/xmux/proto/Bye$Builder;
+	public fun getReason ()Ljava/lang/String;
+	public fun getReasonBytes ()Lcom/google/protobuf/ByteString;
+	public fun setReason (Ljava/lang/String;)Ldev/xmux/proto/Bye$Builder;
+	public fun setReasonBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Bye$Builder;
+}
+
+public final class dev/xmux/proto/ByeKt {
+	public static final field INSTANCE Ldev/xmux/proto/ByeKt;
+}
+
+public final class dev/xmux/proto/ByeKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/ByeKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Bye$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Bye;
+	public final fun clearReason ()V
+	public final fun getReason ()Ljava/lang/String;
+	public final fun setReason (Ljava/lang/String;)V
+}
+
+public final class dev/xmux/proto/ByeKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Bye$Builder;)Ldev/xmux/proto/ByeKt$Dsl;
+}
+
+public final class dev/xmux/proto/ByeKtKt {
+	public static final fun -initializebye (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Bye;
+	public static final fun copy (Ldev/xmux/proto/Bye;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Bye;
+}
+
+public abstract interface class dev/xmux/proto/ByeOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getReason ()Ljava/lang/String;
+	public abstract fun getReasonBytes ()Lcom/google/protobuf/ByteString;
+}
+
+public final class dev/xmux/proto/Checksum : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/ChecksumOrBuilder {
+	public static final field FNV1A_FIELD_NUMBER I
+	public static final field GENERATION_FIELD_NUMBER I
+	public static final field SEQUENCE_FIELD_NUMBER I
+	public static final field TERMINAL_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Checksum;
+	public fun getFnv1A ()J
+	public fun getGeneration ()I
+	public fun getSequence ()I
+	public fun getTerminal ()I
+	public static fun newBuilder ()Ldev/xmux/proto/Checksum$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Checksum;)Ldev/xmux/proto/Checksum$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Checksum;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Checksum;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Checksum;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Checksum;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Checksum;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Checksum;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Checksum;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Checksum;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Checksum;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Checksum;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Checksum;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Checksum;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Checksum$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/ChecksumOrBuilder {
+	public fun clearFnv1A ()Ldev/xmux/proto/Checksum$Builder;
+	public fun clearGeneration ()Ldev/xmux/proto/Checksum$Builder;
+	public fun clearSequence ()Ldev/xmux/proto/Checksum$Builder;
+	public fun clearTerminal ()Ldev/xmux/proto/Checksum$Builder;
+	public fun getFnv1A ()J
+	public fun getGeneration ()I
+	public fun getSequence ()I
+	public fun getTerminal ()I
+	public fun setFnv1A (J)Ldev/xmux/proto/Checksum$Builder;
+	public fun setGeneration (I)Ldev/xmux/proto/Checksum$Builder;
+	public fun setSequence (I)Ldev/xmux/proto/Checksum$Builder;
+	public fun setTerminal (I)Ldev/xmux/proto/Checksum$Builder;
+}
+
+public final class dev/xmux/proto/ChecksumKt {
+	public static final field INSTANCE Ldev/xmux/proto/ChecksumKt;
+}
+
+public final class dev/xmux/proto/ChecksumKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/ChecksumKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Checksum$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Checksum;
+	public final fun clearFnv1A ()V
+	public final fun clearGeneration ()V
+	public final fun clearSequence ()V
+	public final fun clearTerminal ()V
+	public final fun getFnv1A ()J
+	public final fun getGeneration ()I
+	public final fun getSequence ()I
+	public final fun getTerminal ()I
+	public final fun setFnv1A (J)V
+	public final fun setGeneration (I)V
+	public final fun setSequence (I)V
+	public final fun setTerminal (I)V
+}
+
+public final class dev/xmux/proto/ChecksumKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Checksum$Builder;)Ldev/xmux/proto/ChecksumKt$Dsl;
+}
+
+public final class dev/xmux/proto/ChecksumKtKt {
+	public static final fun -initializechecksum (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Checksum;
+	public static final fun copy (Ldev/xmux/proto/Checksum;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Checksum;
+}
+
+public abstract interface class dev/xmux/proto/ChecksumOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getFnv1A ()J
+	public abstract fun getGeneration ()I
+	public abstract fun getSequence ()I
+	public abstract fun getTerminal ()I
+}
+
+public final class dev/xmux/proto/Cursor : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/CursorOrBuilder {
+	public static final field BLINK_FIELD_NUMBER I
+	public static final field COL_FIELD_NUMBER I
+	public static final field ROW_FIELD_NUMBER I
+	public static final field SHAPE_FIELD_NUMBER I
+	public static final field TERMINAL_FIELD_NUMBER I
+	public static final field VISIBLE_FIELD_NUMBER I
+	public fun getBlink ()Z
+	public fun getCol ()I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Cursor;
+	public fun getRow ()I
+	public fun getShape ()Ldev/xmux/proto/CursorShape;
+	public fun getShapeValue ()I
+	public fun getTerminal ()I
+	public fun getVisible ()Z
+	public static fun newBuilder ()Ldev/xmux/proto/Cursor$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Cursor;)Ldev/xmux/proto/Cursor$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Cursor;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Cursor;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Cursor;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Cursor;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Cursor;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Cursor;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Cursor;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Cursor;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Cursor;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Cursor;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Cursor;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Cursor;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Cursor$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/CursorOrBuilder {
+	public fun clearBlink ()Ldev/xmux/proto/Cursor$Builder;
+	public fun clearCol ()Ldev/xmux/proto/Cursor$Builder;
+	public fun clearRow ()Ldev/xmux/proto/Cursor$Builder;
+	public fun clearShape ()Ldev/xmux/proto/Cursor$Builder;
+	public fun clearTerminal ()Ldev/xmux/proto/Cursor$Builder;
+	public fun clearVisible ()Ldev/xmux/proto/Cursor$Builder;
+	public fun getBlink ()Z
+	public fun getCol ()I
+	public fun getRow ()I
+	public fun getShape ()Ldev/xmux/proto/CursorShape;
+	public fun getShapeValue ()I
+	public fun getTerminal ()I
+	public fun getVisible ()Z
+	public fun setBlink (Z)Ldev/xmux/proto/Cursor$Builder;
+	public fun setCol (I)Ldev/xmux/proto/Cursor$Builder;
+	public fun setRow (I)Ldev/xmux/proto/Cursor$Builder;
+	public fun setShape (Ldev/xmux/proto/CursorShape;)Ldev/xmux/proto/Cursor$Builder;
+	public fun setShapeValue (I)Ldev/xmux/proto/Cursor$Builder;
+	public fun setTerminal (I)Ldev/xmux/proto/Cursor$Builder;
+	public fun setVisible (Z)Ldev/xmux/proto/Cursor$Builder;
+}
+
+public final class dev/xmux/proto/CursorKt {
+	public static final field INSTANCE Ldev/xmux/proto/CursorKt;
+}
+
+public final class dev/xmux/proto/CursorKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/CursorKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Cursor$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Cursor;
+	public final fun clearBlink ()V
+	public final fun clearCol ()V
+	public final fun clearRow ()V
+	public final fun clearShape ()V
+	public final fun clearTerminal ()V
+	public final fun clearVisible ()V
+	public final fun getBlink ()Z
+	public final fun getCol ()I
+	public final fun getRow ()I
+	public final fun getShape ()Ldev/xmux/proto/CursorShape;
+	public final fun getShapeValue ()I
+	public final fun getTerminal ()I
+	public final fun getVisible ()Z
+	public final fun setBlink (Z)V
+	public final fun setCol (I)V
+	public final fun setRow (I)V
+	public final fun setShape (Ldev/xmux/proto/CursorShape;)V
+	public final fun setShapeValue (I)V
+	public final fun setTerminal (I)V
+	public final fun setVisible (Z)V
+}
+
+public final class dev/xmux/proto/CursorKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Cursor$Builder;)Ldev/xmux/proto/CursorKt$Dsl;
+}
+
+public final class dev/xmux/proto/CursorKtKt {
+	public static final fun -initializecursor (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Cursor;
+	public static final fun copy (Ldev/xmux/proto/Cursor;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Cursor;
+}
+
+public abstract interface class dev/xmux/proto/CursorOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getBlink ()Z
+	public abstract fun getCol ()I
+	public abstract fun getRow ()I
+	public abstract fun getShape ()Ldev/xmux/proto/CursorShape;
+	public abstract fun getShapeValue ()I
+	public abstract fun getTerminal ()I
+	public abstract fun getVisible ()Z
+}
+
+public final class dev/xmux/proto/CursorShape : java/lang/Enum, com/google/protobuf/Internal$EnumLite {
+	public static final field CURSOR_SHAPE_BAR Ldev/xmux/proto/CursorShape;
+	public static final field CURSOR_SHAPE_BAR_VALUE I
+	public static final field CURSOR_SHAPE_BLOCK Ldev/xmux/proto/CursorShape;
+	public static final field CURSOR_SHAPE_BLOCK_VALUE I
+	public static final field CURSOR_SHAPE_UNDERLINE Ldev/xmux/proto/CursorShape;
+	public static final field CURSOR_SHAPE_UNDERLINE_VALUE I
+	public static final field UNRECOGNIZED Ldev/xmux/proto/CursorShape;
+	public static fun forNumber (I)Ldev/xmux/proto/CursorShape;
+	public final fun getNumber ()I
+	public static fun internalGetValueMap ()Lcom/google/protobuf/Internal$EnumLiteMap;
+	public static fun internalGetVerifier ()Lcom/google/protobuf/Internal$EnumVerifier;
+	public static fun valueOf (I)Ldev/xmux/proto/CursorShape;
+	public static fun valueOf (Ljava/lang/String;)Ldev/xmux/proto/CursorShape;
+	public static fun values ()[Ldev/xmux/proto/CursorShape;
+}
+
+public final class dev/xmux/proto/DetachTerminal : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/DetachTerminalOrBuilder {
+	public static final field TERMINAL_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/DetachTerminal;
+	public fun getTerminal ()I
+	public static fun newBuilder ()Ldev/xmux/proto/DetachTerminal$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/DetachTerminal;)Ldev/xmux/proto/DetachTerminal$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/DetachTerminal;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/DetachTerminal;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/DetachTerminal;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/DetachTerminal;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/DetachTerminal;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/DetachTerminal;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/DetachTerminal;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/DetachTerminal;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/DetachTerminal;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/DetachTerminal;
+	public static fun parseFrom ([B)Ldev/xmux/proto/DetachTerminal;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/DetachTerminal;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/DetachTerminal$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/DetachTerminalOrBuilder {
+	public fun clearTerminal ()Ldev/xmux/proto/DetachTerminal$Builder;
+	public fun getTerminal ()I
+	public fun setTerminal (I)Ldev/xmux/proto/DetachTerminal$Builder;
+}
+
+public final class dev/xmux/proto/DetachTerminalKt {
+	public static final field INSTANCE Ldev/xmux/proto/DetachTerminalKt;
+}
+
+public final class dev/xmux/proto/DetachTerminalKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/DetachTerminalKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/DetachTerminal$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/DetachTerminal;
+	public final fun clearTerminal ()V
+	public final fun getTerminal ()I
+	public final fun setTerminal (I)V
+}
+
+public final class dev/xmux/proto/DetachTerminalKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/DetachTerminal$Builder;)Ldev/xmux/proto/DetachTerminalKt$Dsl;
+}
+
+public final class dev/xmux/proto/DetachTerminalKtKt {
+	public static final fun -initializedetachTerminal (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/DetachTerminal;
+	public static final fun copy (Ldev/xmux/proto/DetachTerminal;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/DetachTerminal;
+}
+
+public abstract interface class dev/xmux/proto/DetachTerminalOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getTerminal ()I
+}
+
+public final class dev/xmux/proto/Direction : java/lang/Enum, com/google/protobuf/Internal$EnumLite {
+	public static final field DIRECTION_DOWN Ldev/xmux/proto/Direction;
+	public static final field DIRECTION_DOWN_VALUE I
+	public static final field DIRECTION_LEFT Ldev/xmux/proto/Direction;
+	public static final field DIRECTION_LEFT_VALUE I
+	public static final field DIRECTION_RIGHT Ldev/xmux/proto/Direction;
+	public static final field DIRECTION_RIGHT_VALUE I
+	public static final field DIRECTION_UP Ldev/xmux/proto/Direction;
+	public static final field DIRECTION_UP_VALUE I
+	public static final field UNRECOGNIZED Ldev/xmux/proto/Direction;
+	public static fun forNumber (I)Ldev/xmux/proto/Direction;
+	public final fun getNumber ()I
+	public static fun internalGetValueMap ()Lcom/google/protobuf/Internal$EnumLiteMap;
+	public static fun internalGetVerifier ()Lcom/google/protobuf/Internal$EnumVerifier;
+	public static fun valueOf (I)Ldev/xmux/proto/Direction;
+	public static fun valueOf (Ljava/lang/String;)Ldev/xmux/proto/Direction;
+	public static fun values ()[Ldev/xmux/proto/Direction;
+}
+
+public final class dev/xmux/proto/FocusDirection : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/FocusDirectionOrBuilder {
+	public static final field DIRECTION_FIELD_NUMBER I
+	public static final field SCREEN_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/FocusDirection;
+	public fun getDirection ()Ldev/xmux/proto/Direction;
+	public fun getDirectionValue ()I
+	public fun getScreen ()I
+	public static fun newBuilder ()Ldev/xmux/proto/FocusDirection$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/FocusDirection;)Ldev/xmux/proto/FocusDirection$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/FocusDirection;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusDirection;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/FocusDirection;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusDirection;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/FocusDirection;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusDirection;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/FocusDirection;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusDirection;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/FocusDirection;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusDirection;
+	public static fun parseFrom ([B)Ldev/xmux/proto/FocusDirection;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusDirection;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/FocusDirection$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/FocusDirectionOrBuilder {
+	public fun clearDirection ()Ldev/xmux/proto/FocusDirection$Builder;
+	public fun clearScreen ()Ldev/xmux/proto/FocusDirection$Builder;
+	public fun getDirection ()Ldev/xmux/proto/Direction;
+	public fun getDirectionValue ()I
+	public fun getScreen ()I
+	public fun setDirection (Ldev/xmux/proto/Direction;)Ldev/xmux/proto/FocusDirection$Builder;
+	public fun setDirectionValue (I)Ldev/xmux/proto/FocusDirection$Builder;
+	public fun setScreen (I)Ldev/xmux/proto/FocusDirection$Builder;
+}
+
+public final class dev/xmux/proto/FocusDirectionKt {
+	public static final field INSTANCE Ldev/xmux/proto/FocusDirectionKt;
+}
+
+public final class dev/xmux/proto/FocusDirectionKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/FocusDirectionKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/FocusDirection$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/FocusDirection;
+	public final fun clearDirection ()V
+	public final fun clearScreen ()V
+	public final fun getDirection ()Ldev/xmux/proto/Direction;
+	public final fun getDirectionValue ()I
+	public final fun getScreen ()I
+	public final fun setDirection (Ldev/xmux/proto/Direction;)V
+	public final fun setDirectionValue (I)V
+	public final fun setScreen (I)V
+}
+
+public final class dev/xmux/proto/FocusDirectionKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/FocusDirection$Builder;)Ldev/xmux/proto/FocusDirectionKt$Dsl;
+}
+
+public final class dev/xmux/proto/FocusDirectionKtKt {
+	public static final fun -initializefocusDirection (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/FocusDirection;
+	public static final fun copy (Ldev/xmux/proto/FocusDirection;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/FocusDirection;
+}
+
+public abstract interface class dev/xmux/proto/FocusDirectionOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getDirection ()Ldev/xmux/proto/Direction;
+	public abstract fun getDirectionValue ()I
+	public abstract fun getScreen ()I
+}
+
+public final class dev/xmux/proto/FocusPane : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/FocusPaneOrBuilder {
+	public static final field PANE_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/FocusPane;
+	public fun getPane ()I
+	public static fun newBuilder ()Ldev/xmux/proto/FocusPane$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/FocusPane;)Ldev/xmux/proto/FocusPane$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/FocusPane;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusPane;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/FocusPane;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusPane;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/FocusPane;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusPane;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/FocusPane;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusPane;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/FocusPane;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusPane;
+	public static fun parseFrom ([B)Ldev/xmux/proto/FocusPane;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusPane;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/FocusPane$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/FocusPaneOrBuilder {
+	public fun clearPane ()Ldev/xmux/proto/FocusPane$Builder;
+	public fun getPane ()I
+	public fun setPane (I)Ldev/xmux/proto/FocusPane$Builder;
+}
+
+public final class dev/xmux/proto/FocusPaneKt {
+	public static final field INSTANCE Ldev/xmux/proto/FocusPaneKt;
+}
+
+public final class dev/xmux/proto/FocusPaneKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/FocusPaneKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/FocusPane$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/FocusPane;
+	public final fun clearPane ()V
+	public final fun getPane ()I
+	public final fun setPane (I)V
+}
+
+public final class dev/xmux/proto/FocusPaneKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/FocusPane$Builder;)Ldev/xmux/proto/FocusPaneKt$Dsl;
+}
+
+public final class dev/xmux/proto/FocusPaneKtKt {
+	public static final fun -initializefocusPane (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/FocusPane;
+	public static final fun copy (Ldev/xmux/proto/FocusPane;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/FocusPane;
+}
+
+public abstract interface class dev/xmux/proto/FocusPaneOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getPane ()I
+}
+
+public final class dev/xmux/proto/FocusTab : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/FocusTabOrBuilder {
+	public static final field TAB_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/FocusTab;
+	public fun getTab ()I
+	public static fun newBuilder ()Ldev/xmux/proto/FocusTab$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/FocusTab;)Ldev/xmux/proto/FocusTab$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/FocusTab;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusTab;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/FocusTab;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusTab;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/FocusTab;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusTab;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/FocusTab;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusTab;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/FocusTab;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusTab;
+	public static fun parseFrom ([B)Ldev/xmux/proto/FocusTab;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/FocusTab;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/FocusTab$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/FocusTabOrBuilder {
+	public fun clearTab ()Ldev/xmux/proto/FocusTab$Builder;
+	public fun getTab ()I
+	public fun setTab (I)Ldev/xmux/proto/FocusTab$Builder;
+}
+
+public final class dev/xmux/proto/FocusTabKt {
+	public static final field INSTANCE Ldev/xmux/proto/FocusTabKt;
+}
+
+public final class dev/xmux/proto/FocusTabKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/FocusTabKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/FocusTab$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/FocusTab;
+	public final fun clearTab ()V
+	public final fun getTab ()I
+	public final fun setTab (I)V
+}
+
+public final class dev/xmux/proto/FocusTabKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/FocusTab$Builder;)Ldev/xmux/proto/FocusTabKt$Dsl;
+}
+
+public final class dev/xmux/proto/FocusTabKtKt {
+	public static final fun -initializefocusTab (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/FocusTab;
+	public static final fun copy (Ldev/xmux/proto/FocusTab;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/FocusTab;
+}
+
+public abstract interface class dev/xmux/proto/FocusTabOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getTab ()I
+}
+
+public final class dev/xmux/proto/Frame : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/FrameOrBuilder {
+	public static final field ATTACH_STATE_FIELD_NUMBER I
+	public static final field ATTACH_TERMINAL_FIELD_NUMBER I
+	public static final field BYE_FIELD_NUMBER I
+	public static final field CHECKSUM_FIELD_NUMBER I
+	public static final field CURSOR_FIELD_NUMBER I
+	public static final field DETACH_TERMINAL_FIELD_NUMBER I
+	public static final field FOCUS_DIRECTION_FIELD_NUMBER I
+	public static final field FOCUS_PANE_FIELD_NUMBER I
+	public static final field FOCUS_TAB_FIELD_NUMBER I
+	public static final field HELLO_FIELD_NUMBER I
+	public static final field INPUT_FIELD_NUMBER I
+	public static final field PING_FIELD_NUMBER I
+	public static final field PONG_FIELD_NUMBER I
+	public static final field RESIZE_FIELD_NUMBER I
+	public static final field RESYNC_TERMINAL_FIELD_NUMBER I
+	public static final field ROWS_FIELD_NUMBER I
+	public static final field STATS_FIELD_NUMBER I
+	public static final field TOPOLOGY_FIELD_NUMBER I
+	public static final field WELCOME_FIELD_NUMBER I
+	public fun getAttachState ()Ldev/xmux/proto/AttachState;
+	public fun getAttachTerminal ()Ldev/xmux/proto/AttachTerminal;
+	public fun getBye ()Ldev/xmux/proto/Bye;
+	public fun getChecksum ()Ldev/xmux/proto/Checksum;
+	public fun getCursor ()Ldev/xmux/proto/Cursor;
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Frame;
+	public fun getDetachTerminal ()Ldev/xmux/proto/DetachTerminal;
+	public fun getFocusDirection ()Ldev/xmux/proto/FocusDirection;
+	public fun getFocusPane ()Ldev/xmux/proto/FocusPane;
+	public fun getFocusTab ()Ldev/xmux/proto/FocusTab;
+	public fun getHello ()Ldev/xmux/proto/Hello;
+	public fun getInput ()Ldev/xmux/proto/Input;
+	public fun getPayloadCase ()Ldev/xmux/proto/Frame$PayloadCase;
+	public fun getPing ()Ldev/xmux/proto/Ping;
+	public fun getPong ()Ldev/xmux/proto/Pong;
+	public fun getResize ()Ldev/xmux/proto/Resize;
+	public fun getResyncTerminal ()Ldev/xmux/proto/ResyncTerminal;
+	public fun getRows ()Ldev/xmux/proto/Rows;
+	public fun getStats ()Ldev/xmux/proto/Stats;
+	public fun getTopology ()Ldev/xmux/proto/Topology;
+	public fun getWelcome ()Ldev/xmux/proto/Welcome;
+	public fun hasAttachState ()Z
+	public fun hasAttachTerminal ()Z
+	public fun hasBye ()Z
+	public fun hasChecksum ()Z
+	public fun hasCursor ()Z
+	public fun hasDetachTerminal ()Z
+	public fun hasFocusDirection ()Z
+	public fun hasFocusPane ()Z
+	public fun hasFocusTab ()Z
+	public fun hasHello ()Z
+	public fun hasInput ()Z
+	public fun hasPing ()Z
+	public fun hasPong ()Z
+	public fun hasResize ()Z
+	public fun hasResyncTerminal ()Z
+	public fun hasRows ()Z
+	public fun hasStats ()Z
+	public fun hasTopology ()Z
+	public fun hasWelcome ()Z
+	public static fun newBuilder ()Ldev/xmux/proto/Frame$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Frame;)Ldev/xmux/proto/Frame$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Frame;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Frame;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Frame;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Frame;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Frame;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Frame;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Frame;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Frame;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Frame;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Frame;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Frame;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Frame;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Frame$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/FrameOrBuilder {
+	public fun clearAttachState ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearAttachTerminal ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearBye ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearChecksum ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearCursor ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearDetachTerminal ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearFocusDirection ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearFocusPane ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearFocusTab ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearHello ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearInput ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearPayload ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearPing ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearPong ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearResize ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearResyncTerminal ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearRows ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearStats ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearTopology ()Ldev/xmux/proto/Frame$Builder;
+	public fun clearWelcome ()Ldev/xmux/proto/Frame$Builder;
+	public fun getAttachState ()Ldev/xmux/proto/AttachState;
+	public fun getAttachTerminal ()Ldev/xmux/proto/AttachTerminal;
+	public fun getBye ()Ldev/xmux/proto/Bye;
+	public fun getChecksum ()Ldev/xmux/proto/Checksum;
+	public fun getCursor ()Ldev/xmux/proto/Cursor;
+	public fun getDetachTerminal ()Ldev/xmux/proto/DetachTerminal;
+	public fun getFocusDirection ()Ldev/xmux/proto/FocusDirection;
+	public fun getFocusPane ()Ldev/xmux/proto/FocusPane;
+	public fun getFocusTab ()Ldev/xmux/proto/FocusTab;
+	public fun getHello ()Ldev/xmux/proto/Hello;
+	public fun getInput ()Ldev/xmux/proto/Input;
+	public fun getPayloadCase ()Ldev/xmux/proto/Frame$PayloadCase;
+	public fun getPing ()Ldev/xmux/proto/Ping;
+	public fun getPong ()Ldev/xmux/proto/Pong;
+	public fun getResize ()Ldev/xmux/proto/Resize;
+	public fun getResyncTerminal ()Ldev/xmux/proto/ResyncTerminal;
+	public fun getRows ()Ldev/xmux/proto/Rows;
+	public fun getStats ()Ldev/xmux/proto/Stats;
+	public fun getTopology ()Ldev/xmux/proto/Topology;
+	public fun getWelcome ()Ldev/xmux/proto/Welcome;
+	public fun hasAttachState ()Z
+	public fun hasAttachTerminal ()Z
+	public fun hasBye ()Z
+	public fun hasChecksum ()Z
+	public fun hasCursor ()Z
+	public fun hasDetachTerminal ()Z
+	public fun hasFocusDirection ()Z
+	public fun hasFocusPane ()Z
+	public fun hasFocusTab ()Z
+	public fun hasHello ()Z
+	public fun hasInput ()Z
+	public fun hasPing ()Z
+	public fun hasPong ()Z
+	public fun hasResize ()Z
+	public fun hasResyncTerminal ()Z
+	public fun hasRows ()Z
+	public fun hasStats ()Z
+	public fun hasTopology ()Z
+	public fun hasWelcome ()Z
+	public fun mergeAttachState (Ldev/xmux/proto/AttachState;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeAttachTerminal (Ldev/xmux/proto/AttachTerminal;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeBye (Ldev/xmux/proto/Bye;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeChecksum (Ldev/xmux/proto/Checksum;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeCursor (Ldev/xmux/proto/Cursor;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeDetachTerminal (Ldev/xmux/proto/DetachTerminal;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeFocusDirection (Ldev/xmux/proto/FocusDirection;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeFocusPane (Ldev/xmux/proto/FocusPane;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeFocusTab (Ldev/xmux/proto/FocusTab;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeHello (Ldev/xmux/proto/Hello;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeInput (Ldev/xmux/proto/Input;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergePing (Ldev/xmux/proto/Ping;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergePong (Ldev/xmux/proto/Pong;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeResize (Ldev/xmux/proto/Resize;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeResyncTerminal (Ldev/xmux/proto/ResyncTerminal;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeRows (Ldev/xmux/proto/Rows;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeStats (Ldev/xmux/proto/Stats;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeTopology (Ldev/xmux/proto/Topology;)Ldev/xmux/proto/Frame$Builder;
+	public fun mergeWelcome (Ldev/xmux/proto/Welcome;)Ldev/xmux/proto/Frame$Builder;
+	public fun setAttachState (Ldev/xmux/proto/AttachState$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setAttachState (Ldev/xmux/proto/AttachState;)Ldev/xmux/proto/Frame$Builder;
+	public fun setAttachTerminal (Ldev/xmux/proto/AttachTerminal$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setAttachTerminal (Ldev/xmux/proto/AttachTerminal;)Ldev/xmux/proto/Frame$Builder;
+	public fun setBye (Ldev/xmux/proto/Bye$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setBye (Ldev/xmux/proto/Bye;)Ldev/xmux/proto/Frame$Builder;
+	public fun setChecksum (Ldev/xmux/proto/Checksum$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setChecksum (Ldev/xmux/proto/Checksum;)Ldev/xmux/proto/Frame$Builder;
+	public fun setCursor (Ldev/xmux/proto/Cursor$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setCursor (Ldev/xmux/proto/Cursor;)Ldev/xmux/proto/Frame$Builder;
+	public fun setDetachTerminal (Ldev/xmux/proto/DetachTerminal$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setDetachTerminal (Ldev/xmux/proto/DetachTerminal;)Ldev/xmux/proto/Frame$Builder;
+	public fun setFocusDirection (Ldev/xmux/proto/FocusDirection$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setFocusDirection (Ldev/xmux/proto/FocusDirection;)Ldev/xmux/proto/Frame$Builder;
+	public fun setFocusPane (Ldev/xmux/proto/FocusPane$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setFocusPane (Ldev/xmux/proto/FocusPane;)Ldev/xmux/proto/Frame$Builder;
+	public fun setFocusTab (Ldev/xmux/proto/FocusTab$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setFocusTab (Ldev/xmux/proto/FocusTab;)Ldev/xmux/proto/Frame$Builder;
+	public fun setHello (Ldev/xmux/proto/Hello$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setHello (Ldev/xmux/proto/Hello;)Ldev/xmux/proto/Frame$Builder;
+	public fun setInput (Ldev/xmux/proto/Input$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setInput (Ldev/xmux/proto/Input;)Ldev/xmux/proto/Frame$Builder;
+	public fun setPing (Ldev/xmux/proto/Ping$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setPing (Ldev/xmux/proto/Ping;)Ldev/xmux/proto/Frame$Builder;
+	public fun setPong (Ldev/xmux/proto/Pong$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setPong (Ldev/xmux/proto/Pong;)Ldev/xmux/proto/Frame$Builder;
+	public fun setResize (Ldev/xmux/proto/Resize$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setResize (Ldev/xmux/proto/Resize;)Ldev/xmux/proto/Frame$Builder;
+	public fun setResyncTerminal (Ldev/xmux/proto/ResyncTerminal$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setResyncTerminal (Ldev/xmux/proto/ResyncTerminal;)Ldev/xmux/proto/Frame$Builder;
+	public fun setRows (Ldev/xmux/proto/Rows$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setRows (Ldev/xmux/proto/Rows;)Ldev/xmux/proto/Frame$Builder;
+	public fun setStats (Ldev/xmux/proto/Stats$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setStats (Ldev/xmux/proto/Stats;)Ldev/xmux/proto/Frame$Builder;
+	public fun setTopology (Ldev/xmux/proto/Topology$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setTopology (Ldev/xmux/proto/Topology;)Ldev/xmux/proto/Frame$Builder;
+	public fun setWelcome (Ldev/xmux/proto/Welcome$Builder;)Ldev/xmux/proto/Frame$Builder;
+	public fun setWelcome (Ldev/xmux/proto/Welcome;)Ldev/xmux/proto/Frame$Builder;
+}
+
+public final class dev/xmux/proto/Frame$PayloadCase : java/lang/Enum, com/google/protobuf/AbstractMessageLite$InternalOneOfEnum {
+	public static final field ATTACH_STATE Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field ATTACH_TERMINAL Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field BYE Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field CHECKSUM Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field CURSOR Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field DETACH_TERMINAL Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field FOCUS_DIRECTION Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field FOCUS_PANE Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field FOCUS_TAB Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field HELLO Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field INPUT Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field PAYLOAD_NOT_SET Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field PING Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field PONG Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field RESIZE Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field RESYNC_TERMINAL Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field ROWS Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field STATS Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field TOPOLOGY Ldev/xmux/proto/Frame$PayloadCase;
+	public static final field WELCOME Ldev/xmux/proto/Frame$PayloadCase;
+	public static fun forNumber (I)Ldev/xmux/proto/Frame$PayloadCase;
+	public fun getNumber ()I
+	public static fun valueOf (I)Ldev/xmux/proto/Frame$PayloadCase;
+	public static fun valueOf (Ljava/lang/String;)Ldev/xmux/proto/Frame$PayloadCase;
+	public static fun values ()[Ldev/xmux/proto/Frame$PayloadCase;
+}
+
+public final class dev/xmux/proto/FrameKt {
+	public static final field INSTANCE Ldev/xmux/proto/FrameKt;
+}
+
+public final class dev/xmux/proto/FrameKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/FrameKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Frame$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Frame;
+	public final fun clearAttachState ()V
+	public final fun clearAttachTerminal ()V
+	public final fun clearBye ()V
+	public final fun clearChecksum ()V
+	public final fun clearCursor ()V
+	public final fun clearDetachTerminal ()V
+	public final fun clearFocusDirection ()V
+	public final fun clearFocusPane ()V
+	public final fun clearFocusTab ()V
+	public final fun clearHello ()V
+	public final fun clearInput ()V
+	public final fun clearPayload ()V
+	public final fun clearPing ()V
+	public final fun clearPong ()V
+	public final fun clearResize ()V
+	public final fun clearResyncTerminal ()V
+	public final fun clearRows ()V
+	public final fun clearStats ()V
+	public final fun clearTopology ()V
+	public final fun clearWelcome ()V
+	public final fun getAttachState ()Ldev/xmux/proto/AttachState;
+	public final fun getAttachTerminal ()Ldev/xmux/proto/AttachTerminal;
+	public final fun getBye ()Ldev/xmux/proto/Bye;
+	public final fun getChecksum ()Ldev/xmux/proto/Checksum;
+	public final fun getCursor ()Ldev/xmux/proto/Cursor;
+	public final fun getDetachTerminal ()Ldev/xmux/proto/DetachTerminal;
+	public final fun getFocusDirection ()Ldev/xmux/proto/FocusDirection;
+	public final fun getFocusPane ()Ldev/xmux/proto/FocusPane;
+	public final fun getFocusTab ()Ldev/xmux/proto/FocusTab;
+	public final fun getHello ()Ldev/xmux/proto/Hello;
+	public final fun getInput ()Ldev/xmux/proto/Input;
+	public final fun getPayloadCase ()Ldev/xmux/proto/Frame$PayloadCase;
+	public final fun getPing ()Ldev/xmux/proto/Ping;
+	public final fun getPong ()Ldev/xmux/proto/Pong;
+	public final fun getResize ()Ldev/xmux/proto/Resize;
+	public final fun getResyncTerminal ()Ldev/xmux/proto/ResyncTerminal;
+	public final fun getRows ()Ldev/xmux/proto/Rows;
+	public final fun getStats ()Ldev/xmux/proto/Stats;
+	public final fun getTopology ()Ldev/xmux/proto/Topology;
+	public final fun getWelcome ()Ldev/xmux/proto/Welcome;
+	public final fun hasAttachState ()Z
+	public final fun hasAttachTerminal ()Z
+	public final fun hasBye ()Z
+	public final fun hasChecksum ()Z
+	public final fun hasCursor ()Z
+	public final fun hasDetachTerminal ()Z
+	public final fun hasFocusDirection ()Z
+	public final fun hasFocusPane ()Z
+	public final fun hasFocusTab ()Z
+	public final fun hasHello ()Z
+	public final fun hasInput ()Z
+	public final fun hasPing ()Z
+	public final fun hasPong ()Z
+	public final fun hasResize ()Z
+	public final fun hasResyncTerminal ()Z
+	public final fun hasRows ()Z
+	public final fun hasStats ()Z
+	public final fun hasTopology ()Z
+	public final fun hasWelcome ()Z
+	public final fun setAttachState (Ldev/xmux/proto/AttachState;)V
+	public final fun setAttachTerminal (Ldev/xmux/proto/AttachTerminal;)V
+	public final fun setBye (Ldev/xmux/proto/Bye;)V
+	public final fun setChecksum (Ldev/xmux/proto/Checksum;)V
+	public final fun setCursor (Ldev/xmux/proto/Cursor;)V
+	public final fun setDetachTerminal (Ldev/xmux/proto/DetachTerminal;)V
+	public final fun setFocusDirection (Ldev/xmux/proto/FocusDirection;)V
+	public final fun setFocusPane (Ldev/xmux/proto/FocusPane;)V
+	public final fun setFocusTab (Ldev/xmux/proto/FocusTab;)V
+	public final fun setHello (Ldev/xmux/proto/Hello;)V
+	public final fun setInput (Ldev/xmux/proto/Input;)V
+	public final fun setPing (Ldev/xmux/proto/Ping;)V
+	public final fun setPong (Ldev/xmux/proto/Pong;)V
+	public final fun setResize (Ldev/xmux/proto/Resize;)V
+	public final fun setResyncTerminal (Ldev/xmux/proto/ResyncTerminal;)V
+	public final fun setRows (Ldev/xmux/proto/Rows;)V
+	public final fun setStats (Ldev/xmux/proto/Stats;)V
+	public final fun setTopology (Ldev/xmux/proto/Topology;)V
+	public final fun setWelcome (Ldev/xmux/proto/Welcome;)V
+}
+
+public final class dev/xmux/proto/FrameKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Frame$Builder;)Ldev/xmux/proto/FrameKt$Dsl;
+}
+
+public final class dev/xmux/proto/FrameKtKt {
+	public static final fun -initializeframe (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Frame;
+	public static final fun copy (Ldev/xmux/proto/Frame;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Frame;
+	public static final fun getAttachStateOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/AttachState;
+	public static final fun getAttachTerminalOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/AttachTerminal;
+	public static final fun getByeOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/Bye;
+	public static final fun getChecksumOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/Checksum;
+	public static final fun getCursorOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/Cursor;
+	public static final fun getDetachTerminalOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/DetachTerminal;
+	public static final fun getFocusDirectionOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/FocusDirection;
+	public static final fun getFocusPaneOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/FocusPane;
+	public static final fun getFocusTabOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/FocusTab;
+	public static final fun getHelloOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/Hello;
+	public static final fun getInputOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/Input;
+	public static final fun getPingOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/Ping;
+	public static final fun getPongOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/Pong;
+	public static final fun getResizeOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/Resize;
+	public static final fun getResyncTerminalOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/ResyncTerminal;
+	public static final fun getRowsOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/Rows;
+	public static final fun getStatsOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/Stats;
+	public static final fun getTopologyOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/Topology;
+	public static final fun getWelcomeOrNull (Ldev/xmux/proto/FrameOrBuilder;)Ldev/xmux/proto/Welcome;
+}
+
+public abstract interface class dev/xmux/proto/FrameOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getAttachState ()Ldev/xmux/proto/AttachState;
+	public abstract fun getAttachTerminal ()Ldev/xmux/proto/AttachTerminal;
+	public abstract fun getBye ()Ldev/xmux/proto/Bye;
+	public abstract fun getChecksum ()Ldev/xmux/proto/Checksum;
+	public abstract fun getCursor ()Ldev/xmux/proto/Cursor;
+	public abstract fun getDetachTerminal ()Ldev/xmux/proto/DetachTerminal;
+	public abstract fun getFocusDirection ()Ldev/xmux/proto/FocusDirection;
+	public abstract fun getFocusPane ()Ldev/xmux/proto/FocusPane;
+	public abstract fun getFocusTab ()Ldev/xmux/proto/FocusTab;
+	public abstract fun getHello ()Ldev/xmux/proto/Hello;
+	public abstract fun getInput ()Ldev/xmux/proto/Input;
+	public abstract fun getPayloadCase ()Ldev/xmux/proto/Frame$PayloadCase;
+	public abstract fun getPing ()Ldev/xmux/proto/Ping;
+	public abstract fun getPong ()Ldev/xmux/proto/Pong;
+	public abstract fun getResize ()Ldev/xmux/proto/Resize;
+	public abstract fun getResyncTerminal ()Ldev/xmux/proto/ResyncTerminal;
+	public abstract fun getRows ()Ldev/xmux/proto/Rows;
+	public abstract fun getStats ()Ldev/xmux/proto/Stats;
+	public abstract fun getTopology ()Ldev/xmux/proto/Topology;
+	public abstract fun getWelcome ()Ldev/xmux/proto/Welcome;
+	public abstract fun hasAttachState ()Z
+	public abstract fun hasAttachTerminal ()Z
+	public abstract fun hasBye ()Z
+	public abstract fun hasChecksum ()Z
+	public abstract fun hasCursor ()Z
+	public abstract fun hasDetachTerminal ()Z
+	public abstract fun hasFocusDirection ()Z
+	public abstract fun hasFocusPane ()Z
+	public abstract fun hasFocusTab ()Z
+	public abstract fun hasHello ()Z
+	public abstract fun hasInput ()Z
+	public abstract fun hasPing ()Z
+	public abstract fun hasPong ()Z
+	public abstract fun hasResize ()Z
+	public abstract fun hasResyncTerminal ()Z
+	public abstract fun hasRows ()Z
+	public abstract fun hasStats ()Z
+	public abstract fun hasTopology ()Z
+	public abstract fun hasWelcome ()Z
+}
+
+public final class dev/xmux/proto/Hello : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/HelloOrBuilder {
+	public static final field CLIENT_FIELD_NUMBER I
+	public static final field DEVICE_NAME_FIELD_NUMBER I
+	public static final field PAIRING_CODE_FIELD_NUMBER I
+	public static final field PROTOCOL_VERSION_FIELD_NUMBER I
+	public static final field TOKEN_FIELD_NUMBER I
+	public fun getClient ()Ljava/lang/String;
+	public fun getClientBytes ()Lcom/google/protobuf/ByteString;
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Hello;
+	public fun getDeviceName ()Ljava/lang/String;
+	public fun getDeviceNameBytes ()Lcom/google/protobuf/ByteString;
+	public fun getPairingCode ()Ljava/lang/String;
+	public fun getPairingCodeBytes ()Lcom/google/protobuf/ByteString;
+	public fun getProtocolVersion ()I
+	public fun getToken ()Ljava/lang/String;
+	public fun getTokenBytes ()Lcom/google/protobuf/ByteString;
+	public static fun newBuilder ()Ldev/xmux/proto/Hello$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Hello;)Ldev/xmux/proto/Hello$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Hello;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Hello;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Hello;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Hello;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Hello;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Hello;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Hello;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Hello;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Hello;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Hello;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Hello;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Hello;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Hello$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/HelloOrBuilder {
+	public fun clearClient ()Ldev/xmux/proto/Hello$Builder;
+	public fun clearDeviceName ()Ldev/xmux/proto/Hello$Builder;
+	public fun clearPairingCode ()Ldev/xmux/proto/Hello$Builder;
+	public fun clearProtocolVersion ()Ldev/xmux/proto/Hello$Builder;
+	public fun clearToken ()Ldev/xmux/proto/Hello$Builder;
+	public fun getClient ()Ljava/lang/String;
+	public fun getClientBytes ()Lcom/google/protobuf/ByteString;
+	public fun getDeviceName ()Ljava/lang/String;
+	public fun getDeviceNameBytes ()Lcom/google/protobuf/ByteString;
+	public fun getPairingCode ()Ljava/lang/String;
+	public fun getPairingCodeBytes ()Lcom/google/protobuf/ByteString;
+	public fun getProtocolVersion ()I
+	public fun getToken ()Ljava/lang/String;
+	public fun getTokenBytes ()Lcom/google/protobuf/ByteString;
+	public fun setClient (Ljava/lang/String;)Ldev/xmux/proto/Hello$Builder;
+	public fun setClientBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Hello$Builder;
+	public fun setDeviceName (Ljava/lang/String;)Ldev/xmux/proto/Hello$Builder;
+	public fun setDeviceNameBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Hello$Builder;
+	public fun setPairingCode (Ljava/lang/String;)Ldev/xmux/proto/Hello$Builder;
+	public fun setPairingCodeBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Hello$Builder;
+	public fun setProtocolVersion (I)Ldev/xmux/proto/Hello$Builder;
+	public fun setToken (Ljava/lang/String;)Ldev/xmux/proto/Hello$Builder;
+	public fun setTokenBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Hello$Builder;
+}
+
+public final class dev/xmux/proto/HelloKt {
+	public static final field INSTANCE Ldev/xmux/proto/HelloKt;
+}
+
+public final class dev/xmux/proto/HelloKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/HelloKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Hello$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Hello;
+	public final fun clearClient ()V
+	public final fun clearDeviceName ()V
+	public final fun clearPairingCode ()V
+	public final fun clearProtocolVersion ()V
+	public final fun clearToken ()V
+	public final fun getClient ()Ljava/lang/String;
+	public final fun getDeviceName ()Ljava/lang/String;
+	public final fun getPairingCode ()Ljava/lang/String;
+	public final fun getProtocolVersion ()I
+	public final fun getToken ()Ljava/lang/String;
+	public final fun setClient (Ljava/lang/String;)V
+	public final fun setDeviceName (Ljava/lang/String;)V
+	public final fun setPairingCode (Ljava/lang/String;)V
+	public final fun setProtocolVersion (I)V
+	public final fun setToken (Ljava/lang/String;)V
+}
+
+public final class dev/xmux/proto/HelloKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Hello$Builder;)Ldev/xmux/proto/HelloKt$Dsl;
+}
+
+public final class dev/xmux/proto/HelloKtKt {
+	public static final fun -initializehello (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Hello;
+	public static final fun copy (Ldev/xmux/proto/Hello;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Hello;
+}
+
+public abstract interface class dev/xmux/proto/HelloOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getClient ()Ljava/lang/String;
+	public abstract fun getClientBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun getDeviceName ()Ljava/lang/String;
+	public abstract fun getDeviceNameBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun getPairingCode ()Ljava/lang/String;
+	public abstract fun getPairingCodeBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun getProtocolVersion ()I
+	public abstract fun getToken ()Ljava/lang/String;
+	public abstract fun getTokenBytes ()Lcom/google/protobuf/ByteString;
+}
+
+public final class dev/xmux/proto/Input : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/InputOrBuilder {
+	public static final field IDEMPOTENCY_FIELD_NUMBER I
+	public static final field KEYS_FIELD_NUMBER I
+	public static final field MOUSE_FIELD_NUMBER I
+	public static final field TERMINAL_FIELD_NUMBER I
+	public static final field TEXT_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Input;
+	public fun getIdempotency ()J
+	public fun getKeys (I)Ldev/xmux/proto/KeyPress;
+	public fun getKeysCount ()I
+	public fun getKeysList ()Ljava/util/List;
+	public fun getKeysOrBuilder (I)Ldev/xmux/proto/KeyPressOrBuilder;
+	public fun getKeysOrBuilderList ()Ljava/util/List;
+	public fun getMouse ()Ldev/xmux/proto/MouseEvent;
+	public fun getTerminal ()I
+	public fun getText ()Ljava/lang/String;
+	public fun getTextBytes ()Lcom/google/protobuf/ByteString;
+	public fun hasMouse ()Z
+	public static fun newBuilder ()Ldev/xmux/proto/Input$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Input;)Ldev/xmux/proto/Input$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Input;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Input;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Input;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Input;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Input;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Input;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Input;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Input;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Input;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Input;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Input;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Input;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Input$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/InputOrBuilder {
+	public fun addAllKeys (Ljava/lang/Iterable;)Ldev/xmux/proto/Input$Builder;
+	public fun addKeys (ILdev/xmux/proto/KeyPress$Builder;)Ldev/xmux/proto/Input$Builder;
+	public fun addKeys (ILdev/xmux/proto/KeyPress;)Ldev/xmux/proto/Input$Builder;
+	public fun addKeys (Ldev/xmux/proto/KeyPress$Builder;)Ldev/xmux/proto/Input$Builder;
+	public fun addKeys (Ldev/xmux/proto/KeyPress;)Ldev/xmux/proto/Input$Builder;
+	public fun clearIdempotency ()Ldev/xmux/proto/Input$Builder;
+	public fun clearKeys ()Ldev/xmux/proto/Input$Builder;
+	public fun clearMouse ()Ldev/xmux/proto/Input$Builder;
+	public fun clearTerminal ()Ldev/xmux/proto/Input$Builder;
+	public fun clearText ()Ldev/xmux/proto/Input$Builder;
+	public fun getIdempotency ()J
+	public fun getKeys (I)Ldev/xmux/proto/KeyPress;
+	public fun getKeysCount ()I
+	public fun getKeysList ()Ljava/util/List;
+	public fun getMouse ()Ldev/xmux/proto/MouseEvent;
+	public fun getTerminal ()I
+	public fun getText ()Ljava/lang/String;
+	public fun getTextBytes ()Lcom/google/protobuf/ByteString;
+	public fun hasMouse ()Z
+	public fun mergeMouse (Ldev/xmux/proto/MouseEvent;)Ldev/xmux/proto/Input$Builder;
+	public fun removeKeys (I)Ldev/xmux/proto/Input$Builder;
+	public fun setIdempotency (J)Ldev/xmux/proto/Input$Builder;
+	public fun setKeys (ILdev/xmux/proto/KeyPress$Builder;)Ldev/xmux/proto/Input$Builder;
+	public fun setKeys (ILdev/xmux/proto/KeyPress;)Ldev/xmux/proto/Input$Builder;
+	public fun setMouse (Ldev/xmux/proto/MouseEvent$Builder;)Ldev/xmux/proto/Input$Builder;
+	public fun setMouse (Ldev/xmux/proto/MouseEvent;)Ldev/xmux/proto/Input$Builder;
+	public fun setTerminal (I)Ldev/xmux/proto/Input$Builder;
+	public fun setText (Ljava/lang/String;)Ldev/xmux/proto/Input$Builder;
+	public fun setTextBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Input$Builder;
+}
+
+public final class dev/xmux/proto/InputKt {
+	public static final field INSTANCE Ldev/xmux/proto/InputKt;
+}
+
+public final class dev/xmux/proto/InputKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/InputKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Input$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Input;
+	public final synthetic fun addAllKeys (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun addKeys (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/KeyPress;)V
+	public final fun clearIdempotency ()V
+	public final synthetic fun clearKeys (Lcom/google/protobuf/kotlin/DslList;)V
+	public final fun clearMouse ()V
+	public final fun clearTerminal ()V
+	public final fun clearText ()V
+	public final fun getIdempotency ()J
+	public final synthetic fun getKeys ()Lcom/google/protobuf/kotlin/DslList;
+	public final fun getMouse ()Ldev/xmux/proto/MouseEvent;
+	public final fun getMouseOrNull (Ldev/xmux/proto/InputKt$Dsl;)Ldev/xmux/proto/MouseEvent;
+	public final fun getTerminal ()I
+	public final fun getText ()Ljava/lang/String;
+	public final fun hasMouse ()Z
+	public final synthetic fun plusAssignAllKeys (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun plusAssignKeys (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/KeyPress;)V
+	public final fun setIdempotency (J)V
+	public final synthetic fun setKeys (Lcom/google/protobuf/kotlin/DslList;ILdev/xmux/proto/KeyPress;)V
+	public final fun setMouse (Ldev/xmux/proto/MouseEvent;)V
+	public final fun setTerminal (I)V
+	public final fun setText (Ljava/lang/String;)V
+}
+
+public final class dev/xmux/proto/InputKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Input$Builder;)Ldev/xmux/proto/InputKt$Dsl;
+}
+
+public final class dev/xmux/proto/InputKt$Dsl$KeysProxy : com/google/protobuf/kotlin/DslProxy {
+}
+
+public final class dev/xmux/proto/InputKtKt {
+	public static final fun -initializeinput (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Input;
+	public static final fun copy (Ldev/xmux/proto/Input;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Input;
+	public static final fun getMouseOrNull (Ldev/xmux/proto/InputOrBuilder;)Ldev/xmux/proto/MouseEvent;
+}
+
+public abstract interface class dev/xmux/proto/InputOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getIdempotency ()J
+	public abstract fun getKeys (I)Ldev/xmux/proto/KeyPress;
+	public abstract fun getKeysCount ()I
+	public abstract fun getKeysList ()Ljava/util/List;
+	public abstract fun getMouse ()Ldev/xmux/proto/MouseEvent;
+	public abstract fun getTerminal ()I
+	public abstract fun getText ()Ljava/lang/String;
+	public abstract fun getTextBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun hasMouse ()Z
+}
+
+public final class dev/xmux/proto/KeyPress : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/KeyPressOrBuilder {
+	public static final field KEY_FIELD_NUMBER I
+	public static final field MODS_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/KeyPress;
+	public fun getKey ()Ljava/lang/String;
+	public fun getKeyBytes ()Lcom/google/protobuf/ByteString;
+	public fun getMods ()I
+	public static fun newBuilder ()Ldev/xmux/proto/KeyPress$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/KeyPress;)Ldev/xmux/proto/KeyPress$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/KeyPress;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/KeyPress;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/KeyPress;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/KeyPress;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/KeyPress;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/KeyPress;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/KeyPress;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/KeyPress;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/KeyPress;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/KeyPress;
+	public static fun parseFrom ([B)Ldev/xmux/proto/KeyPress;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/KeyPress;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/KeyPress$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/KeyPressOrBuilder {
+	public fun clearKey ()Ldev/xmux/proto/KeyPress$Builder;
+	public fun clearMods ()Ldev/xmux/proto/KeyPress$Builder;
+	public fun getKey ()Ljava/lang/String;
+	public fun getKeyBytes ()Lcom/google/protobuf/ByteString;
+	public fun getMods ()I
+	public fun setKey (Ljava/lang/String;)Ldev/xmux/proto/KeyPress$Builder;
+	public fun setKeyBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/KeyPress$Builder;
+	public fun setMods (I)Ldev/xmux/proto/KeyPress$Builder;
+}
+
+public final class dev/xmux/proto/KeyPressKt {
+	public static final field INSTANCE Ldev/xmux/proto/KeyPressKt;
+}
+
+public final class dev/xmux/proto/KeyPressKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/KeyPressKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/KeyPress$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/KeyPress;
+	public final fun clearKey ()V
+	public final fun clearMods ()V
+	public final fun getKey ()Ljava/lang/String;
+	public final fun getMods ()I
+	public final fun setKey (Ljava/lang/String;)V
+	public final fun setMods (I)V
+}
+
+public final class dev/xmux/proto/KeyPressKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/KeyPress$Builder;)Ldev/xmux/proto/KeyPressKt$Dsl;
+}
+
+public final class dev/xmux/proto/KeyPressKtKt {
+	public static final fun -initializekeyPress (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/KeyPress;
+	public static final fun copy (Ldev/xmux/proto/KeyPress;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/KeyPress;
+}
+
+public abstract interface class dev/xmux/proto/KeyPressOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getKey ()Ljava/lang/String;
+	public abstract fun getKeyBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun getMods ()I
+}
+
+public final class dev/xmux/proto/LayoutNode : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/LayoutNodeOrBuilder {
+	public static final field CHILDREN_FIELD_NUMBER I
+	public static final field DIRECTION_FIELD_NUMBER I
+	public static final field KIND_FIELD_NUMBER I
+	public static final field PANE_FIELD_NUMBER I
+	public static final field RATIO_FIELD_NUMBER I
+	public static final field WIDTHS_FIELD_NUMBER I
+	public fun getChildren (I)Ldev/xmux/proto/LayoutNode;
+	public fun getChildrenCount ()I
+	public fun getChildrenList ()Ljava/util/List;
+	public fun getChildrenOrBuilder (I)Ldev/xmux/proto/LayoutNodeOrBuilder;
+	public fun getChildrenOrBuilderList ()Ljava/util/List;
+	public static fun getDefaultInstance ()Ldev/xmux/proto/LayoutNode;
+	public fun getDirection ()Ldev/xmux/proto/SplitDirection;
+	public fun getDirectionValue ()I
+	public fun getKind ()Ldev/xmux/proto/NodeKind;
+	public fun getKindValue ()I
+	public fun getPane ()I
+	public fun getRatio ()F
+	public fun getWidths (I)F
+	public fun getWidthsCount ()I
+	public fun getWidthsList ()Ljava/util/List;
+	public static fun newBuilder ()Ldev/xmux/proto/LayoutNode$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/LayoutNode;)Ldev/xmux/proto/LayoutNode$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/LayoutNode;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/LayoutNode;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/LayoutNode;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/LayoutNode;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/LayoutNode;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/LayoutNode;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/LayoutNode;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/LayoutNode;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/LayoutNode;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/LayoutNode;
+	public static fun parseFrom ([B)Ldev/xmux/proto/LayoutNode;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/LayoutNode;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/LayoutNode$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/LayoutNodeOrBuilder {
+	public fun addAllChildren (Ljava/lang/Iterable;)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun addAllWidths (Ljava/lang/Iterable;)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun addChildren (ILdev/xmux/proto/LayoutNode$Builder;)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun addChildren (ILdev/xmux/proto/LayoutNode;)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun addChildren (Ldev/xmux/proto/LayoutNode$Builder;)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun addChildren (Ldev/xmux/proto/LayoutNode;)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun addWidths (F)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun clearChildren ()Ldev/xmux/proto/LayoutNode$Builder;
+	public fun clearDirection ()Ldev/xmux/proto/LayoutNode$Builder;
+	public fun clearKind ()Ldev/xmux/proto/LayoutNode$Builder;
+	public fun clearPane ()Ldev/xmux/proto/LayoutNode$Builder;
+	public fun clearRatio ()Ldev/xmux/proto/LayoutNode$Builder;
+	public fun clearWidths ()Ldev/xmux/proto/LayoutNode$Builder;
+	public fun getChildren (I)Ldev/xmux/proto/LayoutNode;
+	public fun getChildrenCount ()I
+	public fun getChildrenList ()Ljava/util/List;
+	public fun getDirection ()Ldev/xmux/proto/SplitDirection;
+	public fun getDirectionValue ()I
+	public fun getKind ()Ldev/xmux/proto/NodeKind;
+	public fun getKindValue ()I
+	public fun getPane ()I
+	public fun getRatio ()F
+	public fun getWidths (I)F
+	public fun getWidthsCount ()I
+	public fun getWidthsList ()Ljava/util/List;
+	public fun removeChildren (I)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun setChildren (ILdev/xmux/proto/LayoutNode$Builder;)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun setChildren (ILdev/xmux/proto/LayoutNode;)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun setDirection (Ldev/xmux/proto/SplitDirection;)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun setDirectionValue (I)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun setKind (Ldev/xmux/proto/NodeKind;)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun setKindValue (I)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun setPane (I)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun setRatio (F)Ldev/xmux/proto/LayoutNode$Builder;
+	public fun setWidths (IF)Ldev/xmux/proto/LayoutNode$Builder;
+}
+
+public final class dev/xmux/proto/LayoutNodeKt {
+	public static final field INSTANCE Ldev/xmux/proto/LayoutNodeKt;
+}
+
+public final class dev/xmux/proto/LayoutNodeKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/LayoutNodeKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/LayoutNode$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/LayoutNode;
+	public final synthetic fun addAllChildren (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun addAllWidths (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun addChildren (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/LayoutNode;)V
+	public final synthetic fun addWidths (Lcom/google/protobuf/kotlin/DslList;F)V
+	public final synthetic fun clearChildren (Lcom/google/protobuf/kotlin/DslList;)V
+	public final fun clearDirection ()V
+	public final fun clearKind ()V
+	public final fun clearPane ()V
+	public final fun clearRatio ()V
+	public final synthetic fun clearWidths (Lcom/google/protobuf/kotlin/DslList;)V
+	public final synthetic fun getChildren ()Lcom/google/protobuf/kotlin/DslList;
+	public final fun getDirection ()Ldev/xmux/proto/SplitDirection;
+	public final fun getDirectionValue ()I
+	public final fun getKind ()Ldev/xmux/proto/NodeKind;
+	public final fun getKindValue ()I
+	public final fun getPane ()I
+	public final fun getRatio ()F
+	public final synthetic fun getWidths ()Lcom/google/protobuf/kotlin/DslList;
+	public final synthetic fun plusAssignAllChildren (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun plusAssignAllWidths (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun plusAssignChildren (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/LayoutNode;)V
+	public final synthetic fun plusAssignWidths (Lcom/google/protobuf/kotlin/DslList;F)V
+	public final synthetic fun setChildren (Lcom/google/protobuf/kotlin/DslList;ILdev/xmux/proto/LayoutNode;)V
+	public final fun setDirection (Ldev/xmux/proto/SplitDirection;)V
+	public final fun setDirectionValue (I)V
+	public final fun setKind (Ldev/xmux/proto/NodeKind;)V
+	public final fun setKindValue (I)V
+	public final fun setPane (I)V
+	public final fun setRatio (F)V
+	public final synthetic fun setWidths (Lcom/google/protobuf/kotlin/DslList;IF)V
+}
+
+public final class dev/xmux/proto/LayoutNodeKt$Dsl$ChildrenProxy : com/google/protobuf/kotlin/DslProxy {
+}
+
+public final class dev/xmux/proto/LayoutNodeKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/LayoutNode$Builder;)Ldev/xmux/proto/LayoutNodeKt$Dsl;
+}
+
+public final class dev/xmux/proto/LayoutNodeKt$Dsl$WidthsProxy : com/google/protobuf/kotlin/DslProxy {
+}
+
+public final class dev/xmux/proto/LayoutNodeKtKt {
+	public static final fun -initializelayoutNode (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/LayoutNode;
+	public static final fun copy (Ldev/xmux/proto/LayoutNode;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/LayoutNode;
+}
+
+public abstract interface class dev/xmux/proto/LayoutNodeOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getChildren (I)Ldev/xmux/proto/LayoutNode;
+	public abstract fun getChildrenCount ()I
+	public abstract fun getChildrenList ()Ljava/util/List;
+	public abstract fun getDirection ()Ldev/xmux/proto/SplitDirection;
+	public abstract fun getDirectionValue ()I
+	public abstract fun getKind ()Ldev/xmux/proto/NodeKind;
+	public abstract fun getKindValue ()I
+	public abstract fun getPane ()I
+	public abstract fun getRatio ()F
+	public abstract fun getWidths (I)F
+	public abstract fun getWidthsCount ()I
+	public abstract fun getWidthsList ()Ljava/util/List;
+}
+
+public final class dev/xmux/proto/MouseAction : java/lang/Enum, com/google/protobuf/Internal$EnumLite {
+	public static final field MOUSE_ACTION_MOVE Ldev/xmux/proto/MouseAction;
+	public static final field MOUSE_ACTION_MOVE_VALUE I
+	public static final field MOUSE_ACTION_PRESS Ldev/xmux/proto/MouseAction;
+	public static final field MOUSE_ACTION_PRESS_VALUE I
+	public static final field MOUSE_ACTION_RELEASE Ldev/xmux/proto/MouseAction;
+	public static final field MOUSE_ACTION_RELEASE_VALUE I
+	public static final field MOUSE_ACTION_SCROLL Ldev/xmux/proto/MouseAction;
+	public static final field MOUSE_ACTION_SCROLL_VALUE I
+	public static final field UNRECOGNIZED Ldev/xmux/proto/MouseAction;
+	public static fun forNumber (I)Ldev/xmux/proto/MouseAction;
+	public final fun getNumber ()I
+	public static fun internalGetValueMap ()Lcom/google/protobuf/Internal$EnumLiteMap;
+	public static fun internalGetVerifier ()Lcom/google/protobuf/Internal$EnumVerifier;
+	public static fun valueOf (I)Ldev/xmux/proto/MouseAction;
+	public static fun valueOf (Ljava/lang/String;)Ldev/xmux/proto/MouseAction;
+	public static fun values ()[Ldev/xmux/proto/MouseAction;
+}
+
+public final class dev/xmux/proto/MouseEvent : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/MouseEventOrBuilder {
+	public static final field ACTION_FIELD_NUMBER I
+	public static final field BUTTON_FIELD_NUMBER I
+	public static final field COL_FIELD_NUMBER I
+	public static final field DX_FIELD_NUMBER I
+	public static final field DY_FIELD_NUMBER I
+	public static final field MODS_FIELD_NUMBER I
+	public static final field ROW_FIELD_NUMBER I
+	public fun getAction ()Ldev/xmux/proto/MouseAction;
+	public fun getActionValue ()I
+	public fun getButton ()I
+	public fun getCol ()I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/MouseEvent;
+	public fun getDx ()I
+	public fun getDy ()I
+	public fun getMods ()I
+	public fun getRow ()I
+	public static fun newBuilder ()Ldev/xmux/proto/MouseEvent$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/MouseEvent;)Ldev/xmux/proto/MouseEvent$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/MouseEvent;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/MouseEvent;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/MouseEvent;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/MouseEvent;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/MouseEvent;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/MouseEvent;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/MouseEvent;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/MouseEvent;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/MouseEvent;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/MouseEvent;
+	public static fun parseFrom ([B)Ldev/xmux/proto/MouseEvent;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/MouseEvent;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/MouseEvent$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/MouseEventOrBuilder {
+	public fun clearAction ()Ldev/xmux/proto/MouseEvent$Builder;
+	public fun clearButton ()Ldev/xmux/proto/MouseEvent$Builder;
+	public fun clearCol ()Ldev/xmux/proto/MouseEvent$Builder;
+	public fun clearDx ()Ldev/xmux/proto/MouseEvent$Builder;
+	public fun clearDy ()Ldev/xmux/proto/MouseEvent$Builder;
+	public fun clearMods ()Ldev/xmux/proto/MouseEvent$Builder;
+	public fun clearRow ()Ldev/xmux/proto/MouseEvent$Builder;
+	public fun getAction ()Ldev/xmux/proto/MouseAction;
+	public fun getActionValue ()I
+	public fun getButton ()I
+	public fun getCol ()I
+	public fun getDx ()I
+	public fun getDy ()I
+	public fun getMods ()I
+	public fun getRow ()I
+	public fun setAction (Ldev/xmux/proto/MouseAction;)Ldev/xmux/proto/MouseEvent$Builder;
+	public fun setActionValue (I)Ldev/xmux/proto/MouseEvent$Builder;
+	public fun setButton (I)Ldev/xmux/proto/MouseEvent$Builder;
+	public fun setCol (I)Ldev/xmux/proto/MouseEvent$Builder;
+	public fun setDx (I)Ldev/xmux/proto/MouseEvent$Builder;
+	public fun setDy (I)Ldev/xmux/proto/MouseEvent$Builder;
+	public fun setMods (I)Ldev/xmux/proto/MouseEvent$Builder;
+	public fun setRow (I)Ldev/xmux/proto/MouseEvent$Builder;
+}
+
+public final class dev/xmux/proto/MouseEventKt {
+	public static final field INSTANCE Ldev/xmux/proto/MouseEventKt;
+}
+
+public final class dev/xmux/proto/MouseEventKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/MouseEventKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/MouseEvent$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/MouseEvent;
+	public final fun clearAction ()V
+	public final fun clearButton ()V
+	public final fun clearCol ()V
+	public final fun clearDx ()V
+	public final fun clearDy ()V
+	public final fun clearMods ()V
+	public final fun clearRow ()V
+	public final fun getAction ()Ldev/xmux/proto/MouseAction;
+	public final fun getActionValue ()I
+	public final fun getButton ()I
+	public final fun getCol ()I
+	public final fun getDx ()I
+	public final fun getDy ()I
+	public final fun getMods ()I
+	public final fun getRow ()I
+	public final fun setAction (Ldev/xmux/proto/MouseAction;)V
+	public final fun setActionValue (I)V
+	public final fun setButton (I)V
+	public final fun setCol (I)V
+	public final fun setDx (I)V
+	public final fun setDy (I)V
+	public final fun setMods (I)V
+	public final fun setRow (I)V
+}
+
+public final class dev/xmux/proto/MouseEventKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/MouseEvent$Builder;)Ldev/xmux/proto/MouseEventKt$Dsl;
+}
+
+public final class dev/xmux/proto/MouseEventKtKt {
+	public static final fun -initializemouseEvent (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/MouseEvent;
+	public static final fun copy (Ldev/xmux/proto/MouseEvent;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/MouseEvent;
+}
+
+public abstract interface class dev/xmux/proto/MouseEventOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getAction ()Ldev/xmux/proto/MouseAction;
+	public abstract fun getActionValue ()I
+	public abstract fun getButton ()I
+	public abstract fun getCol ()I
+	public abstract fun getDx ()I
+	public abstract fun getDy ()I
+	public abstract fun getMods ()I
+	public abstract fun getRow ()I
+}
+
+public final class dev/xmux/proto/NodeKind : java/lang/Enum, com/google/protobuf/Internal$EnumLite {
+	public static final field NODE_KIND_LEAF Ldev/xmux/proto/NodeKind;
+	public static final field NODE_KIND_LEAF_VALUE I
+	public static final field NODE_KIND_SPLIT Ldev/xmux/proto/NodeKind;
+	public static final field NODE_KIND_SPLIT_VALUE I
+	public static final field NODE_KIND_STACK Ldev/xmux/proto/NodeKind;
+	public static final field NODE_KIND_STACK_VALUE I
+	public static final field NODE_KIND_VIEWPORT Ldev/xmux/proto/NodeKind;
+	public static final field NODE_KIND_VIEWPORT_VALUE I
+	public static final field UNRECOGNIZED Ldev/xmux/proto/NodeKind;
+	public static fun forNumber (I)Ldev/xmux/proto/NodeKind;
+	public final fun getNumber ()I
+	public static fun internalGetValueMap ()Lcom/google/protobuf/Internal$EnumLiteMap;
+	public static fun internalGetVerifier ()Lcom/google/protobuf/Internal$EnumVerifier;
+	public static fun valueOf (I)Ldev/xmux/proto/NodeKind;
+	public static fun valueOf (Ljava/lang/String;)Ldev/xmux/proto/NodeKind;
+	public static fun values ()[Ldev/xmux/proto/NodeKind;
+}
+
+public final class dev/xmux/proto/Pane : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/PaneOrBuilder {
+	public static final field ACTIVE_TAB_FIELD_NUMBER I
+	public static final field CMUX_ID_FIELD_NUMBER I
+	public static final field ID_FIELD_NUMBER I
+	public static final field TABS_FIELD_NUMBER I
+	public fun getActiveTab ()I
+	public fun getCmuxId ()Ljava/lang/String;
+	public fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Pane;
+	public fun getId ()I
+	public fun getTabs (I)Ldev/xmux/proto/Tab;
+	public fun getTabsCount ()I
+	public fun getTabsList ()Ljava/util/List;
+	public fun getTabsOrBuilder (I)Ldev/xmux/proto/TabOrBuilder;
+	public fun getTabsOrBuilderList ()Ljava/util/List;
+	public static fun newBuilder ()Ldev/xmux/proto/Pane$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Pane;)Ldev/xmux/proto/Pane$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Pane;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Pane;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Pane;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Pane;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Pane;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Pane;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Pane;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Pane;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Pane;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Pane;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Pane;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Pane;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Pane$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/PaneOrBuilder {
+	public fun addAllTabs (Ljava/lang/Iterable;)Ldev/xmux/proto/Pane$Builder;
+	public fun addTabs (ILdev/xmux/proto/Tab$Builder;)Ldev/xmux/proto/Pane$Builder;
+	public fun addTabs (ILdev/xmux/proto/Tab;)Ldev/xmux/proto/Pane$Builder;
+	public fun addTabs (Ldev/xmux/proto/Tab$Builder;)Ldev/xmux/proto/Pane$Builder;
+	public fun addTabs (Ldev/xmux/proto/Tab;)Ldev/xmux/proto/Pane$Builder;
+	public fun clearActiveTab ()Ldev/xmux/proto/Pane$Builder;
+	public fun clearCmuxId ()Ldev/xmux/proto/Pane$Builder;
+	public fun clearId ()Ldev/xmux/proto/Pane$Builder;
+	public fun clearTabs ()Ldev/xmux/proto/Pane$Builder;
+	public fun getActiveTab ()I
+	public fun getCmuxId ()Ljava/lang/String;
+	public fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public fun getId ()I
+	public fun getTabs (I)Ldev/xmux/proto/Tab;
+	public fun getTabsCount ()I
+	public fun getTabsList ()Ljava/util/List;
+	public fun removeTabs (I)Ldev/xmux/proto/Pane$Builder;
+	public fun setActiveTab (I)Ldev/xmux/proto/Pane$Builder;
+	public fun setCmuxId (Ljava/lang/String;)Ldev/xmux/proto/Pane$Builder;
+	public fun setCmuxIdBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Pane$Builder;
+	public fun setId (I)Ldev/xmux/proto/Pane$Builder;
+	public fun setTabs (ILdev/xmux/proto/Tab$Builder;)Ldev/xmux/proto/Pane$Builder;
+	public fun setTabs (ILdev/xmux/proto/Tab;)Ldev/xmux/proto/Pane$Builder;
+}
+
+public final class dev/xmux/proto/PaneKt {
+	public static final field INSTANCE Ldev/xmux/proto/PaneKt;
+}
+
+public final class dev/xmux/proto/PaneKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/PaneKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Pane$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Pane;
+	public final synthetic fun addAllTabs (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun addTabs (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/Tab;)V
+	public final fun clearActiveTab ()V
+	public final fun clearCmuxId ()V
+	public final fun clearId ()V
+	public final synthetic fun clearTabs (Lcom/google/protobuf/kotlin/DslList;)V
+	public final fun getActiveTab ()I
+	public final fun getCmuxId ()Ljava/lang/String;
+	public final fun getId ()I
+	public final synthetic fun getTabs ()Lcom/google/protobuf/kotlin/DslList;
+	public final synthetic fun plusAssignAllTabs (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun plusAssignTabs (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/Tab;)V
+	public final fun setActiveTab (I)V
+	public final fun setCmuxId (Ljava/lang/String;)V
+	public final fun setId (I)V
+	public final synthetic fun setTabs (Lcom/google/protobuf/kotlin/DslList;ILdev/xmux/proto/Tab;)V
+}
+
+public final class dev/xmux/proto/PaneKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Pane$Builder;)Ldev/xmux/proto/PaneKt$Dsl;
+}
+
+public final class dev/xmux/proto/PaneKt$Dsl$TabsProxy : com/google/protobuf/kotlin/DslProxy {
+}
+
+public final class dev/xmux/proto/PaneKtKt {
+	public static final fun -initializepane (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Pane;
+	public static final fun copy (Ldev/xmux/proto/Pane;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Pane;
+}
+
+public abstract interface class dev/xmux/proto/PaneOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getActiveTab ()I
+	public abstract fun getCmuxId ()Ljava/lang/String;
+	public abstract fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun getId ()I
+	public abstract fun getTabs (I)Ldev/xmux/proto/Tab;
+	public abstract fun getTabsCount ()I
+	public abstract fun getTabsList ()Ljava/util/List;
+}
+
+public final class dev/xmux/proto/Ping : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/PingOrBuilder {
+	public static final field NONCE_FIELD_NUMBER I
+	public static final field SENT_NS_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Ping;
+	public fun getNonce ()J
+	public fun getSentNs ()J
+	public static fun newBuilder ()Ldev/xmux/proto/Ping$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Ping;)Ldev/xmux/proto/Ping$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Ping;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Ping;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Ping;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Ping;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Ping;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Ping;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Ping;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Ping;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Ping;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Ping;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Ping;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Ping;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Ping$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/PingOrBuilder {
+	public fun clearNonce ()Ldev/xmux/proto/Ping$Builder;
+	public fun clearSentNs ()Ldev/xmux/proto/Ping$Builder;
+	public fun getNonce ()J
+	public fun getSentNs ()J
+	public fun setNonce (J)Ldev/xmux/proto/Ping$Builder;
+	public fun setSentNs (J)Ldev/xmux/proto/Ping$Builder;
+}
+
+public final class dev/xmux/proto/PingKt {
+	public static final field INSTANCE Ldev/xmux/proto/PingKt;
+}
+
+public final class dev/xmux/proto/PingKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/PingKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Ping$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Ping;
+	public final fun clearNonce ()V
+	public final fun clearSentNs ()V
+	public final fun getNonce ()J
+	public final fun getSentNs ()J
+	public final fun setNonce (J)V
+	public final fun setSentNs (J)V
+}
+
+public final class dev/xmux/proto/PingKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Ping$Builder;)Ldev/xmux/proto/PingKt$Dsl;
+}
+
+public final class dev/xmux/proto/PingKtKt {
+	public static final fun -initializeping (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Ping;
+	public static final fun copy (Ldev/xmux/proto/Ping;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Ping;
+}
+
+public abstract interface class dev/xmux/proto/PingOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getNonce ()J
+	public abstract fun getSentNs ()J
+}
+
+public final class dev/xmux/proto/Pong : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/PongOrBuilder {
+	public static final field NONCE_FIELD_NUMBER I
+	public static final field SENT_NS_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Pong;
+	public fun getNonce ()J
+	public fun getSentNs ()J
+	public static fun newBuilder ()Ldev/xmux/proto/Pong$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Pong;)Ldev/xmux/proto/Pong$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Pong;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Pong;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Pong;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Pong;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Pong;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Pong;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Pong;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Pong;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Pong;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Pong;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Pong;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Pong;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Pong$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/PongOrBuilder {
+	public fun clearNonce ()Ldev/xmux/proto/Pong$Builder;
+	public fun clearSentNs ()Ldev/xmux/proto/Pong$Builder;
+	public fun getNonce ()J
+	public fun getSentNs ()J
+	public fun setNonce (J)Ldev/xmux/proto/Pong$Builder;
+	public fun setSentNs (J)Ldev/xmux/proto/Pong$Builder;
+}
+
+public final class dev/xmux/proto/PongKt {
+	public static final field INSTANCE Ldev/xmux/proto/PongKt;
+}
+
+public final class dev/xmux/proto/PongKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/PongKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Pong$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Pong;
+	public final fun clearNonce ()V
+	public final fun clearSentNs ()V
+	public final fun getNonce ()J
+	public final fun getSentNs ()J
+	public final fun setNonce (J)V
+	public final fun setSentNs (J)V
+}
+
+public final class dev/xmux/proto/PongKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Pong$Builder;)Ldev/xmux/proto/PongKt$Dsl;
+}
+
+public final class dev/xmux/proto/PongKtKt {
+	public static final fun -initializepong (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Pong;
+	public static final fun copy (Ldev/xmux/proto/Pong;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Pong;
+}
+
+public abstract interface class dev/xmux/proto/PongOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getNonce ()J
+	public abstract fun getSentNs ()J
+}
+
+public final class dev/xmux/proto/Resize : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/ResizeOrBuilder {
+	public static final field COLS_FIELD_NUMBER I
+	public static final field ROWS_FIELD_NUMBER I
+	public static final field TERMINAL_FIELD_NUMBER I
+	public fun getCols ()I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Resize;
+	public fun getRows ()I
+	public fun getTerminal ()I
+	public static fun newBuilder ()Ldev/xmux/proto/Resize$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Resize;)Ldev/xmux/proto/Resize$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Resize;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Resize;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Resize;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Resize;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Resize;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Resize;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Resize;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Resize;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Resize;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Resize;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Resize;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Resize;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Resize$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/ResizeOrBuilder {
+	public fun clearCols ()Ldev/xmux/proto/Resize$Builder;
+	public fun clearRows ()Ldev/xmux/proto/Resize$Builder;
+	public fun clearTerminal ()Ldev/xmux/proto/Resize$Builder;
+	public fun getCols ()I
+	public fun getRows ()I
+	public fun getTerminal ()I
+	public fun setCols (I)Ldev/xmux/proto/Resize$Builder;
+	public fun setRows (I)Ldev/xmux/proto/Resize$Builder;
+	public fun setTerminal (I)Ldev/xmux/proto/Resize$Builder;
+}
+
+public final class dev/xmux/proto/ResizeKt {
+	public static final field INSTANCE Ldev/xmux/proto/ResizeKt;
+}
+
+public final class dev/xmux/proto/ResizeKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/ResizeKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Resize$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Resize;
+	public final fun clearCols ()V
+	public final fun clearRows ()V
+	public final fun clearTerminal ()V
+	public final fun getCols ()I
+	public final fun getRows ()I
+	public final fun getTerminal ()I
+	public final fun setCols (I)V
+	public final fun setRows (I)V
+	public final fun setTerminal (I)V
+}
+
+public final class dev/xmux/proto/ResizeKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Resize$Builder;)Ldev/xmux/proto/ResizeKt$Dsl;
+}
+
+public final class dev/xmux/proto/ResizeKtKt {
+	public static final fun -initializeresize (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Resize;
+	public static final fun copy (Ldev/xmux/proto/Resize;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Resize;
+}
+
+public abstract interface class dev/xmux/proto/ResizeOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getCols ()I
+	public abstract fun getRows ()I
+	public abstract fun getTerminal ()I
+}
+
+public final class dev/xmux/proto/ResyncTerminal : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/ResyncTerminalOrBuilder {
+	public static final field TERMINAL_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/ResyncTerminal;
+	public fun getTerminal ()I
+	public static fun newBuilder ()Ldev/xmux/proto/ResyncTerminal$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/ResyncTerminal;)Ldev/xmux/proto/ResyncTerminal$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/ResyncTerminal;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/ResyncTerminal;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/ResyncTerminal;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/ResyncTerminal;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/ResyncTerminal;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/ResyncTerminal;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/ResyncTerminal;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/ResyncTerminal;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/ResyncTerminal;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/ResyncTerminal;
+	public static fun parseFrom ([B)Ldev/xmux/proto/ResyncTerminal;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/ResyncTerminal;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/ResyncTerminal$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/ResyncTerminalOrBuilder {
+	public fun clearTerminal ()Ldev/xmux/proto/ResyncTerminal$Builder;
+	public fun getTerminal ()I
+	public fun setTerminal (I)Ldev/xmux/proto/ResyncTerminal$Builder;
+}
+
+public final class dev/xmux/proto/ResyncTerminalKt {
+	public static final field INSTANCE Ldev/xmux/proto/ResyncTerminalKt;
+}
+
+public final class dev/xmux/proto/ResyncTerminalKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/ResyncTerminalKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/ResyncTerminal$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/ResyncTerminal;
+	public final fun clearTerminal ()V
+	public final fun getTerminal ()I
+	public final fun setTerminal (I)V
+}
+
+public final class dev/xmux/proto/ResyncTerminalKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/ResyncTerminal$Builder;)Ldev/xmux/proto/ResyncTerminalKt$Dsl;
+}
+
+public final class dev/xmux/proto/ResyncTerminalKtKt {
+	public static final fun -initializeresyncTerminal (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/ResyncTerminal;
+	public static final fun copy (Ldev/xmux/proto/ResyncTerminal;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/ResyncTerminal;
+}
+
+public abstract interface class dev/xmux/proto/ResyncTerminalOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getTerminal ()I
+}
+
+public final class dev/xmux/proto/Row : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/RowOrBuilder {
+	public static final field INDEX_FIELD_NUMBER I
+	public static final field RUNS_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Row;
+	public fun getIndex ()I
+	public fun getRuns (I)Ldev/xmux/proto/Run;
+	public fun getRunsCount ()I
+	public fun getRunsList ()Ljava/util/List;
+	public fun getRunsOrBuilder (I)Ldev/xmux/proto/RunOrBuilder;
+	public fun getRunsOrBuilderList ()Ljava/util/List;
+	public static fun newBuilder ()Ldev/xmux/proto/Row$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Row;)Ldev/xmux/proto/Row$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Row;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Row;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Row;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Row;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Row;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Row;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Row;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Row;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Row;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Row;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Row;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Row;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Row$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/RowOrBuilder {
+	public fun addAllRuns (Ljava/lang/Iterable;)Ldev/xmux/proto/Row$Builder;
+	public fun addRuns (ILdev/xmux/proto/Run$Builder;)Ldev/xmux/proto/Row$Builder;
+	public fun addRuns (ILdev/xmux/proto/Run;)Ldev/xmux/proto/Row$Builder;
+	public fun addRuns (Ldev/xmux/proto/Run$Builder;)Ldev/xmux/proto/Row$Builder;
+	public fun addRuns (Ldev/xmux/proto/Run;)Ldev/xmux/proto/Row$Builder;
+	public fun clearIndex ()Ldev/xmux/proto/Row$Builder;
+	public fun clearRuns ()Ldev/xmux/proto/Row$Builder;
+	public fun getIndex ()I
+	public fun getRuns (I)Ldev/xmux/proto/Run;
+	public fun getRunsCount ()I
+	public fun getRunsList ()Ljava/util/List;
+	public fun removeRuns (I)Ldev/xmux/proto/Row$Builder;
+	public fun setIndex (I)Ldev/xmux/proto/Row$Builder;
+	public fun setRuns (ILdev/xmux/proto/Run$Builder;)Ldev/xmux/proto/Row$Builder;
+	public fun setRuns (ILdev/xmux/proto/Run;)Ldev/xmux/proto/Row$Builder;
+}
+
+public final class dev/xmux/proto/RowKt {
+	public static final field INSTANCE Ldev/xmux/proto/RowKt;
+}
+
+public final class dev/xmux/proto/RowKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/RowKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Row$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Row;
+	public final synthetic fun addAllRuns (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun addRuns (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/Run;)V
+	public final fun clearIndex ()V
+	public final synthetic fun clearRuns (Lcom/google/protobuf/kotlin/DslList;)V
+	public final fun getIndex ()I
+	public final synthetic fun getRuns ()Lcom/google/protobuf/kotlin/DslList;
+	public final synthetic fun plusAssignAllRuns (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun plusAssignRuns (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/Run;)V
+	public final fun setIndex (I)V
+	public final synthetic fun setRuns (Lcom/google/protobuf/kotlin/DslList;ILdev/xmux/proto/Run;)V
+}
+
+public final class dev/xmux/proto/RowKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Row$Builder;)Ldev/xmux/proto/RowKt$Dsl;
+}
+
+public final class dev/xmux/proto/RowKt$Dsl$RunsProxy : com/google/protobuf/kotlin/DslProxy {
+}
+
+public final class dev/xmux/proto/RowKtKt {
+	public static final fun -initializerow (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Row;
+	public static final fun copy (Ldev/xmux/proto/Row;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Row;
+}
+
+public abstract interface class dev/xmux/proto/RowOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getIndex ()I
+	public abstract fun getRuns (I)Ldev/xmux/proto/Run;
+	public abstract fun getRunsCount ()I
+	public abstract fun getRunsList ()Ljava/util/List;
+}
+
+public final class dev/xmux/proto/Rows : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/RowsOrBuilder {
+	public static final field COLS_FIELD_NUMBER I
+	public static final field DEFAULT_BG_FIELD_NUMBER I
+	public static final field DEFAULT_FG_FIELD_NUMBER I
+	public static final field DIRTY_FIELD_NUMBER I
+	public static final field FULL_RESET_FIELD_NUMBER I
+	public static final field GENERATION_FIELD_NUMBER I
+	public static final field ROWS_FIELD_NUMBER I
+	public static final field SEQUENCE_FIELD_NUMBER I
+	public static final field TERMINAL_FIELD_NUMBER I
+	public fun getCols ()I
+	public fun getDefaultBg ()I
+	public fun getDefaultFg ()I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Rows;
+	public fun getDirty (I)Ldev/xmux/proto/Row;
+	public fun getDirtyCount ()I
+	public fun getDirtyList ()Ljava/util/List;
+	public fun getDirtyOrBuilder (I)Ldev/xmux/proto/RowOrBuilder;
+	public fun getDirtyOrBuilderList ()Ljava/util/List;
+	public fun getFullReset ()Z
+	public fun getGeneration ()I
+	public fun getRows ()I
+	public fun getSequence ()I
+	public fun getTerminal ()I
+	public static fun newBuilder ()Ldev/xmux/proto/Rows$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Rows;)Ldev/xmux/proto/Rows$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Rows;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Rows;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Rows;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Rows;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Rows;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Rows;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Rows;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Rows;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Rows;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Rows;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Rows;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Rows;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Rows$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/RowsOrBuilder {
+	public fun addAllDirty (Ljava/lang/Iterable;)Ldev/xmux/proto/Rows$Builder;
+	public fun addDirty (ILdev/xmux/proto/Row$Builder;)Ldev/xmux/proto/Rows$Builder;
+	public fun addDirty (ILdev/xmux/proto/Row;)Ldev/xmux/proto/Rows$Builder;
+	public fun addDirty (Ldev/xmux/proto/Row$Builder;)Ldev/xmux/proto/Rows$Builder;
+	public fun addDirty (Ldev/xmux/proto/Row;)Ldev/xmux/proto/Rows$Builder;
+	public fun clearCols ()Ldev/xmux/proto/Rows$Builder;
+	public fun clearDefaultBg ()Ldev/xmux/proto/Rows$Builder;
+	public fun clearDefaultFg ()Ldev/xmux/proto/Rows$Builder;
+	public fun clearDirty ()Ldev/xmux/proto/Rows$Builder;
+	public fun clearFullReset ()Ldev/xmux/proto/Rows$Builder;
+	public fun clearGeneration ()Ldev/xmux/proto/Rows$Builder;
+	public fun clearRows ()Ldev/xmux/proto/Rows$Builder;
+	public fun clearSequence ()Ldev/xmux/proto/Rows$Builder;
+	public fun clearTerminal ()Ldev/xmux/proto/Rows$Builder;
+	public fun getCols ()I
+	public fun getDefaultBg ()I
+	public fun getDefaultFg ()I
+	public fun getDirty (I)Ldev/xmux/proto/Row;
+	public fun getDirtyCount ()I
+	public fun getDirtyList ()Ljava/util/List;
+	public fun getFullReset ()Z
+	public fun getGeneration ()I
+	public fun getRows ()I
+	public fun getSequence ()I
+	public fun getTerminal ()I
+	public fun removeDirty (I)Ldev/xmux/proto/Rows$Builder;
+	public fun setCols (I)Ldev/xmux/proto/Rows$Builder;
+	public fun setDefaultBg (I)Ldev/xmux/proto/Rows$Builder;
+	public fun setDefaultFg (I)Ldev/xmux/proto/Rows$Builder;
+	public fun setDirty (ILdev/xmux/proto/Row$Builder;)Ldev/xmux/proto/Rows$Builder;
+	public fun setDirty (ILdev/xmux/proto/Row;)Ldev/xmux/proto/Rows$Builder;
+	public fun setFullReset (Z)Ldev/xmux/proto/Rows$Builder;
+	public fun setGeneration (I)Ldev/xmux/proto/Rows$Builder;
+	public fun setRows (I)Ldev/xmux/proto/Rows$Builder;
+	public fun setSequence (I)Ldev/xmux/proto/Rows$Builder;
+	public fun setTerminal (I)Ldev/xmux/proto/Rows$Builder;
+}
+
+public final class dev/xmux/proto/RowsKt {
+	public static final field INSTANCE Ldev/xmux/proto/RowsKt;
+}
+
+public final class dev/xmux/proto/RowsKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/RowsKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Rows$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Rows;
+	public final synthetic fun addAllDirty (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun addDirty (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/Row;)V
+	public final fun clearCols ()V
+	public final fun clearDefaultBg ()V
+	public final fun clearDefaultFg ()V
+	public final synthetic fun clearDirty (Lcom/google/protobuf/kotlin/DslList;)V
+	public final fun clearFullReset ()V
+	public final fun clearGeneration ()V
+	public final fun clearRows ()V
+	public final fun clearSequence ()V
+	public final fun clearTerminal ()V
+	public final fun getCols ()I
+	public final fun getDefaultBg ()I
+	public final fun getDefaultFg ()I
+	public final synthetic fun getDirty ()Lcom/google/protobuf/kotlin/DslList;
+	public final fun getFullReset ()Z
+	public final fun getGeneration ()I
+	public final fun getRows ()I
+	public final fun getSequence ()I
+	public final fun getTerminal ()I
+	public final synthetic fun plusAssignAllDirty (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun plusAssignDirty (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/Row;)V
+	public final fun setCols (I)V
+	public final fun setDefaultBg (I)V
+	public final fun setDefaultFg (I)V
+	public final synthetic fun setDirty (Lcom/google/protobuf/kotlin/DslList;ILdev/xmux/proto/Row;)V
+	public final fun setFullReset (Z)V
+	public final fun setGeneration (I)V
+	public final fun setRows (I)V
+	public final fun setSequence (I)V
+	public final fun setTerminal (I)V
+}
+
+public final class dev/xmux/proto/RowsKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Rows$Builder;)Ldev/xmux/proto/RowsKt$Dsl;
+}
+
+public final class dev/xmux/proto/RowsKt$Dsl$DirtyProxy : com/google/protobuf/kotlin/DslProxy {
+}
+
+public final class dev/xmux/proto/RowsKtKt {
+	public static final fun -initializerows (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Rows;
+	public static final fun copy (Ldev/xmux/proto/Rows;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Rows;
+}
+
+public abstract interface class dev/xmux/proto/RowsOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getCols ()I
+	public abstract fun getDefaultBg ()I
+	public abstract fun getDefaultFg ()I
+	public abstract fun getDirty (I)Ldev/xmux/proto/Row;
+	public abstract fun getDirtyCount ()I
+	public abstract fun getDirtyList ()Ljava/util/List;
+	public abstract fun getFullReset ()Z
+	public abstract fun getGeneration ()I
+	public abstract fun getRows ()I
+	public abstract fun getSequence ()I
+	public abstract fun getTerminal ()I
+}
+
+public final class dev/xmux/proto/Run : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/RunOrBuilder {
+	public static final field ATTRS_FIELD_NUMBER I
+	public static final field BG_FIELD_NUMBER I
+	public static final field FG_FIELD_NUMBER I
+	public static final field TEXT_FIELD_NUMBER I
+	public static final field UNDERLINE_FIELD_NUMBER I
+	public static final field WIDTH_HINT_FIELD_NUMBER I
+	public fun getAttrs ()I
+	public fun getBg ()I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Run;
+	public fun getFg ()I
+	public fun getText ()Ljava/lang/String;
+	public fun getTextBytes ()Lcom/google/protobuf/ByteString;
+	public fun getUnderline ()Ldev/xmux/proto/Underline;
+	public fun getUnderlineValue ()I
+	public fun getWidthHint ()I
+	public static fun newBuilder ()Ldev/xmux/proto/Run$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Run;)Ldev/xmux/proto/Run$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Run;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Run;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Run;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Run;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Run;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Run;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Run;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Run;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Run;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Run;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Run;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Run;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Run$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/RunOrBuilder {
+	public fun clearAttrs ()Ldev/xmux/proto/Run$Builder;
+	public fun clearBg ()Ldev/xmux/proto/Run$Builder;
+	public fun clearFg ()Ldev/xmux/proto/Run$Builder;
+	public fun clearText ()Ldev/xmux/proto/Run$Builder;
+	public fun clearUnderline ()Ldev/xmux/proto/Run$Builder;
+	public fun clearWidthHint ()Ldev/xmux/proto/Run$Builder;
+	public fun getAttrs ()I
+	public fun getBg ()I
+	public fun getFg ()I
+	public fun getText ()Ljava/lang/String;
+	public fun getTextBytes ()Lcom/google/protobuf/ByteString;
+	public fun getUnderline ()Ldev/xmux/proto/Underline;
+	public fun getUnderlineValue ()I
+	public fun getWidthHint ()I
+	public fun setAttrs (I)Ldev/xmux/proto/Run$Builder;
+	public fun setBg (I)Ldev/xmux/proto/Run$Builder;
+	public fun setFg (I)Ldev/xmux/proto/Run$Builder;
+	public fun setText (Ljava/lang/String;)Ldev/xmux/proto/Run$Builder;
+	public fun setTextBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Run$Builder;
+	public fun setUnderline (Ldev/xmux/proto/Underline;)Ldev/xmux/proto/Run$Builder;
+	public fun setUnderlineValue (I)Ldev/xmux/proto/Run$Builder;
+	public fun setWidthHint (I)Ldev/xmux/proto/Run$Builder;
+}
+
+public final class dev/xmux/proto/RunKt {
+	public static final field INSTANCE Ldev/xmux/proto/RunKt;
+}
+
+public final class dev/xmux/proto/RunKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/RunKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Run$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Run;
+	public final fun clearAttrs ()V
+	public final fun clearBg ()V
+	public final fun clearFg ()V
+	public final fun clearText ()V
+	public final fun clearUnderline ()V
+	public final fun clearWidthHint ()V
+	public final fun getAttrs ()I
+	public final fun getBg ()I
+	public final fun getFg ()I
+	public final fun getText ()Ljava/lang/String;
+	public final fun getUnderline ()Ldev/xmux/proto/Underline;
+	public final fun getUnderlineValue ()I
+	public final fun getWidthHint ()I
+	public final fun setAttrs (I)V
+	public final fun setBg (I)V
+	public final fun setFg (I)V
+	public final fun setText (Ljava/lang/String;)V
+	public final fun setUnderline (Ldev/xmux/proto/Underline;)V
+	public final fun setUnderlineValue (I)V
+	public final fun setWidthHint (I)V
+}
+
+public final class dev/xmux/proto/RunKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Run$Builder;)Ldev/xmux/proto/RunKt$Dsl;
+}
+
+public final class dev/xmux/proto/RunKtKt {
+	public static final fun -initializerun (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Run;
+	public static final fun copy (Ldev/xmux/proto/Run;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Run;
+}
+
+public abstract interface class dev/xmux/proto/RunOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getAttrs ()I
+	public abstract fun getBg ()I
+	public abstract fun getFg ()I
+	public abstract fun getText ()Ljava/lang/String;
+	public abstract fun getTextBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun getUnderline ()Ldev/xmux/proto/Underline;
+	public abstract fun getUnderlineValue ()I
+	public abstract fun getWidthHint ()I
+}
+
+public final class dev/xmux/proto/Screen : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/ScreenOrBuilder {
+	public static final field CMUX_ID_FIELD_NUMBER I
+	public static final field FOCUSED_PANE_FIELD_NUMBER I
+	public static final field ID_FIELD_NUMBER I
+	public static final field LAYOUT_FIELD_NUMBER I
+	public static final field PANES_FIELD_NUMBER I
+	public static final field TITLE_FIELD_NUMBER I
+	public static final field WORKSPACE_FIELD_NUMBER I
+	public fun getCmuxId ()Ljava/lang/String;
+	public fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Screen;
+	public fun getFocusedPane ()I
+	public fun getId ()I
+	public fun getLayout ()Ldev/xmux/proto/LayoutNode;
+	public fun getPanes (I)Ldev/xmux/proto/Pane;
+	public fun getPanesCount ()I
+	public fun getPanesList ()Ljava/util/List;
+	public fun getPanesOrBuilder (I)Ldev/xmux/proto/PaneOrBuilder;
+	public fun getPanesOrBuilderList ()Ljava/util/List;
+	public fun getTitle ()Ljava/lang/String;
+	public fun getTitleBytes ()Lcom/google/protobuf/ByteString;
+	public fun getWorkspace ()I
+	public fun hasLayout ()Z
+	public static fun newBuilder ()Ldev/xmux/proto/Screen$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Screen;)Ldev/xmux/proto/Screen$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Screen;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Screen;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Screen;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Screen;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Screen;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Screen;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Screen;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Screen;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Screen;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Screen;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Screen;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Screen;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Screen$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/ScreenOrBuilder {
+	public fun addAllPanes (Ljava/lang/Iterable;)Ldev/xmux/proto/Screen$Builder;
+	public fun addPanes (ILdev/xmux/proto/Pane$Builder;)Ldev/xmux/proto/Screen$Builder;
+	public fun addPanes (ILdev/xmux/proto/Pane;)Ldev/xmux/proto/Screen$Builder;
+	public fun addPanes (Ldev/xmux/proto/Pane$Builder;)Ldev/xmux/proto/Screen$Builder;
+	public fun addPanes (Ldev/xmux/proto/Pane;)Ldev/xmux/proto/Screen$Builder;
+	public fun clearCmuxId ()Ldev/xmux/proto/Screen$Builder;
+	public fun clearFocusedPane ()Ldev/xmux/proto/Screen$Builder;
+	public fun clearId ()Ldev/xmux/proto/Screen$Builder;
+	public fun clearLayout ()Ldev/xmux/proto/Screen$Builder;
+	public fun clearPanes ()Ldev/xmux/proto/Screen$Builder;
+	public fun clearTitle ()Ldev/xmux/proto/Screen$Builder;
+	public fun clearWorkspace ()Ldev/xmux/proto/Screen$Builder;
+	public fun getCmuxId ()Ljava/lang/String;
+	public fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public fun getFocusedPane ()I
+	public fun getId ()I
+	public fun getLayout ()Ldev/xmux/proto/LayoutNode;
+	public fun getPanes (I)Ldev/xmux/proto/Pane;
+	public fun getPanesCount ()I
+	public fun getPanesList ()Ljava/util/List;
+	public fun getTitle ()Ljava/lang/String;
+	public fun getTitleBytes ()Lcom/google/protobuf/ByteString;
+	public fun getWorkspace ()I
+	public fun hasLayout ()Z
+	public fun mergeLayout (Ldev/xmux/proto/LayoutNode;)Ldev/xmux/proto/Screen$Builder;
+	public fun removePanes (I)Ldev/xmux/proto/Screen$Builder;
+	public fun setCmuxId (Ljava/lang/String;)Ldev/xmux/proto/Screen$Builder;
+	public fun setCmuxIdBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Screen$Builder;
+	public fun setFocusedPane (I)Ldev/xmux/proto/Screen$Builder;
+	public fun setId (I)Ldev/xmux/proto/Screen$Builder;
+	public fun setLayout (Ldev/xmux/proto/LayoutNode$Builder;)Ldev/xmux/proto/Screen$Builder;
+	public fun setLayout (Ldev/xmux/proto/LayoutNode;)Ldev/xmux/proto/Screen$Builder;
+	public fun setPanes (ILdev/xmux/proto/Pane$Builder;)Ldev/xmux/proto/Screen$Builder;
+	public fun setPanes (ILdev/xmux/proto/Pane;)Ldev/xmux/proto/Screen$Builder;
+	public fun setTitle (Ljava/lang/String;)Ldev/xmux/proto/Screen$Builder;
+	public fun setTitleBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Screen$Builder;
+	public fun setWorkspace (I)Ldev/xmux/proto/Screen$Builder;
+}
+
+public final class dev/xmux/proto/ScreenKt {
+	public static final field INSTANCE Ldev/xmux/proto/ScreenKt;
+}
+
+public final class dev/xmux/proto/ScreenKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/ScreenKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Screen$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Screen;
+	public final synthetic fun addAllPanes (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun addPanes (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/Pane;)V
+	public final fun clearCmuxId ()V
+	public final fun clearFocusedPane ()V
+	public final fun clearId ()V
+	public final fun clearLayout ()V
+	public final synthetic fun clearPanes (Lcom/google/protobuf/kotlin/DslList;)V
+	public final fun clearTitle ()V
+	public final fun clearWorkspace ()V
+	public final fun getCmuxId ()Ljava/lang/String;
+	public final fun getFocusedPane ()I
+	public final fun getId ()I
+	public final fun getLayout ()Ldev/xmux/proto/LayoutNode;
+	public final fun getLayoutOrNull (Ldev/xmux/proto/ScreenKt$Dsl;)Ldev/xmux/proto/LayoutNode;
+	public final synthetic fun getPanes ()Lcom/google/protobuf/kotlin/DslList;
+	public final fun getTitle ()Ljava/lang/String;
+	public final fun getWorkspace ()I
+	public final fun hasLayout ()Z
+	public final synthetic fun plusAssignAllPanes (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun plusAssignPanes (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/Pane;)V
+	public final fun setCmuxId (Ljava/lang/String;)V
+	public final fun setFocusedPane (I)V
+	public final fun setId (I)V
+	public final fun setLayout (Ldev/xmux/proto/LayoutNode;)V
+	public final synthetic fun setPanes (Lcom/google/protobuf/kotlin/DslList;ILdev/xmux/proto/Pane;)V
+	public final fun setTitle (Ljava/lang/String;)V
+	public final fun setWorkspace (I)V
+}
+
+public final class dev/xmux/proto/ScreenKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Screen$Builder;)Ldev/xmux/proto/ScreenKt$Dsl;
+}
+
+public final class dev/xmux/proto/ScreenKt$Dsl$PanesProxy : com/google/protobuf/kotlin/DslProxy {
+}
+
+public final class dev/xmux/proto/ScreenKtKt {
+	public static final fun -initializescreen (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Screen;
+	public static final fun copy (Ldev/xmux/proto/Screen;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Screen;
+	public static final fun getLayoutOrNull (Ldev/xmux/proto/ScreenOrBuilder;)Ldev/xmux/proto/LayoutNode;
+}
+
+public abstract interface class dev/xmux/proto/ScreenOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getCmuxId ()Ljava/lang/String;
+	public abstract fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun getFocusedPane ()I
+	public abstract fun getId ()I
+	public abstract fun getLayout ()Ldev/xmux/proto/LayoutNode;
+	public abstract fun getPanes (I)Ldev/xmux/proto/Pane;
+	public abstract fun getPanesCount ()I
+	public abstract fun getPanesList ()Ljava/util/List;
+	public abstract fun getTitle ()Ljava/lang/String;
+	public abstract fun getTitleBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun getWorkspace ()I
+	public abstract fun hasLayout ()Z
+}
+
+public final class dev/xmux/proto/SplitDirection : java/lang/Enum, com/google/protobuf/Internal$EnumLite {
+	public static final field SPLIT_DIRECTION_HORIZONTAL Ldev/xmux/proto/SplitDirection;
+	public static final field SPLIT_DIRECTION_HORIZONTAL_VALUE I
+	public static final field SPLIT_DIRECTION_VERTICAL Ldev/xmux/proto/SplitDirection;
+	public static final field SPLIT_DIRECTION_VERTICAL_VALUE I
+	public static final field UNRECOGNIZED Ldev/xmux/proto/SplitDirection;
+	public static fun forNumber (I)Ldev/xmux/proto/SplitDirection;
+	public final fun getNumber ()I
+	public static fun internalGetValueMap ()Lcom/google/protobuf/Internal$EnumLiteMap;
+	public static fun internalGetVerifier ()Lcom/google/protobuf/Internal$EnumVerifier;
+	public static fun valueOf (I)Ldev/xmux/proto/SplitDirection;
+	public static fun valueOf (Ljava/lang/String;)Ldev/xmux/proto/SplitDirection;
+	public static fun values ()[Ldev/xmux/proto/SplitDirection;
+}
+
+public final class dev/xmux/proto/Stats : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/StatsOrBuilder {
+	public static final field BYTES_PER_SECOND_FIELD_NUMBER I
+	public static final field ROWS_PER_SECOND_FIELD_NUMBER I
+	public static final field RTT_MS_FIELD_NUMBER I
+	public fun getBytesPerSecond ()I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Stats;
+	public fun getRowsPerSecond ()I
+	public fun getRttMs ()I
+	public static fun newBuilder ()Ldev/xmux/proto/Stats$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Stats;)Ldev/xmux/proto/Stats$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Stats;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Stats;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Stats;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Stats;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Stats;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Stats;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Stats;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Stats;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Stats;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Stats;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Stats;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Stats;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Stats$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/StatsOrBuilder {
+	public fun clearBytesPerSecond ()Ldev/xmux/proto/Stats$Builder;
+	public fun clearRowsPerSecond ()Ldev/xmux/proto/Stats$Builder;
+	public fun clearRttMs ()Ldev/xmux/proto/Stats$Builder;
+	public fun getBytesPerSecond ()I
+	public fun getRowsPerSecond ()I
+	public fun getRttMs ()I
+	public fun setBytesPerSecond (I)Ldev/xmux/proto/Stats$Builder;
+	public fun setRowsPerSecond (I)Ldev/xmux/proto/Stats$Builder;
+	public fun setRttMs (I)Ldev/xmux/proto/Stats$Builder;
+}
+
+public final class dev/xmux/proto/StatsKt {
+	public static final field INSTANCE Ldev/xmux/proto/StatsKt;
+}
+
+public final class dev/xmux/proto/StatsKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/StatsKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Stats$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Stats;
+	public final fun clearBytesPerSecond ()V
+	public final fun clearRowsPerSecond ()V
+	public final fun clearRttMs ()V
+	public final fun getBytesPerSecond ()I
+	public final fun getRowsPerSecond ()I
+	public final fun getRttMs ()I
+	public final fun setBytesPerSecond (I)V
+	public final fun setRowsPerSecond (I)V
+	public final fun setRttMs (I)V
+}
+
+public final class dev/xmux/proto/StatsKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Stats$Builder;)Ldev/xmux/proto/StatsKt$Dsl;
+}
+
+public final class dev/xmux/proto/StatsKtKt {
+	public static final fun -initializestats (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Stats;
+	public static final fun copy (Ldev/xmux/proto/Stats;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Stats;
+}
+
+public abstract interface class dev/xmux/proto/StatsOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getBytesPerSecond ()I
+	public abstract fun getRowsPerSecond ()I
+	public abstract fun getRttMs ()I
+}
+
+public final class dev/xmux/proto/Tab : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/TabOrBuilder {
+	public static final field CMUX_ID_FIELD_NUMBER I
+	public static final field ID_FIELD_NUMBER I
+	public static final field TERMINAL_FIELD_NUMBER I
+	public static final field TITLE_FIELD_NUMBER I
+	public fun getCmuxId ()Ljava/lang/String;
+	public fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Tab;
+	public fun getId ()I
+	public fun getTerminal ()I
+	public fun getTitle ()Ljava/lang/String;
+	public fun getTitleBytes ()Lcom/google/protobuf/ByteString;
+	public static fun newBuilder ()Ldev/xmux/proto/Tab$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Tab;)Ldev/xmux/proto/Tab$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Tab;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Tab;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Tab;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Tab;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Tab;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Tab;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Tab;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Tab;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Tab;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Tab;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Tab;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Tab;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Tab$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/TabOrBuilder {
+	public fun clearCmuxId ()Ldev/xmux/proto/Tab$Builder;
+	public fun clearId ()Ldev/xmux/proto/Tab$Builder;
+	public fun clearTerminal ()Ldev/xmux/proto/Tab$Builder;
+	public fun clearTitle ()Ldev/xmux/proto/Tab$Builder;
+	public fun getCmuxId ()Ljava/lang/String;
+	public fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public fun getId ()I
+	public fun getTerminal ()I
+	public fun getTitle ()Ljava/lang/String;
+	public fun getTitleBytes ()Lcom/google/protobuf/ByteString;
+	public fun setCmuxId (Ljava/lang/String;)Ldev/xmux/proto/Tab$Builder;
+	public fun setCmuxIdBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Tab$Builder;
+	public fun setId (I)Ldev/xmux/proto/Tab$Builder;
+	public fun setTerminal (I)Ldev/xmux/proto/Tab$Builder;
+	public fun setTitle (Ljava/lang/String;)Ldev/xmux/proto/Tab$Builder;
+	public fun setTitleBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Tab$Builder;
+}
+
+public final class dev/xmux/proto/TabKt {
+	public static final field INSTANCE Ldev/xmux/proto/TabKt;
+}
+
+public final class dev/xmux/proto/TabKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/TabKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Tab$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Tab;
+	public final fun clearCmuxId ()V
+	public final fun clearId ()V
+	public final fun clearTerminal ()V
+	public final fun clearTitle ()V
+	public final fun getCmuxId ()Ljava/lang/String;
+	public final fun getId ()I
+	public final fun getTerminal ()I
+	public final fun getTitle ()Ljava/lang/String;
+	public final fun setCmuxId (Ljava/lang/String;)V
+	public final fun setId (I)V
+	public final fun setTerminal (I)V
+	public final fun setTitle (Ljava/lang/String;)V
+}
+
+public final class dev/xmux/proto/TabKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Tab$Builder;)Ldev/xmux/proto/TabKt$Dsl;
+}
+
+public final class dev/xmux/proto/TabKtKt {
+	public static final fun -initializetab (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Tab;
+	public static final fun copy (Ldev/xmux/proto/Tab;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Tab;
+}
+
+public abstract interface class dev/xmux/proto/TabOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getCmuxId ()Ljava/lang/String;
+	public abstract fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun getId ()I
+	public abstract fun getTerminal ()I
+	public abstract fun getTitle ()Ljava/lang/String;
+	public abstract fun getTitleBytes ()Lcom/google/protobuf/ByteString;
+}
+
+public final class dev/xmux/proto/Terminal : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/TerminalOrBuilder {
+	public static final field CMUX_ID_FIELD_NUMBER I
+	public static final field COLS_FIELD_NUMBER I
+	public static final field ID_FIELD_NUMBER I
+	public static final field ROWS_FIELD_NUMBER I
+	public static final field RUNNING_FIELD_NUMBER I
+	public static final field TITLE_FIELD_NUMBER I
+	public fun getCmuxId ()Ljava/lang/String;
+	public fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public fun getCols ()I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Terminal;
+	public fun getId ()I
+	public fun getRows ()I
+	public fun getRunning ()Z
+	public fun getTitle ()Ljava/lang/String;
+	public fun getTitleBytes ()Lcom/google/protobuf/ByteString;
+	public static fun newBuilder ()Ldev/xmux/proto/Terminal$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Terminal;)Ldev/xmux/proto/Terminal$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Terminal;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Terminal;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Terminal;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Terminal;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Terminal;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Terminal;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Terminal;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Terminal;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Terminal;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Terminal;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Terminal;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Terminal;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Terminal$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/TerminalOrBuilder {
+	public fun clearCmuxId ()Ldev/xmux/proto/Terminal$Builder;
+	public fun clearCols ()Ldev/xmux/proto/Terminal$Builder;
+	public fun clearId ()Ldev/xmux/proto/Terminal$Builder;
+	public fun clearRows ()Ldev/xmux/proto/Terminal$Builder;
+	public fun clearRunning ()Ldev/xmux/proto/Terminal$Builder;
+	public fun clearTitle ()Ldev/xmux/proto/Terminal$Builder;
+	public fun getCmuxId ()Ljava/lang/String;
+	public fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public fun getCols ()I
+	public fun getId ()I
+	public fun getRows ()I
+	public fun getRunning ()Z
+	public fun getTitle ()Ljava/lang/String;
+	public fun getTitleBytes ()Lcom/google/protobuf/ByteString;
+	public fun setCmuxId (Ljava/lang/String;)Ldev/xmux/proto/Terminal$Builder;
+	public fun setCmuxIdBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Terminal$Builder;
+	public fun setCols (I)Ldev/xmux/proto/Terminal$Builder;
+	public fun setId (I)Ldev/xmux/proto/Terminal$Builder;
+	public fun setRows (I)Ldev/xmux/proto/Terminal$Builder;
+	public fun setRunning (Z)Ldev/xmux/proto/Terminal$Builder;
+	public fun setTitle (Ljava/lang/String;)Ldev/xmux/proto/Terminal$Builder;
+	public fun setTitleBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Terminal$Builder;
+}
+
+public final class dev/xmux/proto/TerminalKt {
+	public static final field INSTANCE Ldev/xmux/proto/TerminalKt;
+}
+
+public final class dev/xmux/proto/TerminalKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/TerminalKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Terminal$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Terminal;
+	public final fun clearCmuxId ()V
+	public final fun clearCols ()V
+	public final fun clearId ()V
+	public final fun clearRows ()V
+	public final fun clearRunning ()V
+	public final fun clearTitle ()V
+	public final fun getCmuxId ()Ljava/lang/String;
+	public final fun getCols ()I
+	public final fun getId ()I
+	public final fun getRows ()I
+	public final fun getRunning ()Z
+	public final fun getTitle ()Ljava/lang/String;
+	public final fun setCmuxId (Ljava/lang/String;)V
+	public final fun setCols (I)V
+	public final fun setId (I)V
+	public final fun setRows (I)V
+	public final fun setRunning (Z)V
+	public final fun setTitle (Ljava/lang/String;)V
+}
+
+public final class dev/xmux/proto/TerminalKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Terminal$Builder;)Ldev/xmux/proto/TerminalKt$Dsl;
+}
+
+public final class dev/xmux/proto/TerminalKtKt {
+	public static final fun -initializeterminal (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Terminal;
+	public static final fun copy (Ldev/xmux/proto/Terminal;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Terminal;
+}
+
+public abstract interface class dev/xmux/proto/TerminalOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getCmuxId ()Ljava/lang/String;
+	public abstract fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun getCols ()I
+	public abstract fun getId ()I
+	public abstract fun getRows ()I
+	public abstract fun getRunning ()Z
+	public abstract fun getTitle ()Ljava/lang/String;
+	public abstract fun getTitleBytes ()Lcom/google/protobuf/ByteString;
+}
+
+public final class dev/xmux/proto/Topology : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/TopologyOrBuilder {
+	public static final field ACTIVE_SCREEN_FIELD_NUMBER I
+	public static final field REVISION_FIELD_NUMBER I
+	public static final field SCREENS_FIELD_NUMBER I
+	public static final field TERMINALS_FIELD_NUMBER I
+	public static final field WORKSPACES_FIELD_NUMBER I
+	public fun getActiveScreen ()I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Topology;
+	public fun getRevision ()I
+	public fun getScreens (I)Ldev/xmux/proto/Screen;
+	public fun getScreensCount ()I
+	public fun getScreensList ()Ljava/util/List;
+	public fun getScreensOrBuilder (I)Ldev/xmux/proto/ScreenOrBuilder;
+	public fun getScreensOrBuilderList ()Ljava/util/List;
+	public fun getTerminals (I)Ldev/xmux/proto/Terminal;
+	public fun getTerminalsCount ()I
+	public fun getTerminalsList ()Ljava/util/List;
+	public fun getTerminalsOrBuilder (I)Ldev/xmux/proto/TerminalOrBuilder;
+	public fun getTerminalsOrBuilderList ()Ljava/util/List;
+	public fun getWorkspaces (I)Ldev/xmux/proto/Workspace;
+	public fun getWorkspacesCount ()I
+	public fun getWorkspacesList ()Ljava/util/List;
+	public fun getWorkspacesOrBuilder (I)Ldev/xmux/proto/WorkspaceOrBuilder;
+	public fun getWorkspacesOrBuilderList ()Ljava/util/List;
+	public static fun newBuilder ()Ldev/xmux/proto/Topology$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Topology;)Ldev/xmux/proto/Topology$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Topology;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Topology;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Topology;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Topology;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Topology;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Topology;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Topology;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Topology;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Topology;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Topology;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Topology;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Topology;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Topology$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/TopologyOrBuilder {
+	public fun addAllScreens (Ljava/lang/Iterable;)Ldev/xmux/proto/Topology$Builder;
+	public fun addAllTerminals (Ljava/lang/Iterable;)Ldev/xmux/proto/Topology$Builder;
+	public fun addAllWorkspaces (Ljava/lang/Iterable;)Ldev/xmux/proto/Topology$Builder;
+	public fun addScreens (ILdev/xmux/proto/Screen$Builder;)Ldev/xmux/proto/Topology$Builder;
+	public fun addScreens (ILdev/xmux/proto/Screen;)Ldev/xmux/proto/Topology$Builder;
+	public fun addScreens (Ldev/xmux/proto/Screen$Builder;)Ldev/xmux/proto/Topology$Builder;
+	public fun addScreens (Ldev/xmux/proto/Screen;)Ldev/xmux/proto/Topology$Builder;
+	public fun addTerminals (ILdev/xmux/proto/Terminal$Builder;)Ldev/xmux/proto/Topology$Builder;
+	public fun addTerminals (ILdev/xmux/proto/Terminal;)Ldev/xmux/proto/Topology$Builder;
+	public fun addTerminals (Ldev/xmux/proto/Terminal$Builder;)Ldev/xmux/proto/Topology$Builder;
+	public fun addTerminals (Ldev/xmux/proto/Terminal;)Ldev/xmux/proto/Topology$Builder;
+	public fun addWorkspaces (ILdev/xmux/proto/Workspace$Builder;)Ldev/xmux/proto/Topology$Builder;
+	public fun addWorkspaces (ILdev/xmux/proto/Workspace;)Ldev/xmux/proto/Topology$Builder;
+	public fun addWorkspaces (Ldev/xmux/proto/Workspace$Builder;)Ldev/xmux/proto/Topology$Builder;
+	public fun addWorkspaces (Ldev/xmux/proto/Workspace;)Ldev/xmux/proto/Topology$Builder;
+	public fun clearActiveScreen ()Ldev/xmux/proto/Topology$Builder;
+	public fun clearRevision ()Ldev/xmux/proto/Topology$Builder;
+	public fun clearScreens ()Ldev/xmux/proto/Topology$Builder;
+	public fun clearTerminals ()Ldev/xmux/proto/Topology$Builder;
+	public fun clearWorkspaces ()Ldev/xmux/proto/Topology$Builder;
+	public fun getActiveScreen ()I
+	public fun getRevision ()I
+	public fun getScreens (I)Ldev/xmux/proto/Screen;
+	public fun getScreensCount ()I
+	public fun getScreensList ()Ljava/util/List;
+	public fun getTerminals (I)Ldev/xmux/proto/Terminal;
+	public fun getTerminalsCount ()I
+	public fun getTerminalsList ()Ljava/util/List;
+	public fun getWorkspaces (I)Ldev/xmux/proto/Workspace;
+	public fun getWorkspacesCount ()I
+	public fun getWorkspacesList ()Ljava/util/List;
+	public fun removeScreens (I)Ldev/xmux/proto/Topology$Builder;
+	public fun removeTerminals (I)Ldev/xmux/proto/Topology$Builder;
+	public fun removeWorkspaces (I)Ldev/xmux/proto/Topology$Builder;
+	public fun setActiveScreen (I)Ldev/xmux/proto/Topology$Builder;
+	public fun setRevision (I)Ldev/xmux/proto/Topology$Builder;
+	public fun setScreens (ILdev/xmux/proto/Screen$Builder;)Ldev/xmux/proto/Topology$Builder;
+	public fun setScreens (ILdev/xmux/proto/Screen;)Ldev/xmux/proto/Topology$Builder;
+	public fun setTerminals (ILdev/xmux/proto/Terminal$Builder;)Ldev/xmux/proto/Topology$Builder;
+	public fun setTerminals (ILdev/xmux/proto/Terminal;)Ldev/xmux/proto/Topology$Builder;
+	public fun setWorkspaces (ILdev/xmux/proto/Workspace$Builder;)Ldev/xmux/proto/Topology$Builder;
+	public fun setWorkspaces (ILdev/xmux/proto/Workspace;)Ldev/xmux/proto/Topology$Builder;
+}
+
+public final class dev/xmux/proto/TopologyKt {
+	public static final field INSTANCE Ldev/xmux/proto/TopologyKt;
+}
+
+public final class dev/xmux/proto/TopologyKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/TopologyKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Topology$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Topology;
+	public final synthetic fun addAllScreens (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun addAllTerminals (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun addAllWorkspaces (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun addScreens (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/Screen;)V
+	public final synthetic fun addTerminals (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/Terminal;)V
+	public final synthetic fun addWorkspaces (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/Workspace;)V
+	public final fun clearActiveScreen ()V
+	public final fun clearRevision ()V
+	public final synthetic fun clearScreens (Lcom/google/protobuf/kotlin/DslList;)V
+	public final synthetic fun clearTerminals (Lcom/google/protobuf/kotlin/DslList;)V
+	public final synthetic fun clearWorkspaces (Lcom/google/protobuf/kotlin/DslList;)V
+	public final fun getActiveScreen ()I
+	public final fun getRevision ()I
+	public final synthetic fun getScreens ()Lcom/google/protobuf/kotlin/DslList;
+	public final synthetic fun getTerminals ()Lcom/google/protobuf/kotlin/DslList;
+	public final synthetic fun getWorkspaces ()Lcom/google/protobuf/kotlin/DslList;
+	public final synthetic fun plusAssignAllScreens (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun plusAssignAllTerminals (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun plusAssignAllWorkspaces (Lcom/google/protobuf/kotlin/DslList;Ljava/lang/Iterable;)V
+	public final synthetic fun plusAssignScreens (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/Screen;)V
+	public final synthetic fun plusAssignTerminals (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/Terminal;)V
+	public final synthetic fun plusAssignWorkspaces (Lcom/google/protobuf/kotlin/DslList;Ldev/xmux/proto/Workspace;)V
+	public final fun setActiveScreen (I)V
+	public final fun setRevision (I)V
+	public final synthetic fun setScreens (Lcom/google/protobuf/kotlin/DslList;ILdev/xmux/proto/Screen;)V
+	public final synthetic fun setTerminals (Lcom/google/protobuf/kotlin/DslList;ILdev/xmux/proto/Terminal;)V
+	public final synthetic fun setWorkspaces (Lcom/google/protobuf/kotlin/DslList;ILdev/xmux/proto/Workspace;)V
+}
+
+public final class dev/xmux/proto/TopologyKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Topology$Builder;)Ldev/xmux/proto/TopologyKt$Dsl;
+}
+
+public final class dev/xmux/proto/TopologyKt$Dsl$ScreensProxy : com/google/protobuf/kotlin/DslProxy {
+}
+
+public final class dev/xmux/proto/TopologyKt$Dsl$TerminalsProxy : com/google/protobuf/kotlin/DslProxy {
+}
+
+public final class dev/xmux/proto/TopologyKt$Dsl$WorkspacesProxy : com/google/protobuf/kotlin/DslProxy {
+}
+
+public final class dev/xmux/proto/TopologyKtKt {
+	public static final fun -initializetopology (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Topology;
+	public static final fun copy (Ldev/xmux/proto/Topology;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Topology;
+}
+
+public abstract interface class dev/xmux/proto/TopologyOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getActiveScreen ()I
+	public abstract fun getRevision ()I
+	public abstract fun getScreens (I)Ldev/xmux/proto/Screen;
+	public abstract fun getScreensCount ()I
+	public abstract fun getScreensList ()Ljava/util/List;
+	public abstract fun getTerminals (I)Ldev/xmux/proto/Terminal;
+	public abstract fun getTerminalsCount ()I
+	public abstract fun getTerminalsList ()Ljava/util/List;
+	public abstract fun getWorkspaces (I)Ldev/xmux/proto/Workspace;
+	public abstract fun getWorkspacesCount ()I
+	public abstract fun getWorkspacesList ()Ljava/util/List;
+}
+
+public final class dev/xmux/proto/Underline : java/lang/Enum, com/google/protobuf/Internal$EnumLite {
+	public static final field UNDERLINE_CURLY Ldev/xmux/proto/Underline;
+	public static final field UNDERLINE_CURLY_VALUE I
+	public static final field UNDERLINE_DASHED Ldev/xmux/proto/Underline;
+	public static final field UNDERLINE_DASHED_VALUE I
+	public static final field UNDERLINE_DOTTED Ldev/xmux/proto/Underline;
+	public static final field UNDERLINE_DOTTED_VALUE I
+	public static final field UNDERLINE_DOUBLE Ldev/xmux/proto/Underline;
+	public static final field UNDERLINE_DOUBLE_VALUE I
+	public static final field UNDERLINE_NONE Ldev/xmux/proto/Underline;
+	public static final field UNDERLINE_NONE_VALUE I
+	public static final field UNDERLINE_SINGLE Ldev/xmux/proto/Underline;
+	public static final field UNDERLINE_SINGLE_VALUE I
+	public static final field UNRECOGNIZED Ldev/xmux/proto/Underline;
+	public static fun forNumber (I)Ldev/xmux/proto/Underline;
+	public final fun getNumber ()I
+	public static fun internalGetValueMap ()Lcom/google/protobuf/Internal$EnumLiteMap;
+	public static fun internalGetVerifier ()Lcom/google/protobuf/Internal$EnumVerifier;
+	public static fun valueOf (I)Ldev/xmux/proto/Underline;
+	public static fun valueOf (Ljava/lang/String;)Ldev/xmux/proto/Underline;
+	public static fun values ()[Ldev/xmux/proto/Underline;
+}
+
+public final class dev/xmux/proto/Welcome : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/WelcomeOrBuilder {
+	public static final field PAIRED_FIELD_NUMBER I
+	public static final field PROTOCOL_VERSION_FIELD_NUMBER I
+	public static final field SERVER_FIELD_NUMBER I
+	public static final field SESSION_NAME_FIELD_NUMBER I
+	public static final field TOKEN_FIELD_NUMBER I
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Welcome;
+	public fun getPaired ()Z
+	public fun getProtocolVersion ()I
+	public fun getServer ()Ljava/lang/String;
+	public fun getServerBytes ()Lcom/google/protobuf/ByteString;
+	public fun getSessionName ()Ljava/lang/String;
+	public fun getSessionNameBytes ()Lcom/google/protobuf/ByteString;
+	public fun getToken ()Ljava/lang/String;
+	public fun getTokenBytes ()Lcom/google/protobuf/ByteString;
+	public static fun newBuilder ()Ldev/xmux/proto/Welcome$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Welcome;)Ldev/xmux/proto/Welcome$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Welcome;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Welcome;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Welcome;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Welcome;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Welcome;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Welcome;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Welcome;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Welcome;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Welcome;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Welcome;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Welcome;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Welcome;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Welcome$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/WelcomeOrBuilder {
+	public fun clearPaired ()Ldev/xmux/proto/Welcome$Builder;
+	public fun clearProtocolVersion ()Ldev/xmux/proto/Welcome$Builder;
+	public fun clearServer ()Ldev/xmux/proto/Welcome$Builder;
+	public fun clearSessionName ()Ldev/xmux/proto/Welcome$Builder;
+	public fun clearToken ()Ldev/xmux/proto/Welcome$Builder;
+	public fun getPaired ()Z
+	public fun getProtocolVersion ()I
+	public fun getServer ()Ljava/lang/String;
+	public fun getServerBytes ()Lcom/google/protobuf/ByteString;
+	public fun getSessionName ()Ljava/lang/String;
+	public fun getSessionNameBytes ()Lcom/google/protobuf/ByteString;
+	public fun getToken ()Ljava/lang/String;
+	public fun getTokenBytes ()Lcom/google/protobuf/ByteString;
+	public fun setPaired (Z)Ldev/xmux/proto/Welcome$Builder;
+	public fun setProtocolVersion (I)Ldev/xmux/proto/Welcome$Builder;
+	public fun setServer (Ljava/lang/String;)Ldev/xmux/proto/Welcome$Builder;
+	public fun setServerBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Welcome$Builder;
+	public fun setSessionName (Ljava/lang/String;)Ldev/xmux/proto/Welcome$Builder;
+	public fun setSessionNameBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Welcome$Builder;
+	public fun setToken (Ljava/lang/String;)Ldev/xmux/proto/Welcome$Builder;
+	public fun setTokenBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Welcome$Builder;
+}
+
+public final class dev/xmux/proto/WelcomeKt {
+	public static final field INSTANCE Ldev/xmux/proto/WelcomeKt;
+}
+
+public final class dev/xmux/proto/WelcomeKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/WelcomeKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Welcome$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Welcome;
+	public final fun clearPaired ()V
+	public final fun clearProtocolVersion ()V
+	public final fun clearServer ()V
+	public final fun clearSessionName ()V
+	public final fun clearToken ()V
+	public final fun getPaired ()Z
+	public final fun getProtocolVersion ()I
+	public final fun getServer ()Ljava/lang/String;
+	public final fun getSessionName ()Ljava/lang/String;
+	public final fun getToken ()Ljava/lang/String;
+	public final fun setPaired (Z)V
+	public final fun setProtocolVersion (I)V
+	public final fun setServer (Ljava/lang/String;)V
+	public final fun setSessionName (Ljava/lang/String;)V
+	public final fun setToken (Ljava/lang/String;)V
+}
+
+public final class dev/xmux/proto/WelcomeKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Welcome$Builder;)Ldev/xmux/proto/WelcomeKt$Dsl;
+}
+
+public final class dev/xmux/proto/WelcomeKtKt {
+	public static final fun -initializewelcome (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Welcome;
+	public static final fun copy (Ldev/xmux/proto/Welcome;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Welcome;
+}
+
+public abstract interface class dev/xmux/proto/WelcomeOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getPaired ()Z
+	public abstract fun getProtocolVersion ()I
+	public abstract fun getServer ()Ljava/lang/String;
+	public abstract fun getServerBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun getSessionName ()Ljava/lang/String;
+	public abstract fun getSessionNameBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun getToken ()Ljava/lang/String;
+	public abstract fun getTokenBytes ()Lcom/google/protobuf/ByteString;
+}
+
+public final class dev/xmux/proto/Workspace : com/google/protobuf/GeneratedMessageLite, dev/xmux/proto/WorkspaceOrBuilder {
+	public static final field CMUX_ID_FIELD_NUMBER I
+	public static final field ID_FIELD_NUMBER I
+	public static final field TITLE_FIELD_NUMBER I
+	public fun getCmuxId ()Ljava/lang/String;
+	public fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public static fun getDefaultInstance ()Ldev/xmux/proto/Workspace;
+	public fun getId ()I
+	public fun getTitle ()Ljava/lang/String;
+	public fun getTitleBytes ()Lcom/google/protobuf/ByteString;
+	public static fun newBuilder ()Ldev/xmux/proto/Workspace$Builder;
+	public static fun newBuilder (Ldev/xmux/proto/Workspace;)Ldev/xmux/proto/Workspace$Builder;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Workspace;
+	public static fun parseDelimitedFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Workspace;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Workspace;
+	public static fun parseFrom (Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Workspace;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;)Ldev/xmux/proto/Workspace;
+	public static fun parseFrom (Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Workspace;
+	public static fun parseFrom (Ljava/io/InputStream;)Ldev/xmux/proto/Workspace;
+	public static fun parseFrom (Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Workspace;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;)Ldev/xmux/proto/Workspace;
+	public static fun parseFrom (Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Workspace;
+	public static fun parseFrom ([B)Ldev/xmux/proto/Workspace;
+	public static fun parseFrom ([BLcom/google/protobuf/ExtensionRegistryLite;)Ldev/xmux/proto/Workspace;
+	public static fun parser ()Lcom/google/protobuf/Parser;
+}
+
+public final class dev/xmux/proto/Workspace$Builder : com/google/protobuf/GeneratedMessageLite$Builder, dev/xmux/proto/WorkspaceOrBuilder {
+	public fun clearCmuxId ()Ldev/xmux/proto/Workspace$Builder;
+	public fun clearId ()Ldev/xmux/proto/Workspace$Builder;
+	public fun clearTitle ()Ldev/xmux/proto/Workspace$Builder;
+	public fun getCmuxId ()Ljava/lang/String;
+	public fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public fun getId ()I
+	public fun getTitle ()Ljava/lang/String;
+	public fun getTitleBytes ()Lcom/google/protobuf/ByteString;
+	public fun setCmuxId (Ljava/lang/String;)Ldev/xmux/proto/Workspace$Builder;
+	public fun setCmuxIdBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Workspace$Builder;
+	public fun setId (I)Ldev/xmux/proto/Workspace$Builder;
+	public fun setTitle (Ljava/lang/String;)Ldev/xmux/proto/Workspace$Builder;
+	public fun setTitleBytes (Lcom/google/protobuf/ByteString;)Ldev/xmux/proto/Workspace$Builder;
+}
+
+public final class dev/xmux/proto/WorkspaceKt {
+	public static final field INSTANCE Ldev/xmux/proto/WorkspaceKt;
+}
+
+public final class dev/xmux/proto/WorkspaceKt$Dsl {
+	public static final field Companion Ldev/xmux/proto/WorkspaceKt$Dsl$Companion;
+	public synthetic fun <init> (Ldev/xmux/proto/Workspace$Builder;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final synthetic fun _build ()Ldev/xmux/proto/Workspace;
+	public final fun clearCmuxId ()V
+	public final fun clearId ()V
+	public final fun clearTitle ()V
+	public final fun getCmuxId ()Ljava/lang/String;
+	public final fun getId ()I
+	public final fun getTitle ()Ljava/lang/String;
+	public final fun setCmuxId (Ljava/lang/String;)V
+	public final fun setId (I)V
+	public final fun setTitle (Ljava/lang/String;)V
+}
+
+public final class dev/xmux/proto/WorkspaceKt$Dsl$Companion {
+	public final synthetic fun _create (Ldev/xmux/proto/Workspace$Builder;)Ldev/xmux/proto/WorkspaceKt$Dsl;
+}
+
+public final class dev/xmux/proto/WorkspaceKtKt {
+	public static final fun -initializeworkspace (Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Workspace;
+	public static final fun copy (Ldev/xmux/proto/Workspace;Lkotlin/jvm/functions/Function1;)Ldev/xmux/proto/Workspace;
+}
+
+public abstract interface class dev/xmux/proto/WorkspaceOrBuilder : com/google/protobuf/MessageLiteOrBuilder {
+	public abstract fun getCmuxId ()Ljava/lang/String;
+	public abstract fun getCmuxIdBytes ()Lcom/google/protobuf/ByteString;
+	public abstract fun getId ()I
+	public abstract fun getTitle ()Ljava/lang/String;
+	public abstract fun getTitleBytes ()Lcom/google/protobuf/ByteString;
+}
+
+public final class dev/xmux/proto/Xmux {
+	public static fun registerAllExtensions (Lcom/google/protobuf/ExtensionRegistryLite;)V
+}
+

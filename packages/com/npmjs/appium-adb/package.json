@@ -1,0 +1,12 @@
+{
+  "name": "@-/com.npmjs.appium-adb",
+  "private": true,
+  "type": "module",
+  "imports": {},
+  "exports": {
+    ".": "./+.ts"
+  },
+  "dependencies": {
+    "appium-adb": "catalog:"
+  }
+}

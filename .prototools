@@ -1,0 +1,15 @@
+# Toolchain for every language in this repo, managed by proto (https://moonrepo.dev/proto).
+# `proto use` installs everything below; CI runs moonrepo/setup-toolchain with auto-install.
+# Not managed by proto: Gradle (pinned by gradle/wrapper) and the Android SDK
+# (found through ANDROID_HOME, see packages/dev/improve/xmux/configs/android).
+
+proto = "0.63.2"
+bun = "1.4.4"
+node = "24.22.2"
+# Keep equal to rust-toolchain.toml (asserted by configs/proto/__tests__).
+rust = "1.95.0"
+# Build JDK for Gradle / AGP 8.11; the Android modules compile to Java 17 bytecode.
+jdk = "temurin-17.0.20+8"
+
+[settings]
+auto-install = true

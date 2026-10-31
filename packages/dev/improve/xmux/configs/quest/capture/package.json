@@ -1,0 +1,25 @@
+{
+  "name": "@-/dev.improve.xmux.configs.quest.capture",
+  "version": "0.0.0",
+  "private": true,
+  "bin": {
+    "_quest-capture": "./_quest-capture.ts"
+  },
+  "type": "module",
+  "imports": {
+    "#capture": "./capture.ts",
+    "#capture-command": "./capture-command.ts"
+  },
+  "exports": {
+    ".": "./+.ts"
+  },
+  "dependencies": {
+    "@-/com.npmjs.appium-adb": "workspace:*",
+    "@-/com.npmjs.citty-universal": "workspace:*",
+    "@-/com.npmjs.consola": "workspace:*",
+    "@-/com.npmjs.pathe": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest.device": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest.parse": "workspace:*",
+    "@-/dev.improve.xmux.constants.paths": "workspace:*"
+  }
+}

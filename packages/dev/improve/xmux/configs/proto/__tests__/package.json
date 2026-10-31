@@ -1,0 +1,10 @@
+{
+  "name": "@-/dev.improve.xmux.configs.proto.__tests__",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@-/com.npmjs.smol-toml": "workspace:*",
+    "@-/dev.improve.xmux.constants.paths": "workspace:*",
+    "vitest": "catalog:"
+  }
+}

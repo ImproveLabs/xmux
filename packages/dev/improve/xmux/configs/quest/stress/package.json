@@ -1,0 +1,19 @@
+{
+  "name": "@-/dev.improve.xmux.configs.quest.stress",
+  "version": "0.0.0",
+  "private": true,
+  "bin": {
+    "_quest-stress": "./_quest-stress.ts"
+  },
+  "type": "module",
+  "imports": {
+    "#stress-command": "./stress-command.ts"
+  },
+  "dependencies": {
+    "@-/com.npmjs.citty-universal": "workspace:*",
+    "@-/com.npmjs.consola": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest.apps": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest.device": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest.stats": "workspace:*"
+  }
+}

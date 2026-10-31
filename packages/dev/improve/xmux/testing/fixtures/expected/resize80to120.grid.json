@@ -1,0 +1,52 @@
+{
+  "scenario": "resize80to120",
+  "terminals": [
+    {
+      "cmux_id": "term_771d1416b58bf685d8c3f0fac3e7129f",
+      "grid": {
+        "cols": 120,
+        "rows": 30,
+        "default_fg": 4294967295,
+        "default_bg": 4278190080,
+        "cursor": {
+          "row": 2,
+          "col": 0,
+          "visible": true
+        },
+        "lines": [
+          "before resize                                                                                                           ",
+          "after resize: 30 120                                                                                                    ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        ",
+          "                                                                                                                        "
+        ],
+        "styles": []
+      }
+    }
+  ]
+}

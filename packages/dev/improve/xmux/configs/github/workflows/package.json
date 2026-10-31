@@ -1,0 +1,17 @@
+{
+  "name": "@-/dev.improve.xmux.configs.github.workflows",
+  "version": "0.0.0",
+  "private": true,
+  "bin": {
+    "_gwf": "./_gwf.ts"
+  },
+  "type": "module",
+  "dependencies": {
+    "@-/com.npmjs.citty-universal": "workspace:*",
+    "@-/dev.improve.xmux.configs.github.workflows.android": "workspace:*",
+    "@-/dev.improve.xmux.configs.github.workflows.rust": "workspace:*",
+    "@-/dev.improve.xmux.configs.github.workflows.typescript": "workspace:*",
+    "@-/dev.improve.xmux.constants.paths": "workspace:*",
+    "@github-actions-workflow-ts/cli": "catalog:"
+  }
+}

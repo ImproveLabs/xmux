@@ -1,0 +1,46 @@
+{
+  "scenario": "cursor",
+  "terminals": [
+    {
+      "cmux_id": "term_48cb9e10885e6b3ae510b2bc3a18d8cc",
+      "grid": {
+        "cols": 80,
+        "rows": 24,
+        "default_fg": 4294967295,
+        "default_bg": 4278190080,
+        "cursor": {
+          "row": 0,
+          "col": 0,
+          "visible": false
+        },
+        "lines": [
+          "top-left                                                                        ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "         at 5,10                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "cleared line 10!                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                             saved-and-moved                                    ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "    cursor ends here                                                            ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                ",
+          "                                                                                "
+        ],
+        "styles": []
+      }
+    }
+  ]
+}

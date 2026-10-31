@@ -1,0 +1,20 @@
+[package]
+name = "xmux-proto"
+description = "xmux wire protocol: schema types (prost), 16-byte framing, LZ4"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+prost = { workspace = true }
+lz4_flex = { workspace = true }
+thiserror = { workspace = true }
+
+[build-dependencies]
+prost-build = { workspace = true }
+protox = { workspace = true }
+
+[lints]
+workspace = true

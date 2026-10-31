@@ -1,0 +1,12 @@
+{
+  "name": "@-/dev.improve.xmux.configs.quest.parse",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#parse": "./parse.ts"
+  },
+  "exports": {
+    ".": "./+.ts"
+  }
+}

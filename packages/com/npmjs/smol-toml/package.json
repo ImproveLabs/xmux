@@ -1,0 +1,12 @@
+{
+  "name": "@-/com.npmjs.smol-toml",
+  "private": true,
+  "type": "module",
+  "imports": {},
+  "exports": {
+    ".": "./+.ts"
+  },
+  "dependencies": {
+    "smol-toml": "catalog:"
+  }
+}

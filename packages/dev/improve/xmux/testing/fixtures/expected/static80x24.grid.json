@@ -1,0 +1,46 @@
+{
+  "scenario": "static80x24",
+  "terminals": [
+    {
+      "cmux_id": "term_24414ed7058384049c6e40c15354dfc6",
+      "grid": {
+        "cols": 80,
+        "rows": 24,
+        "default_fg": 4294967295,
+        "default_bg": 4278190080,
+        "cursor": {
+          "row": 23,
+          "col": 79,
+          "visible": true
+        },
+        "lines": [
+          "01 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "02 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "03 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "04 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "05 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "06 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "07 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "08 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "09 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "10 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "11 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "12 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "13 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "14 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "15 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "16 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "17 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "18 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "19 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "20 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "21 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "22 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "23 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU",
+          "24 The quick brown fox jumps over the lazy dog. 0123456789 ABCDEFGHIJKLMNOPQRSTU"
+        ],
+        "styles": []
+      }
+    }
+  ]
+}

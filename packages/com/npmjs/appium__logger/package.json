@@ -1,0 +1,12 @@
+{
+  "name": "@-/com.npmjs.appium__logger",
+  "private": true,
+  "type": "module",
+  "imports": {},
+  "exports": {
+    ".": "./+.ts"
+  },
+  "dependencies": {
+    "@appium/logger": "catalog:"
+  }
+}

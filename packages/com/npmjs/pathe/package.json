@@ -1,0 +1,12 @@
+{
+  "name": "@-/com.npmjs.pathe",
+  "private": true,
+  "type": "module",
+  "imports": {},
+  "exports": {
+    ".": "./+.ts"
+  },
+  "dependencies": {
+    "pathe": "catalog:"
+  }
+}

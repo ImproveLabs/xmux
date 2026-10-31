@@ -1,0 +1,3 @@
+# Bun never loads .env files implicitly here; scripts take configuration from flags and the
+# environment so CI and local runs behave the same.
+env = false

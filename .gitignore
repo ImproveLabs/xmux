@@ -1,0 +1,36 @@
+# JavaScript / Bun
+node_modules/
+*.tsbuildinfo
+.vite/
+
+# Android / Gradle
+/build/
+packages/**/build/
+.gradle/
+.kotlin/
+/local.properties
+*.iml
+.idea/
+
+# Rust
+/target/
+
+# Tooling output
+results/smoke/*.jpg
+*.log
+.DS_Store
+
+# Headset captures
+results/quest/
+
+# JVM heap dumps (Gradle, R8)
+*.hprof
+
+# Local device state, build artifacts, and signing credentials
+.argent/
+results/
+dist/
+*.jks
+*.keystore
+.env
+.env.*

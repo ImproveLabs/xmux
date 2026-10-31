@@ -1,0 +1,156 @@
+public final class dev/xmux/spatial/PanelSpec {
+	public static final field $stable I
+	public static final field Companion Ldev/xmux/spatial/PanelSpec$Companion;
+	public fun <init> (IIF)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()F
+	public final fun copy (IIF)Ldev/xmux/spatial/PanelSpec;
+	public static synthetic fun copy$default (Ldev/xmux/spatial/PanelSpec;IIFILjava/lang/Object;)Ldev/xmux/spatial/PanelSpec;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getHeightM ()F
+	public final fun getHeightPx ()I
+	public final fun getWidthM ()F
+	public final fun getWidthPx ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/spatial/PanelSpec$Companion {
+	public final fun of (FFIIFIF)Ldev/xmux/spatial/PanelSpec;
+	public final fun of (Ldev/xmux/core/TerminalFont;IIFIF)Ldev/xmux/spatial/PanelSpec;
+}
+
+public abstract interface class dev/xmux/spatial/Placement {
+}
+
+public final class dev/xmux/spatial/Placement$Arc : dev/xmux/spatial/Placement {
+	public static final field $stable I
+	public fun <init> (II)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun copy (II)Ldev/xmux/spatial/Placement$Arc;
+	public static synthetic fun copy$default (Ldev/xmux/spatial/Placement$Arc;IIILjava/lang/Object;)Ldev/xmux/spatial/Placement$Arc;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCount ()I
+	public final fun getIndex ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/spatial/Placement$Fixed : dev/xmux/spatial/Placement {
+	public static final field $stable I
+	public fun <init> (Lcom/meta/spatial/core/Pose;)V
+	public final fun component1 ()Lcom/meta/spatial/core/Pose;
+	public final fun copy (Lcom/meta/spatial/core/Pose;)Ldev/xmux/spatial/Placement$Fixed;
+	public static synthetic fun copy$default (Ldev/xmux/spatial/Placement$Fixed;Lcom/meta/spatial/core/Pose;ILjava/lang/Object;)Ldev/xmux/spatial/Placement$Fixed;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPose ()Lcom/meta/spatial/core/Pose;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/spatial/Placement$InFrontOfHead : dev/xmux/spatial/Placement {
+	public static final field $stable I
+	public static final field INSTANCE Ldev/xmux/spatial/Placement$InFrontOfHead;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/spatial/ScreenWindow {
+	public static final field $stable I
+	public final fun getContent ()Ldev/xmux/spatial/WindowContent;
+	public final fun getEntity ()Lcom/meta/spatial/core/Entity;
+	public final fun getIndex ()I
+	public final fun getScreen-s1LLKI8 ()Ldev/xmux/client/ScreenId;
+	public final fun getScreenView ()Ldev/xmux/core/ScreenView;
+	public final fun getSession ()Ldev/xmux/client/XmuxSession;
+	public final fun getState ()Ldev/xmux/compose/TerminalWindowState;
+	public final fun getView ()Ldev/xmux/core/TerminalGridView;
+	public final fun isLayer ()Z
+	public final fun pose ()Lcom/meta/spatial/core/Pose;
+	public final fun refreshIfDirty ()V
+	public final fun setPose (Lcom/meta/spatial/core/Pose;)V
+}
+
+public final class dev/xmux/spatial/SpatialConfig {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (FIIFFIFFZ)V
+	public synthetic fun <init> (FIIFFIFFZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()F
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()F
+	public final fun component5 ()F
+	public final fun component6 ()I
+	public final fun component7 ()F
+	public final fun component8 ()F
+	public final fun component9 ()Z
+	public final fun copy (FIIFFIFFZ)Ldev/xmux/spatial/SpatialConfig;
+	public static synthetic fun copy$default (Ldev/xmux/spatial/SpatialConfig;FIIFFIFFZILjava/lang/Object;)Ldev/xmux/spatial/SpatialConfig;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getArcRadiusM ()F
+	public final fun getCols ()I
+	public final fun getEnablePassthrough ()Z
+	public final fun getFontPx ()F
+	public final fun getMaxLayers ()I
+	public final fun getPaddingPx ()F
+	public final fun getRows ()I
+	public final fun getSpawnDistanceM ()F
+	public final fun getWindowWidthM ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/xmux/spatial/WindowContent {
+	public static final field $stable I
+	public fun <init> (Ldev/xmux/compose/TerminalWindowState;Ldev/xmux/core/CellGrid;Ldev/xmux/compose/WindowChrome;)V
+	public synthetic fun <init> (Ldev/xmux/compose/TerminalWindowState;Ldev/xmux/core/CellGrid;Ldev/xmux/compose/WindowChrome;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getChrome ()Ldev/xmux/compose/WindowChrome;
+	public final fun getGrid ()Ldev/xmux/core/CellGrid;
+	public final fun getState ()Ldev/xmux/compose/TerminalWindowState;
+}
+
+public final class dev/xmux/spatial/WindowLayout {
+	public static final field $stable I
+	public static final field INSTANCE Ldev/xmux/spatial/WindowLayout;
+	public final fun arc (Lcom/meta/spatial/core/Pose;IIFFFF)Lcom/meta/spatial/core/Pose;
+	public static synthetic fun arc$default (Ldev/xmux/spatial/WindowLayout;Lcom/meta/spatial/core/Pose;IIFFFFILjava/lang/Object;)Lcom/meta/spatial/core/Pose;
+	public final fun arcColumns (I)I
+	public final fun inFrontOfHead (Lcom/meta/spatial/core/Pose;F)Lcom/meta/spatial/core/Pose;
+	public final fun isUsableHeadPose (Lcom/meta/spatial/core/Pose;)Z
+	public final fun resolve (Ldev/xmux/spatial/Placement;Lcom/meta/spatial/core/Pose;Ldev/xmux/spatial/SpatialConfig;Ldev/xmux/spatial/PanelSpec;)Lcom/meta/spatial/core/Pose;
+}
+
+public final class dev/xmux/spatial/XmuxSpatial {
+	public static final field $stable I
+	public static final field BASE_REGISTRATION_ID I
+	public static final field Companion Ldev/xmux/spatial/XmuxSpatial$Companion;
+	public fun <init> (Lcom/meta/spatial/toolkit/AppSystemActivity;Ldev/xmux/spatial/SpatialConfig;)V
+	public synthetic fun <init> (Lcom/meta/spatial/toolkit/AppSystemActivity;Ldev/xmux/spatial/SpatialConfig;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun dispatchKeyEvent (Landroid/view/KeyEvent;)Z
+	public final fun follow (Ldev/xmux/client/XmuxSession;Lkotlin/jvm/functions/Function2;)V
+	public static synthetic fun follow$default (Ldev/xmux/spatial/XmuxSpatial;Ldev/xmux/client/XmuxSession;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)V
+	public final fun getConfig ()Ldev/xmux/spatial/SpatialConfig;
+	public final fun getFocused ()Ldev/xmux/spatial/ScreenWindow;
+	public final fun getFont ()Ldev/xmux/core/TerminalFont;
+	public final fun getSpec ()Ldev/xmux/spatial/PanelSpec;
+	public final fun getWindows ()Ljava/util/List;
+	public final fun mount (Ldev/xmux/spatial/WindowContent;Ldev/xmux/spatial/Placement;)Ldev/xmux/spatial/ScreenWindow;
+	public static synthetic fun mount$default (Ldev/xmux/spatial/XmuxSpatial;Ldev/xmux/spatial/WindowContent;Ldev/xmux/spatial/Placement;ILjava/lang/Object;)Ldev/xmux/spatial/ScreenWindow;
+	public final fun mount-dkMwouA (Ldev/xmux/client/XmuxSession;ILdev/xmux/spatial/Placement;)Ldev/xmux/spatial/ScreenWindow;
+	public static synthetic fun mount-dkMwouA$default (Ldev/xmux/spatial/XmuxSpatial;Ldev/xmux/client/XmuxSession;ILdev/xmux/spatial/Placement;ILjava/lang/Object;)Ldev/xmux/spatial/ScreenWindow;
+	public final fun mountPanel (IILdev/xmux/spatial/Placement;Lkotlin/jvm/functions/Function2;)Lcom/meta/spatial/core/Entity;
+	public static synthetic fun mountPanel$default (Ldev/xmux/spatial/XmuxSpatial;IILdev/xmux/spatial/Placement;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lcom/meta/spatial/core/Entity;
+	public final fun onSceneReady ()V
+	public final fun onSceneTick ()V
+	public final fun registerFeatures ()Ljava/util/List;
+	public final fun registerPanels ()Ljava/util/List;
+	public final fun unmount (Ldev/xmux/spatial/ScreenWindow;)V
+}
+
+public final class dev/xmux/spatial/XmuxSpatial$Companion {
+}
+
