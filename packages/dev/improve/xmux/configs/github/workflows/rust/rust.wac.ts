@@ -21,8 +21,8 @@ const paths: Paths = [
 
 /** rustup installs the toolchain and components named in rust-toolchain.toml. */
 const rustupToolchainStep = new Step({
-  name: "Install Rust toolchain from rust-toolchain.toml",
-  run: "rustup toolchain install",
+  name: "Install Rust toolchain components",
+  run: "rustup component add cargo rustc rust-std rustfmt clippy",
 });
 
 const rustCacheStep = new Step({

@@ -42,6 +42,8 @@ jobs:
           run-install: false
       - name: Install dependencies
         run: vp install
+      - name: Install Rust toolchain components
+        run: rustup component add cargo rustc rust-std rustfmt clippy
       - name: Check the tag matches the Cargo version
         run: |-
           cargo_version="$(cargo metadata --no-deps --format-version 1 | jq -r '.packages[] | select(.name == "xmux-bridged") | .version')"

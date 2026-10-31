@@ -4,7 +4,10 @@ xmux follows `0.MINOR.PATCH` until 1.0: a MINOR release may break the Kotlin API
 protocol, and says so here. The Android libraries, the bridge and the wire protocol share one
 version.
 
-## 0.1.0 — Preview
+## 0.1.1 — Preview
+
+- Fix fresh-runner Rust installation and Android library publication after the unpublished 0.1.0 release attempt.
+- Publish AARs, source JARs, POMs, and Gradle module metadata; omit generated Javadocs because AGP 8.11's bundled Dokka cannot read Java 17 sealed classes.
 
 ### Bridge (`xmux-bridge`)
 

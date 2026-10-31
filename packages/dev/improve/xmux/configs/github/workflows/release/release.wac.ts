@@ -28,6 +28,10 @@ const bridge = new NormalJob("bridge", {
 }).addSteps([
   ...bootstrapSteps,
   new Step({
+    name: "Install Rust toolchain components",
+    run: "rustup component add cargo rustc rust-std rustfmt clippy",
+  }),
+  new Step({
     name: "Check the tag matches the Cargo version",
     run: [
       'cargo_version="$(cargo metadata --no-deps --format-version 1 | jq -r \'.packages[] | select(.name == "xmux-bridged") | .version\')"',

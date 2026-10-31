@@ -1,3 +1,5 @@
+import com.vanniktech.maven.publish.AndroidSingleVariantLibrary
+
 plugins {
   alias(libs.plugins.android.library)
   alias(libs.plugins.kotlin.android)
@@ -35,7 +37,8 @@ dependencies {
 }
 
 mavenPublishing {
-  publishToMavenCentral(automaticRelease = true)
+  // AGP 8.11's bundled Dokka cannot read Java 17 sealed classes; ship sources without Javadocs.
+  configure(AndroidSingleVariantLibrary(publishJavadocJar = false))
   if (project.hasProperty("signingInMemoryKey")) signAllPublications()
   coordinates(project.group.toString(), project.name, project.version.toString())
   pom {
