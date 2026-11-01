@@ -6,6 +6,11 @@ version.
 
 ## 0.2.0 — Preview
 
+- Opt-in grid resizing (`SpatialConfig.resizeGrids`): resizing a cmux screen window re-flows its
+  terminals instead of scaling the panel. ISDK `Relayout` with a free aspect ratio reveals or crops
+  the panel while dragging; on release, `ScreenLayoutEngine.fit` sizes every pane to whole cells,
+  `XmuxSpatial.onGridResize` gets the new grids (default: `TerminalHandle.resize`), and the window
+  follows them or snaps back. `XmuxSpatial.resizeWindow` resizes a window from code.
 - Move runnable apps to the top-level `apps/` directory and rename the internal demo library to
   `xmux-demo-content`. Android Gradle project names now match their app directories.
 - Rename the developer CLI crate to `xmux-cli` and its executable to `xmux`.

@@ -1,5 +1,7 @@
 package dev.improve.xmux.spatial
 
+import android.os.SystemClock
+import android.util.Log
 import android.view.KeyEvent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
@@ -41,7 +43,10 @@ import dev.improve.xmux.client.ScreenId
 import dev.improve.xmux.client.TerminalHandle
 import dev.improve.xmux.client.TerminalId
 import dev.improve.xmux.client.XmuxSession
+import dev.improve.xmux.screen.layout.PxSize
 import dev.improve.xmux.screen.view.ScreenView
+import kotlin.math.abs
+import kotlin.math.roundToInt
 import dev.improve.xmux.terminal.font.TerminalFont
 import dev.improve.xmux.terminal.grid.TerminalGridView
 import dev.improve.xmux.terminal.window.TerminalWindow
@@ -79,6 +84,13 @@ public class ScreenWindow internal constructor(
   public var screenView: ScreenView? = null
     internal set
   internal var pending: Placement? = null
+
+  /** The screen view's last laid-out size; differs from the spec's body after a Relayout resize. */
+  @Volatile internal var laidOutBody: PxSize? = null
+  /** When a grid resize was requested; the panel snaps back to its grids if none arrives by then. */
+  internal var gridResizeDeadline: Long = 0L
+  /** The body a snap-back already answered, so a layout quirk cannot respawn the panel forever. */
+  internal var snappedBody: PxSize? = null
 
   public val state: TerminalWindowState get() = content?.state ?: binding!!.state
   public val session: XmuxSession? get() = binding?.session
@@ -147,6 +159,20 @@ public class XmuxSpatial(
 
   public val windows: List<ScreenWindow> get() = mounted
 
+  /**
+   * With [SpatialConfig.resizeGrids], called on the main thread when the user resized [window]:
+   * [sizes] holds the grid each of its terminals needs to fill the new size (only those that
+   * change, background tabs included). The default asks cmux through this viewer
+   * ([TerminalHandle.resize]) for the terminals the window shows; replace it to apply the size
+   * another way. The window follows once the new grids arrive, and snaps back to its current
+   * grids if none do within a few seconds.
+   */
+  public var onGridResize: (window: ScreenWindow, sizes: Map<TerminalId, GridSize>) -> Unit = { window, sizes ->
+    val session = window.session
+    val shown = window.screen?.let { session?.topology?.value?.screen(it) }?.panes?.mapNotNull { it.activeTerminal }.orEmpty()
+    if (session != null) for ((terminal, size) in sizes) if (terminal in shown) session.terminal(terminal).resize(size.cols, size.rows)
+  }
+
   /** The window that last got a tap; keyboard input goes to its focused pane. */
   public var focused: ScreenWindow? = null
     private set
@@ -180,6 +206,7 @@ public class XmuxSpatial(
       }
       if (b.tick() && w.entity != null) respawn(w)
     }
+    if (config.resizeGrids) for (w in mounted.toList()) settleGridResize(w)
     for (w in mounted) w.refreshIfDirty()
     if (mounted.none { it.pending != null }) return
     val head = headPose() ?: return
@@ -322,8 +349,58 @@ public class XmuxSpatial(
     return PanelSpec(w, h, w * metresPerPx)
   }
 
+  /**
+   * Resizes a cmux screen window to about [widthM] x [heightM] (header included) the way a corner
+   * drag does with [SpatialConfig.resizeGrids]: [onGridResize] gets the grids that fill that size,
+   * and the window follows them. Call on the main thread.
+   */
+  public fun resizeWindow(window: ScreenWindow, widthM: Float, heightM: Float) {
+    require(config.resizeGrids) { "SpatialConfig.resizeGrids is off" }
+    require(window in mounted && window.binding != null) { "not a mounted cmux screen window" }
+    val panel = PxSize((widthM / metresPerPx).roundToInt(), (heightM / metresPerPx).roundToInt())
+    window.laidOutBody = PxSize(panel.width, panel.height - window.chrome.headerHeightDp - 1)
+  }
+
+  /**
+   * A Relayout resize leaves the panel at the user's size with the old grids in it. Ask for the
+   * grids that fill it; when nothing would change (less than a cell), or no new grid arrives in
+   * time, re-create the panel at its grids' size.
+   */
+  private fun settleGridResize(window: ScreenWindow) {
+    val binding = window.binding ?: return
+    if (window.entity == null) return
+    val body = window.laidOutBody
+    if (body == null) {
+      if (window.gridResizeDeadline != 0L && SystemClock.uptimeMillis() > window.gridResizeDeadline) {
+        Log.i(TAG, "screen ${window.screen?.value}: no new grid arrived; restoring the panel")
+        window.gridResizeDeadline = 0L
+        respawn(window)
+      }
+      return
+    }
+    window.laidOutBody = null
+    val expected = bodySize(window.spec, window.chrome)
+    val cell = binding.font
+    if (abs(body.width - expected.width) < cell.cellWidth / 2 && abs(body.height - expected.height) < cell.cellHeight / 2) return
+    if (body.width <= 0 || body.height <= 0) return
+    val sizes = binding.gridsFor(body)
+    Log.i(TAG, "screen ${window.screen?.value}: resized to ${body.width}x${body.height} px (was ${expected.width}x${expected.height}); grids $sizes")
+    if (sizes.isNotEmpty()) {
+      window.snappedBody = null
+      window.gridResizeDeadline = SystemClock.uptimeMillis() + GRID_RESIZE_TIMEOUT_MS
+      onGridResize(window, sizes)
+    } else if (window.snappedBody != body) {
+      window.snappedBody = body
+      respawn(window)
+    }
+  }
+
+  private fun bodySize(spec: PanelSpec, chrome: WindowChrome): PxSize = PxSize(spec.widthPx, spec.heightPx - chrome.headerHeightDp - 1)
+
   /** Re-creates a screen window's panel at its new size, keeping its pose. */
   private fun respawn(window: ScreenWindow) {
+    window.gridResizeDeadline = 0L
+    window.laidOutBody = null
     val pose = window.pose()
     window.entity?.destroy()
     window.entity = null
@@ -345,12 +422,22 @@ public class XmuxSpatial(
           // rotation faces a viewer at the origin.
           Transform(Pose(Vector3(0f, 1.3f, config.spawnDistanceM), Quaternion(0f, 0f, 0f))),
           IsdkGrabbable(movementType = IsdkGrabMovementType.AxialBillboard),
-          IsdkPanelResize(
-            resizeMode = ResizeMode.Simple,
-            minDimensions = Vector2(0.2f, 0.14f),
-            maxDimensions = Vector2(4f, 3f),
-            preserveAspectRatio = true,
-          ),
+          if (config.resizeGrids && window.binding != null) {
+            // The panel's pixels follow its size (no stretching); settleGridResize turns them into grids.
+            IsdkPanelResize(
+              resizeMode = ResizeMode.Relayout,
+              minDimensions = Vector2(0.2f, 0.14f),
+              maxDimensions = Vector2(4f, 3f),
+              preserveAspectRatio = false,
+            )
+          } else {
+            IsdkPanelResize(
+              resizeMode = ResizeMode.Simple,
+              minDimensions = Vector2(0.2f, 0.14f),
+              maxDimensions = Vector2(4f, 3f),
+              preserveAspectRatio = true,
+            )
+          },
         ),
       )
   }
@@ -379,6 +466,11 @@ public class XmuxSpatial(
                   window.screenView = v
                   binding.view = v
                   binding.tick()
+                  if (config.resizeGrids) {
+                    v.addOnLayoutChangeListener { view, _, _, _, _, _, _, _, _ ->
+                      if (window.screenView === view) window.laidOutBody = PxSize(view.width, view.height)
+                    }
+                  }
                 },
               )
             }
@@ -448,5 +540,7 @@ public class XmuxSpatial(
 
   public companion object {
     public const val BASE_REGISTRATION_ID: Int = 10_000
+    private const val GRID_RESIZE_TIMEOUT_MS = 3_000L
+    private const val TAG = "XmuxSpatial"
   }
 }

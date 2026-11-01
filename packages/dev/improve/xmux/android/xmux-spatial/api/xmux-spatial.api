@@ -1,3 +1,17 @@
+public final class dev/improve/xmux/spatial/GridSize {
+	public static final field $stable I
+	public fun <init> (II)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun copy (II)Ldev/improve/xmux/spatial/GridSize;
+	public static synthetic fun copy$default (Ldev/improve/xmux/spatial/GridSize;IIILjava/lang/Object;)Ldev/improve/xmux/spatial/GridSize;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCols ()I
+	public final fun getRows ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
 public final class dev/improve/xmux/spatial/PanelSpec {
 	public static final field $stable I
 	public static final field Companion Ldev/improve/xmux/spatial/PanelSpec$Companion;
@@ -81,9 +95,10 @@ public final class dev/improve/xmux/spatial/ScreenWindow {
 public final class dev/improve/xmux/spatial/SpatialConfig {
 	public static final field $stable I
 	public fun <init> ()V
-	public fun <init> (FIIFFIFFZ)V
-	public synthetic fun <init> (FIIFFIFFZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (FIIFFIFFZZ)V
+	public synthetic fun <init> (FIIFFIFFZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()F
+	public final fun component10 ()Z
 	public final fun component2 ()I
 	public final fun component3 ()I
 	public final fun component4 ()F
@@ -92,8 +107,8 @@ public final class dev/improve/xmux/spatial/SpatialConfig {
 	public final fun component7 ()F
 	public final fun component8 ()F
 	public final fun component9 ()Z
-	public final fun copy (FIIFFIFFZ)Ldev/improve/xmux/spatial/SpatialConfig;
-	public static synthetic fun copy$default (Ldev/improve/xmux/spatial/SpatialConfig;FIIFFIFFZILjava/lang/Object;)Ldev/improve/xmux/spatial/SpatialConfig;
+	public final fun copy (FIIFFIFFZZ)Ldev/improve/xmux/spatial/SpatialConfig;
+	public static synthetic fun copy$default (Ldev/improve/xmux/spatial/SpatialConfig;FIIFFIFFZZILjava/lang/Object;)Ldev/improve/xmux/spatial/SpatialConfig;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getArcRadiusM ()F
 	public final fun getCols ()I
@@ -101,6 +116,7 @@ public final class dev/improve/xmux/spatial/SpatialConfig {
 	public final fun getFontPx ()F
 	public final fun getMaxLayers ()I
 	public final fun getPaddingPx ()F
+	public final fun getResizeGrids ()Z
 	public final fun getRows ()I
 	public final fun getSpawnDistanceM ()F
 	public final fun getWindowWidthM ()F
@@ -171,6 +187,7 @@ public final class dev/improve/xmux/spatial/XmuxSpatial {
 	public final fun getConfig ()Ldev/improve/xmux/spatial/SpatialConfig;
 	public final fun getFocused ()Ldev/improve/xmux/spatial/ScreenWindow;
 	public final fun getFont ()Ldev/improve/xmux/terminal/font/TerminalFont;
+	public final fun getOnGridResize ()Lkotlin/jvm/functions/Function2;
 	public final fun getSpec ()Ldev/improve/xmux/spatial/PanelSpec;
 	public final fun getWindows ()Ljava/util/List;
 	public final fun hitTest (Lcom/meta/spatial/core/Vector3;Lcom/meta/spatial/core/Vector3;F)Ldev/improve/xmux/spatial/WindowHit;
@@ -186,6 +203,8 @@ public final class dev/improve/xmux/spatial/XmuxSpatial {
 	public final fun onSceneTick ()V
 	public final fun registerFeatures ()Ljava/util/List;
 	public final fun registerPanels ()Ljava/util/List;
+	public final fun resizeWindow (Ldev/improve/xmux/spatial/ScreenWindow;FF)V
+	public final fun setOnGridResize (Lkotlin/jvm/functions/Function2;)V
 	public final fun unmount (Ldev/improve/xmux/spatial/ScreenWindow;)V
 }
 

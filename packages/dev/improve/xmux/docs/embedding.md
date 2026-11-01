@@ -193,6 +193,15 @@ xmux.follow(session, chrome = { screen ->
 Windows can always be grabbed, moved and resized with hands or controllers. `ScreenWindow.setPose`
 moves one from code.
 
+By default, resizing scales a window. With `SpatialConfig(resizeGrids = true)`, resizing a cmux screen
+window re-flows its terminals: the corners reveal or crop the panel while dragging (ISDK `Relayout`,
+free aspect ratio), and on release xmux fits the screen's panes to the new size, in whole cells.
+`xmux.onGridResize(window, sizes)` then gets the grid each terminal needs. The default asks cmux
+through this viewer (`TerminalHandle.resize`); set it to apply the sizes another way, for instance
+to pin them over a Mac frontend's size. The window follows when the new grids arrive, and snaps
+back to its current grids if none do within 3 s. `xmux.resizeWindow(window, widthM, heightM)` does
+the same from code.
+
 `SpatialConfig` fields:
 
 | Field | Default | Meaning |
@@ -205,6 +214,7 @@ moves one from code.
 | `spawnDistanceM` | 1.1 | distance for `InFrontOfHead` |
 | `arcRadiusM` | 1.6 | radius for `Arc` |
 | `enablePassthrough` | true | turn passthrough on in `onSceneReady()` |
+| `resizeGrids` | false | resizing a screen window changes its terminals' grids instead of scaling it (changes the Mac's grids) |
 
 Compositor layers look sharper than meshes but each one costs GPU time, so only the first
 `maxLayers` windows get one.

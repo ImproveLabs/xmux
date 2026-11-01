@@ -15,6 +15,13 @@ public data class SpatialConfig(
   public val spawnDistanceM: Float = 1.1f,
   public val arcRadiusM: Float = 1.6f,
   public val enablePassthrough: Boolean = true,
+  /**
+   * Resizing a cmux screen window re-flows its terminals instead of scaling the panel: the corners
+   * reveal or crop the panel while dragging (ISDK `Relayout`, free aspect ratio), and on release
+   * [XmuxSpatial.onGridResize] gets the grid each terminal needs to fill the new size. The window
+   * then follows the terminals' new grids. Off by default, since it changes the Mac's grids.
+   */
+  public val resizeGrids: Boolean = false,
 )
 
 /** Where a newly mounted window goes. */

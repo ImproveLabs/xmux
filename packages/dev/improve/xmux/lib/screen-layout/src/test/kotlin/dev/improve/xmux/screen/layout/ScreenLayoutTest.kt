@@ -40,6 +40,36 @@ class ScreenLayoutTest {
   }
 
   @Test
+  fun fitGivesALonePaneTheWholeTarget() {
+    assertEquals(mapOf(1 to PxSize(640, 300)), ScreenLayoutEngine.fit(LayoutTree.Leaf(1), size, PxSize(640, 300)))
+  }
+
+  @Test
+  fun fitKeepsSplitProportionsAndFillsTheTarget() {
+    // 100 and 80 wide side by side: twice the width keeps the 5:4 share, both take the full height.
+    val side = LayoutTree.Split(true, 0.5f, LayoutTree.Leaf(1), LayoutTree.Leaf(2))
+    val target = PxSize(2 * (100 + 80) + d, 120)
+    val fitted = ScreenLayoutEngine.fit(side, size, target)
+    assertEquals(mapOf(1 to PxSize(200, 120), 2 to PxSize(160, 120)), fitted)
+    assertEquals(target, ScreenLayoutEngine.measure(side) { fitted.getValue(it) })
+
+    val nested = LayoutTree.Split(true, 0.5f, LayoutTree.Leaf(1), LayoutTree.Split(false, 0.5f, LayoutTree.Leaf(2), LayoutTree.Leaf(3)))
+    val big = PxSize(500, 333)
+    assertEquals(big, ScreenLayoutEngine.measure(nested) { ScreenLayoutEngine.fit(nested, size, big).getValue(it) })
+  }
+
+  @Test
+  fun fitUsesTheRatioBeforePanesHaveSizesAndSkipsCollapsedStackMembers() {
+    val empty = { _: Int -> PxSize(0, 0) }
+    val split = LayoutTree.Split(false, 0.25f, LayoutTree.Leaf(1), LayoutTree.Leaf(2))
+    assertEquals(mapOf(1 to PxSize(80, 24), 2 to PxSize(80, 74)), ScreenLayoutEngine.fit(split, empty, PxSize(80, 100)))
+
+    val stack = LayoutTree.Stack(listOf(1, 2, 3), expanded = 2)
+    val h = ScreenLayoutEngine.STACK_HEADER_PX
+    assertEquals(mapOf(2 to PxSize(300, 200 - 2 * h)), ScreenLayoutEngine.fit(stack, size, PxSize(300, 200)))
+  }
+
+  @Test
   fun columnsSitSideBySideWithDividers() {
     val tree = LayoutTree.Columns(listOf(0.5f, 0.5f), listOf(LayoutTree.Leaf(1), LayoutTree.Leaf(3)))
     assertEquals(PxSize(100 + d + 60, 50), ScreenLayoutEngine.measure(tree, size))

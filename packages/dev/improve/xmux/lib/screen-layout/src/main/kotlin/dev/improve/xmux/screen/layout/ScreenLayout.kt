@@ -105,6 +105,52 @@ public object ScreenLayoutEngine {
     }
   }
 
+  /**
+   * The size every shown pane gets when the whole tree is resized to [target]: the inverse of
+   * [measure]. A split shares its extent along the split axis in proportion to its children's
+   * current sizes ([size]), so their relative widths survive, and gives both children its full
+   * extent across it. Collapsed stack members are left out (their size never shows).
+   */
+  public fun fit(tree: LayoutTree, size: (Int) -> PxSize, target: PxSize): Map<Int, PxSize> {
+    val out = LinkedHashMap<Int, PxSize>()
+    fitInto(tree, size, target.width, target.height, out)
+    return out
+  }
+
+  private fun fitInto(tree: LayoutTree, size: (Int) -> PxSize, width: Int, height: Int, out: MutableMap<Int, PxSize>) {
+    when (tree) {
+      is LayoutTree.Leaf -> out[tree.pane] = PxSize(width.coerceAtLeast(0), height.coerceAtLeast(0))
+      is LayoutTree.Split -> {
+        val a = measure(tree.first, size)
+        val b = measure(tree.second, size)
+        if (tree.horizontal) {
+          val (first, second) = share(width - DIVIDER_PX, listOf(a.width, b.width), listOf(tree.ratio, 1f - tree.ratio))
+          fitInto(tree.first, size, first, height, out)
+          fitInto(tree.second, size, second, height, out)
+        } else {
+          val (first, second) = share(height - DIVIDER_PX, listOf(a.height, b.height), listOf(tree.ratio, 1f - tree.ratio))
+          fitInto(tree.first, size, width, first, out)
+          fitInto(tree.second, size, width, second, out)
+        }
+      }
+      is LayoutTree.Stack -> fitInto(LayoutTree.Leaf(tree.expanded), size, width, height - (tree.panes.size - 1) * STACK_HEADER_PX, out)
+      is LayoutTree.Columns -> {
+        val widths = share(width - DIVIDER_PX * (tree.columns.size - 1).coerceAtLeast(0), tree.columns.map { measure(it, size).width }, tree.widths)
+        for ((column, w) in tree.columns.zip(widths)) fitInto(column, size, w, height, out)
+      }
+    }
+  }
+
+  /** Splits [total] in proportion to [current], or to [fallback] when nothing has a size yet. */
+  private fun share(total: Int, current: List<Int>, fallback: List<Float>): List<Int> {
+    val available = total.coerceAtLeast(0)
+    val weights = if (current.sum() > 0) current.map { it.toFloat() } else fallback.map { it.coerceAtLeast(0f) }
+    val sum = weights.sum()
+    val parts = weights.map { if (sum > 0f) (available * it / sum).toInt() else available / weights.size }.toMutableList()
+    if (parts.isNotEmpty()) parts[parts.lastIndex] += available - parts.sum()
+    return parts
+  }
+
   /** The dividers between siblings, for drawing. */
   public fun dividers(tree: LayoutTree, size: (Int) -> PxSize, left: Int = 0, top: Int = 0): List<PxRect> {
     val out = ArrayList<PxRect>()

@@ -94,6 +94,7 @@ public final class dev/improve/xmux/screen/layout/ScreenLayoutEngine {
 	public static final field STACK_HEADER_PX I
 	public final fun dividers (Ldev/improve/xmux/screen/layout/LayoutTree;Lkotlin/jvm/functions/Function1;II)Ljava/util/List;
 	public static synthetic fun dividers$default (Ldev/improve/xmux/screen/layout/ScreenLayoutEngine;Ldev/improve/xmux/screen/layout/LayoutTree;Lkotlin/jvm/functions/Function1;IIILjava/lang/Object;)Ljava/util/List;
+	public final fun fit (Ldev/improve/xmux/screen/layout/LayoutTree;Lkotlin/jvm/functions/Function1;Ldev/improve/xmux/screen/layout/PxSize;)Ljava/util/Map;
 	public final fun measure (Ldev/improve/xmux/screen/layout/LayoutTree;Lkotlin/jvm/functions/Function1;)Ldev/improve/xmux/screen/layout/PxSize;
 	public final fun place (Ldev/improve/xmux/screen/layout/LayoutTree;Lkotlin/jvm/functions/Function1;II)Ljava/util/Map;
 	public static synthetic fun place$default (Ldev/improve/xmux/screen/layout/ScreenLayoutEngine;Ldev/improve/xmux/screen/layout/LayoutTree;Lkotlin/jvm/functions/Function1;IIILjava/lang/Object;)Ljava/util/Map;

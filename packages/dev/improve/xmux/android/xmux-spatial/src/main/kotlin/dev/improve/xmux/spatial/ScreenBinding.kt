@@ -25,7 +25,7 @@ import dev.improve.xmux.window.frame.TerminalWindowState
 internal class ScreenBinding(
   val session: XmuxSession,
   val screen: ScreenId,
-  private val font: TerminalFont,
+  val font: TerminalFont,
   private val terminals: TerminalRefs,
   private val onFocus: () -> Unit,
 ) : ScreenView.Listener {
@@ -79,6 +79,27 @@ internal class ScreenBinding(
 
   fun refreshIfDirty() {
     view?.refreshIfDirty()
+  }
+
+  /**
+   * The grid each terminal needs for this screen to fill [body] pixels, for only the terminals
+   * whose grid differs. Every tab of a pane gets the pane's size, so switching tabs does not
+   * resize the window again.
+   */
+  fun gridsFor(body: PxSize): Map<TerminalId, GridSize> {
+    val topology = session.topology.value
+    val s = topology.screen(screen) ?: return emptyMap()
+    val fitted = GridFit.grids(ScreenModels.tree(s.layout), ScreenModels.panes(s, session), body, font.cellWidth, font.cellHeight)
+    val out = LinkedHashMap<TerminalId, GridSize>()
+    for (pane in s.panes) {
+      val size = fitted[pane.id.value] ?: continue
+      for (tab in pane.tabs) {
+        val current = if (tab.terminal == pane.activeTerminal) session.terminal(tab.terminal).grid.value.let { GridSize(it.cols, it.rows) }
+          else topology.terminals[tab.terminal]?.let { GridSize(it.cols, it.rows) }
+        if (current != size) out[tab.terminal] = size
+      }
+    }
+    return out
   }
 
   /** Releases every terminal this window showed. */
