@@ -1,11 +1,11 @@
-public final class dev/improve/xmux/core/Glyph {
+public final class dev/improve/xmux/terminal/font/Glyph {
 	public fun <init> (Landroid/graphics/fonts/Font;I)V
 	public final fun getFont ()Landroid/graphics/fonts/Font;
 	public final fun getId ()I
 }
 
-public final class dev/improve/xmux/core/TerminalFont {
-	public static final field Companion Ldev/improve/xmux/core/TerminalFont$Companion;
+public final class dev/improve/xmux/terminal/font/TerminalFont {
+	public static final field Companion Ldev/improve/xmux/terminal/font/TerminalFont$Companion;
 	public static final field DEFAULT_ASSET Ljava/lang/String;
 	public fun <init> (Landroid/content/Context;FLjava/lang/String;)V
 	public synthetic fun <init> (Landroid/content/Context;FLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
@@ -15,9 +15,9 @@ public final class dev/improve/xmux/core/TerminalFont {
 	public final fun getFont ()Landroid/graphics/fonts/Font;
 	public final fun getPaint ()Landroid/graphics/Paint;
 	public final fun getTypeface ()Landroid/graphics/Typeface;
-	public final fun glyph (I)Ldev/improve/xmux/core/Glyph;
+	public final fun glyph (I)Ldev/improve/xmux/terminal/font/Glyph;
 }
 
-public final class dev/improve/xmux/core/TerminalFont$Companion {
+public final class dev/improve/xmux/terminal/font/TerminalFont$Companion {
 }
 

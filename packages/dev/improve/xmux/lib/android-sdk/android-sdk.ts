@@ -18,15 +18,13 @@ const defaultEnvironment = (): AndroidSdkEnvironment => ({
 
 /**
  * The Android SDK is the one toolchain piece proto does not manage. Honour ANDROID_HOME, then the
- * legacy ANDROID_SDK_ROOT, then the default location Android Studio installs to.
+ * default location Android Studio installs to.
  */
 export function resolveAndroidSdk(
   environment: AndroidSdkEnvironment = defaultEnvironment(),
 ): string {
   const { env, home, platform, exists } = environment;
-  for (const candidate of [env.ANDROID_HOME, env.ANDROID_SDK_ROOT]) {
-    if (candidate !== undefined && candidate.length > 0) return candidate;
-  }
+  if (env.ANDROID_HOME !== undefined && env.ANDROID_HOME.length > 0) return env.ANDROID_HOME;
   const fallback =
     platform === "darwin"
       ? path.join(home, "Library", "Android", "sdk")
@@ -35,6 +33,6 @@ export function resolveAndroidSdk(
         : path.join(home, "Android", "Sdk");
   if (exists(fallback)) return fallback;
   throw new Error(
-    `Android SDK not found. Set ANDROID_HOME (looked at ANDROID_HOME, ANDROID_SDK_ROOT and ${fallback}).`,
+    `Android SDK not found. Set ANDROID_HOME (looked at ANDROID_HOME and ${fallback}).`,
   );
 }

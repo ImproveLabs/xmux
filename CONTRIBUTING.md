@@ -3,8 +3,10 @@
 - Every behavior change comes with a test at the lowest level that can see it: Rust unit tests in the
   bridge, JVM tests beside their component/library, Robolectric draw tests for the renderer, device smoke
   (`vpx _quest-stress`, `vpx _quest-stats`) only for what needs a headset.
-- Kotlin packages use `dev.improve.xmux.*`; source paths mirror the package under each
-  `src/<sourceSet>/kotlin/dev/improve/xmux/` directory.
+- Kotlin packages use `dev.improve.xmux.*`. Each library module owns exactly one package, equal to
+  its Android namespace (`:xmux-terminal-grid` is `dev.improve.xmux.terminal.grid`); never declare
+  the same package in two modules. Source paths mirror the package under each
+  `src/<sourceSet>/kotlin/` directory.
 - Public Kotlin API is explicit (`explicitApi()`) and checked by the binary-compatibility validator:
   run `vpr android:api-dump` and commit the `api/*.api` diff with any public change.
 - The wire schema is `packages/dev/improve/xmux/schema/proto/xmux.proto`; code is generated at build time
@@ -37,8 +39,8 @@
   Tests read shared files (the schema, `packages/dev/improve/xmux/testing/fixtures/`)
   through `env!("XMUX_REPO_ROOT")`, never `CARGO_MANIFEST_DIR/../..`. Build scripts walk up from
   `CARGO_MANIFEST_DIR` instead, because `cargo install --git` does not read `.cargo/config.toml`.
-- Android apps live under `apps/`; client/Spatial integrations, the `xmux-core` convenience bundle,
-  and internal demo content live under `packages/dev/improve/xmux/android/`. UI components each have a
+- Android apps live under `apps/`; client/Spatial integrations and internal demo content live under
+  `packages/dev/improve/xmux/android/`. UI components each have a
   Gradle module under `packages/dev/improve/xmux/components/`; supporting libraries live under
   `packages/dev/improve/xmux/lib/`. The generated protocol module lives under
   `packages/dev/improve/xmux/schema/proto/android/`. All belong to the Gradle build at the repo root.

@@ -422,7 +422,7 @@ public final class dev/improve/xmux/client/RowApplier {
 	public final fun check (Ldev/improve/xmux/proto/Checksum;)Z
 	public final fun checksum ()J
 	public final fun getGeneration ()I
-	public final fun getGrid ()Ldev/improve/xmux/core/CellGrid;
+	public final fun getGrid ()Ldev/improve/xmux/cell/grid/CellGrid;
 	public final fun getSequence ()I
 	public final fun getSynced ()Z
 	public final fun invalidate ()V
@@ -599,7 +599,7 @@ public abstract interface class dev/improve/xmux/client/TerminalHandle : java/la
 	public abstract fun keys ([Ldev/improve/xmux/client/Key;)V
 	public abstract fun mouse (Ldev/improve/xmux/client/MouseEvent;)V
 	public abstract fun resize (II)V
-	public abstract fun send (Ldev/improve/xmux/core/KeyInput;)V
+	public abstract fun send (Ldev/improve/xmux/key/encoder/KeyInput;)V
 	public abstract fun write (Ljava/lang/String;)V
 }
 

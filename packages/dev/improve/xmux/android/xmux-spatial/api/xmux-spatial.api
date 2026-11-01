@@ -18,7 +18,7 @@ public final class dev/improve/xmux/spatial/PanelSpec {
 
 public final class dev/improve/xmux/spatial/PanelSpec$Companion {
 	public final fun of (FFIIFIF)Ldev/improve/xmux/spatial/PanelSpec;
-	public final fun of (Ldev/improve/xmux/core/TerminalFont;IIFIF)Ldev/improve/xmux/spatial/PanelSpec;
+	public final fun of (Ldev/improve/xmux/terminal/font/TerminalFont;IIFIF)Ldev/improve/xmux/spatial/PanelSpec;
 }
 
 public abstract interface class dev/improve/xmux/spatial/Placement {
@@ -60,7 +60,7 @@ public final class dev/improve/xmux/spatial/Placement$InFrontOfHead : dev/improv
 
 public final class dev/improve/xmux/spatial/ScreenWindow {
 	public static final field $stable I
-	public final fun getChrome ()Ldev/improve/xmux/compose/WindowChrome;
+	public final fun getChrome ()Ldev/improve/xmux/window/frame/WindowChrome;
 	public final fun getContent ()Ldev/improve/xmux/spatial/WindowContent;
 	public final fun getEntity ()Lcom/meta/spatial/core/Entity;
 	public final fun getFocusedPane-TkCTjq8 ()Ldev/improve/xmux/client/PaneId;
@@ -68,10 +68,10 @@ public final class dev/improve/xmux/spatial/ScreenWindow {
 	public final fun getIndex ()I
 	public final fun getPanelSize ()Ldev/improve/xmux/spatial/PanelSpec;
 	public final fun getScreen-Z_4NEhc ()Ldev/improve/xmux/client/ScreenId;
-	public final fun getScreenView ()Ldev/improve/xmux/core/ScreenView;
+	public final fun getScreenView ()Ldev/improve/xmux/screen/view/ScreenView;
 	public final fun getSession ()Ldev/improve/xmux/client/XmuxSession;
-	public final fun getState ()Ldev/improve/xmux/compose/TerminalWindowState;
-	public final fun getView ()Ldev/improve/xmux/core/TerminalGridView;
+	public final fun getState ()Ldev/improve/xmux/window/frame/TerminalWindowState;
+	public final fun getView ()Ldev/improve/xmux/terminal/grid/TerminalGridView;
 	public final fun isLayer ()Z
 	public final fun pose ()Lcom/meta/spatial/core/Pose;
 	public final fun refreshIfDirty ()V
@@ -110,11 +110,11 @@ public final class dev/improve/xmux/spatial/SpatialConfig {
 
 public final class dev/improve/xmux/spatial/WindowContent {
 	public static final field $stable I
-	public fun <init> (Ldev/improve/xmux/compose/TerminalWindowState;Ldev/improve/xmux/core/CellGrid;Ldev/improve/xmux/compose/WindowChrome;)V
-	public synthetic fun <init> (Ldev/improve/xmux/compose/TerminalWindowState;Ldev/improve/xmux/core/CellGrid;Ldev/improve/xmux/compose/WindowChrome;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun getChrome ()Ldev/improve/xmux/compose/WindowChrome;
-	public final fun getGrid ()Ldev/improve/xmux/core/CellGrid;
-	public final fun getState ()Ldev/improve/xmux/compose/TerminalWindowState;
+	public fun <init> (Ldev/improve/xmux/window/frame/TerminalWindowState;Ldev/improve/xmux/cell/grid/CellGrid;Ldev/improve/xmux/window/frame/WindowChrome;)V
+	public synthetic fun <init> (Ldev/improve/xmux/window/frame/TerminalWindowState;Ldev/improve/xmux/cell/grid/CellGrid;Ldev/improve/xmux/window/frame/WindowChrome;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getChrome ()Ldev/improve/xmux/window/frame/WindowChrome;
+	public final fun getGrid ()Ldev/improve/xmux/cell/grid/CellGrid;
+	public final fun getState ()Ldev/improve/xmux/window/frame/TerminalWindowState;
 }
 
 public final class dev/improve/xmux/spatial/WindowHit {
@@ -170,7 +170,7 @@ public final class dev/improve/xmux/spatial/XmuxSpatial {
 	public static synthetic fun follow$default (Ldev/improve/xmux/spatial/XmuxSpatial;Ldev/improve/xmux/client/XmuxSession;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
 	public final fun getConfig ()Ldev/improve/xmux/spatial/SpatialConfig;
 	public final fun getFocused ()Ldev/improve/xmux/spatial/ScreenWindow;
-	public final fun getFont ()Ldev/improve/xmux/core/TerminalFont;
+	public final fun getFont ()Ldev/improve/xmux/terminal/font/TerminalFont;
 	public final fun getSpec ()Ldev/improve/xmux/spatial/PanelSpec;
 	public final fun getWindows ()Ljava/util/List;
 	public final fun hitTest (Lcom/meta/spatial/core/Vector3;Lcom/meta/spatial/core/Vector3;F)Ldev/improve/xmux/spatial/WindowHit;
@@ -178,8 +178,8 @@ public final class dev/improve/xmux/spatial/XmuxSpatial {
 	public static synthetic fun hitTest$default (Ldev/improve/xmux/spatial/XmuxSpatial;Lcom/meta/spatial/core/Vector3;Lcom/meta/spatial/core/Vector3;FILjava/lang/Object;)Ldev/improve/xmux/spatial/WindowHit;
 	public final fun mount (Ldev/improve/xmux/spatial/WindowContent;Ldev/improve/xmux/spatial/Placement;)Ldev/improve/xmux/spatial/ScreenWindow;
 	public static synthetic fun mount$default (Ldev/improve/xmux/spatial/XmuxSpatial;Ldev/improve/xmux/spatial/WindowContent;Ldev/improve/xmux/spatial/Placement;ILjava/lang/Object;)Ldev/improve/xmux/spatial/ScreenWindow;
-	public final fun mount-zW-XcrU (Ldev/improve/xmux/client/XmuxSession;ILdev/improve/xmux/spatial/Placement;Ldev/improve/xmux/compose/WindowChrome;)Ldev/improve/xmux/spatial/ScreenWindow;
-	public static synthetic fun mount-zW-XcrU$default (Ldev/improve/xmux/spatial/XmuxSpatial;Ldev/improve/xmux/client/XmuxSession;ILdev/improve/xmux/spatial/Placement;Ldev/improve/xmux/compose/WindowChrome;ILjava/lang/Object;)Ldev/improve/xmux/spatial/ScreenWindow;
+	public final fun mount-zW-XcrU (Ldev/improve/xmux/client/XmuxSession;ILdev/improve/xmux/spatial/Placement;Ldev/improve/xmux/window/frame/WindowChrome;)Ldev/improve/xmux/spatial/ScreenWindow;
+	public static synthetic fun mount-zW-XcrU$default (Ldev/improve/xmux/spatial/XmuxSpatial;Ldev/improve/xmux/client/XmuxSession;ILdev/improve/xmux/spatial/Placement;Ldev/improve/xmux/window/frame/WindowChrome;ILjava/lang/Object;)Ldev/improve/xmux/spatial/ScreenWindow;
 	public final fun mountPanel (IILdev/improve/xmux/spatial/Placement;Lkotlin/jvm/functions/Function2;)Lcom/meta/spatial/core/Entity;
 	public static synthetic fun mountPanel$default (Ldev/improve/xmux/spatial/XmuxSpatial;IILdev/improve/xmux/spatial/Placement;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lcom/meta/spatial/core/Entity;
 	public final fun onSceneReady ()V

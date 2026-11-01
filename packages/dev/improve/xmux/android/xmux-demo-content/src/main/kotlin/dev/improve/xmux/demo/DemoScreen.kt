@@ -1,7 +1,7 @@
 package dev.improve.xmux.demo
 
-import dev.improve.xmux.core.Attr
-import dev.improve.xmux.core.CellGrid
+import dev.improve.xmux.cell.grid.Attr
+import dev.improve.xmux.cell.grid.CellGrid
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

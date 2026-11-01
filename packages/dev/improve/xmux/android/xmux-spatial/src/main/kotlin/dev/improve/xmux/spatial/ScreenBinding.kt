@@ -7,15 +7,15 @@ import dev.improve.xmux.client.MouseAction
 import dev.improve.xmux.client.MouseEvent
 import dev.improve.xmux.client.PaneId
 import dev.improve.xmux.client.ScreenId
-import dev.improve.xmux.client.ScreenModels
 import dev.improve.xmux.client.TerminalHandle
 import dev.improve.xmux.client.TerminalId
 import dev.improve.xmux.client.XmuxSession
-import dev.improve.xmux.compose.TerminalWindowState
-import dev.improve.xmux.core.KeyEncoder
-import dev.improve.xmux.core.PxSize
-import dev.improve.xmux.core.ScreenView
-import dev.improve.xmux.core.TerminalFont
+import dev.improve.xmux.key.encoder.KeyEncoder
+import dev.improve.xmux.screen.layout.PxSize
+import dev.improve.xmux.screen.view.ScreenView
+import dev.improve.xmux.screen.view.session.ScreenModels
+import dev.improve.xmux.terminal.font.TerminalFont
+import dev.improve.xmux.window.frame.TerminalWindowState
 
 /**
  * Keeps one window in step with one cmux screen: its panes and layout, its title and spinner,

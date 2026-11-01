@@ -10,8 +10,8 @@ Reusable UI components, each with its own Gradle module and explicit dependencie
 | `terminal-grid/` | `:xmux-terminal-grid` | Native terminal renderer |
 | `screen-view/` | `:xmux-screen-view` | Native multi-pane screen view |
 | `screen-view/session/` | `:xmux-screen-view-session` | Client session to screen-view adapter (`ScreenModels`) |
-| `compose/` | `:xmux-compose` | Convenience bundle for existing integrations |
 
-Each published artifact uses the Gradle module name under `dev.xmux`. Public Kotlin packages remain
-`dev.improve.xmux.compose`, `dev.improve.xmux.core`, and `dev.improve.xmux.client` to preserve source
-imports. Platform setup comes from the Gradle convention plugins in the root `build-logic/` directory.
+Each published artifact uses the Gradle module name under `dev.xmux`. Each module owns one Kotlin
+package, its Android namespace: `dev.improve.xmux.` plus the module name without `xmux-`, with dashes
+as dots (`:xmux-screen-view-session` is `dev.improve.xmux.screen.view.session`). Platform setup comes
+from the Gradle convention plugins in the root `build-logic/` directory.

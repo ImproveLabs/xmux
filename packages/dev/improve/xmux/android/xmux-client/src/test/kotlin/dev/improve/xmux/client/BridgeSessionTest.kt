@@ -1,7 +1,7 @@
 package dev.improve.xmux.client
 
 import dev.improve.xmux.client.testing.FakeBridge
-import dev.improve.xmux.core.KeyInput
+import dev.improve.xmux.key.encoder.KeyInput
 import dev.improve.xmux.proto.Bye
 import dev.improve.xmux.proto.Frame
 import dev.improve.xmux.proto.LayoutNode as WireLayoutNode

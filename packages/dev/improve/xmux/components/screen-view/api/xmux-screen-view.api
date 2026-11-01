@@ -1,20 +1,20 @@
-public final class dev/improve/xmux/core/ScreenView : android/view/ViewGroup {
-	public static final field Companion Ldev/improve/xmux/core/ScreenView$Companion;
+public final class dev/improve/xmux/screen/view/ScreenView : android/view/ViewGroup {
+	public static final field Companion Ldev/improve/xmux/screen/view/ScreenView$Companion;
 	public static final field DEFAULT_PADDING_PX F
 	public static final field TAB_STRIP_PX I
-	public fun <init> (Landroid/content/Context;Ldev/improve/xmux/core/TerminalFont;)V
+	public fun <init> (Landroid/content/Context;Ldev/improve/xmux/terminal/font/TerminalFont;)V
 	public final fun getActiveTabColor ()I
 	public final fun getBodyColor ()I
 	public final fun getDividerColor ()I
 	public final fun getFocusColor ()I
 	public final fun getFocusedPane ()I
-	public final fun getFont ()Ldev/improve/xmux/core/TerminalFont;
+	public final fun getFont ()Ldev/improve/xmux/terminal/font/TerminalFont;
 	public final fun getLabelColor ()I
-	public final fun getListener ()Ldev/improve/xmux/core/ScreenView$Listener;
+	public final fun getListener ()Ldev/improve/xmux/screen/view/ScreenView$Listener;
 	public final fun getTabColor ()I
-	public final fun gridView (I)Ldev/improve/xmux/core/TerminalGridView;
-	public final fun hit (FF)Ldev/improve/xmux/core/ScreenView$Hit;
-	public final fun naturalSize ()Ldev/improve/xmux/core/PxSize;
+	public final fun gridView (I)Ldev/improve/xmux/terminal/grid/TerminalGridView;
+	public final fun hit (FF)Ldev/improve/xmux/screen/view/ScreenView$Hit;
+	public final fun naturalSize ()Ldev/improve/xmux/screen/layout/PxSize;
 	public fun onCheckIsTextEditor ()Z
 	public fun onCreateInputConnection (Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
 	public fun onGenericMotionEvent (Landroid/view/MotionEvent;)Z
@@ -27,25 +27,25 @@ public final class dev/improve/xmux/core/ScreenView : android/view/ViewGroup {
 	public final fun setFocusColor (I)V
 	public final fun setFocusedPane (I)V
 	public final fun setLabelColor (I)V
-	public final fun setListener (Ldev/improve/xmux/core/ScreenView$Listener;)V
+	public final fun setListener (Ldev/improve/xmux/screen/view/ScreenView$Listener;)V
 	public final fun setTabColor (I)V
 	public final fun tabAt (FF)Lkotlin/Pair;
-	public final fun update (Ldev/improve/xmux/core/LayoutTree;Ljava/util/List;I)V
+	public final fun update (Ldev/improve/xmux/screen/layout/LayoutTree;Ljava/util/List;I)V
 }
 
-public final class dev/improve/xmux/core/ScreenView$Companion {
-	public final fun measure (Ldev/improve/xmux/core/TerminalFont;Ldev/improve/xmux/core/LayoutTree;Ljava/util/List;)Ldev/improve/xmux/core/PxSize;
-	public final fun paneSize (Ldev/improve/xmux/core/TerminalFont;Ldev/improve/xmux/core/ScreenView$Pane;F)Ldev/improve/xmux/core/PxSize;
-	public static synthetic fun paneSize$default (Ldev/improve/xmux/core/ScreenView$Companion;Ldev/improve/xmux/core/TerminalFont;Ldev/improve/xmux/core/ScreenView$Pane;FILjava/lang/Object;)Ldev/improve/xmux/core/PxSize;
+public final class dev/improve/xmux/screen/view/ScreenView$Companion {
+	public final fun measure (Ldev/improve/xmux/terminal/font/TerminalFont;Ldev/improve/xmux/screen/layout/LayoutTree;Ljava/util/List;)Ldev/improve/xmux/screen/layout/PxSize;
+	public final fun paneSize (Ldev/improve/xmux/terminal/font/TerminalFont;Ldev/improve/xmux/screen/view/ScreenView$Pane;F)Ldev/improve/xmux/screen/layout/PxSize;
+	public static synthetic fun paneSize$default (Ldev/improve/xmux/screen/view/ScreenView$Companion;Ldev/improve/xmux/terminal/font/TerminalFont;Ldev/improve/xmux/screen/view/ScreenView$Pane;FILjava/lang/Object;)Ldev/improve/xmux/screen/layout/PxSize;
 }
 
-public final class dev/improve/xmux/core/ScreenView$Hit {
+public final class dev/improve/xmux/screen/view/ScreenView$Hit {
 	public fun <init> (III)V
 	public final fun component1 ()I
 	public final fun component2 ()I
 	public final fun component3 ()I
-	public final fun copy (III)Ldev/improve/xmux/core/ScreenView$Hit;
-	public static synthetic fun copy$default (Ldev/improve/xmux/core/ScreenView$Hit;IIIILjava/lang/Object;)Ldev/improve/xmux/core/ScreenView$Hit;
+	public final fun copy (III)Ldev/improve/xmux/screen/view/ScreenView$Hit;
+	public static synthetic fun copy$default (Ldev/improve/xmux/screen/view/ScreenView$Hit;IIIILjava/lang/Object;)Ldev/improve/xmux/screen/view/ScreenView$Hit;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCol ()I
 	public final fun getPane ()I
@@ -54,27 +54,27 @@ public final class dev/improve/xmux/core/ScreenView$Hit {
 	public fun toString ()Ljava/lang/String;
 }
 
-public abstract interface class dev/improve/xmux/core/ScreenView$Listener {
+public abstract interface class dev/improve/xmux/screen/view/ScreenView$Listener {
 	public abstract fun onKey (Landroid/view/KeyEvent;)Z
-	public abstract fun onPointer (Ldev/improve/xmux/core/ScreenView$Hit;I)V
-	public abstract fun onScroll (Ldev/improve/xmux/core/ScreenView$Hit;I)V
+	public abstract fun onPointer (Ldev/improve/xmux/screen/view/ScreenView$Hit;I)V
+	public abstract fun onScroll (Ldev/improve/xmux/screen/view/ScreenView$Hit;I)V
 	public abstract fun onTab (II)V
 	public abstract fun onText (Ljava/lang/String;)V
 }
 
-public final class dev/improve/xmux/core/ScreenView$Listener$DefaultImpls {
-	public static fun onKey (Ldev/improve/xmux/core/ScreenView$Listener;Landroid/view/KeyEvent;)Z
-	public static fun onPointer (Ldev/improve/xmux/core/ScreenView$Listener;Ldev/improve/xmux/core/ScreenView$Hit;I)V
-	public static fun onScroll (Ldev/improve/xmux/core/ScreenView$Listener;Ldev/improve/xmux/core/ScreenView$Hit;I)V
-	public static fun onTab (Ldev/improve/xmux/core/ScreenView$Listener;II)V
-	public static fun onText (Ldev/improve/xmux/core/ScreenView$Listener;Ljava/lang/String;)V
+public final class dev/improve/xmux/screen/view/ScreenView$Listener$DefaultImpls {
+	public static fun onKey (Ldev/improve/xmux/screen/view/ScreenView$Listener;Landroid/view/KeyEvent;)Z
+	public static fun onPointer (Ldev/improve/xmux/screen/view/ScreenView$Listener;Ldev/improve/xmux/screen/view/ScreenView$Hit;I)V
+	public static fun onScroll (Ldev/improve/xmux/screen/view/ScreenView$Listener;Ldev/improve/xmux/screen/view/ScreenView$Hit;I)V
+	public static fun onTab (Ldev/improve/xmux/screen/view/ScreenView$Listener;II)V
+	public static fun onText (Ldev/improve/xmux/screen/view/ScreenView$Listener;Ljava/lang/String;)V
 }
 
-public final class dev/improve/xmux/core/ScreenView$Pane {
-	public fun <init> (ILdev/improve/xmux/core/CellGrid;Ljava/util/List;ILjava/lang/String;)V
-	public synthetic fun <init> (ILdev/improve/xmux/core/CellGrid;Ljava/util/List;ILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+public final class dev/improve/xmux/screen/view/ScreenView$Pane {
+	public fun <init> (ILdev/improve/xmux/cell/grid/CellGrid;Ljava/util/List;ILjava/lang/String;)V
+	public synthetic fun <init> (ILdev/improve/xmux/cell/grid/CellGrid;Ljava/util/List;ILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun getActiveTab ()I
-	public final fun getGrid ()Ldev/improve/xmux/core/CellGrid;
+	public final fun getGrid ()Ldev/improve/xmux/cell/grid/CellGrid;
 	public final fun getId ()I
 	public final fun getTabs ()Ljava/util/List;
 	public final fun getTitle ()Ljava/lang/String;

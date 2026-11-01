@@ -20,7 +20,7 @@ rootProject.name = "xmux"
 // Every directory under apps/ or packages/ that has a build.gradle.kts is a project, at any
 // depth. Component and library paths map to xmux-prefixed artifact names; other projects use
 // their directory names unless explicitly mapped.
-// Names are flat (`:xmux-core`, not `:packages:dev:...`), so published libraries keep project name ==
+// Names are flat (`:xmux-client`, not `:packages:dev:...`), so published libraries keep project name ==
 // artifact name and composite builds substitute `dev.xmux:<name>` without extra configuration.
 val projectNames = mapOf(
   "packages/dev/improve/xmux/schema/proto/android" to "xmux-proto",

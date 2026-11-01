@@ -1,6 +1,6 @@
 package dev.improve.xmux.spatial
 
-import dev.improve.xmux.core.TerminalFont
+import dev.improve.xmux.terminal.font.TerminalFont
 
 /**
  * Pixel and physical size of a window panel. The texture is sized exactly to the grid plus the

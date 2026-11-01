@@ -82,8 +82,8 @@ the user types it into `xmux-bridge pair` on the Mac), `Online`, `Stalled`, `Rec
 SharedPreferences by default). `ConnectPanel` in `xmux-connect-panel` is a ready-made picker and
 pairing screen; the XMUX app shows it in a panel with `xmux.mountPanel(...)`.
 
-Add `implementation("dev.xmux:xmux-connect-panel:<version>")` when using that picker. The
-`xmux-compose` convenience bundle also includes it. For a custom phone or Android integration,
+Add `implementation("dev.xmux:xmux-connect-panel:<version>")` when using that picker. For a
+custom phone or Android integration,
 `xmux-screen-view-session` provides `ScreenModels` to adapt session topology and terminal grids to
 `ScreenView`; the network client itself has no view dependency.
 

@@ -1,6 +1,8 @@
 package dev.improve.xmux.spatial
 
+import android.view.KeyEvent
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import com.meta.spatial.compose.ComposeFeature
@@ -17,6 +19,7 @@ import com.meta.spatial.isdk.IsdkGrabbable
 import com.meta.spatial.isdk.IsdkPanelDimensions
 import com.meta.spatial.isdk.IsdkPanelResize
 import com.meta.spatial.isdk.ResizeMode
+import com.meta.spatial.runtime.HitInfo
 import com.meta.spatial.runtime.PanelShapeLayerBlendType
 import com.meta.spatial.runtime.ReferenceSpace
 import com.meta.spatial.toolkit.AppSystemActivity
@@ -32,22 +35,19 @@ import com.meta.spatial.toolkit.UIPanelRenderOptions
 import com.meta.spatial.toolkit.UIPanelSettings
 import com.meta.spatial.vr.VRFeature
 import com.meta.spatial.vr.VrInputSystemType
-import dev.improve.xmux.compose.TerminalWindow
-import dev.improve.xmux.compose.TerminalWindowState
-import dev.improve.xmux.compose.WindowChrome
-import dev.improve.xmux.core.CellGrid
-import dev.improve.xmux.core.TerminalFont
-import dev.improve.xmux.core.TerminalGridView
-import android.view.KeyEvent
-import androidx.compose.runtime.Composable
-import com.meta.spatial.runtime.HitInfo
+import dev.improve.xmux.cell.grid.CellGrid
 import dev.improve.xmux.client.PaneId
 import dev.improve.xmux.client.ScreenId
 import dev.improve.xmux.client.TerminalHandle
 import dev.improve.xmux.client.TerminalId
 import dev.improve.xmux.client.XmuxSession
-import dev.improve.xmux.compose.WindowFrame
-import dev.improve.xmux.core.ScreenView
+import dev.improve.xmux.screen.view.ScreenView
+import dev.improve.xmux.terminal.font.TerminalFont
+import dev.improve.xmux.terminal.grid.TerminalGridView
+import dev.improve.xmux.terminal.window.TerminalWindow
+import dev.improve.xmux.window.frame.TerminalWindowState
+import dev.improve.xmux.window.frame.WindowChrome
+import dev.improve.xmux.window.frame.WindowFrame
 
 /** What a grid window shows: a [CellGrid] the embedder fills itself (demos, custom content). */
 public class WindowContent(

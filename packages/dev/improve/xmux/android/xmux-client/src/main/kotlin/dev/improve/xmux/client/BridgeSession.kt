@@ -1,7 +1,7 @@
 package dev.improve.xmux.client
 
-import dev.improve.xmux.core.CellGrid
-import dev.improve.xmux.core.KeyInput
+import dev.improve.xmux.cell.grid.CellGrid
+import dev.improve.xmux.key.encoder.KeyInput
 import dev.improve.xmux.proto.AttachTerminal
 import dev.improve.xmux.proto.DetachTerminal
 import dev.improve.xmux.proto.FocusPane

@@ -1,7 +1,7 @@
 package dev.improve.xmux.client
 
-import dev.improve.xmux.core.Attr
-import dev.improve.xmux.core.CellGrid
+import dev.improve.xmux.cell.grid.Attr
+import dev.improve.xmux.cell.grid.CellGrid
 import dev.improve.xmux.proto.Frame
 import org.json.JSONObject
 import kotlin.test.Test

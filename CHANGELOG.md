@@ -10,13 +10,20 @@ version.
   `xmux-demo-content`. Android Gradle project names now match their app directories.
 - Rename the developer CLI crate to `xmux-cli` and its executable to `xmux`.
 - Split UI into independent Gradle modules under `components/`, with terminal primitives under
-  `lib/`. Cell grids and screen layout are plain Kotlin/JVM libraries. Keep `xmux-core` and
-  `xmux-compose` as convenience bundles, and share Gradle conventions through `build-logic/`.
-- Move `ScreenModels` out of the client into `xmux-screen-view-session`; consumers using that
-  adapter must depend on it. Kotlin source imports are unchanged. Recompile binary consumers of
-  `WindowFrame`, whose JVM facade moves from `TerminalWindowKt` to `WindowFrameKt`.
+  `lib/`. Cell grids and screen layout are plain Kotlin/JVM libraries. Every published library
+  shares its Gradle setup through the conventions in `build-logic/`.
+- Breaking: remove the `xmux-core` and `xmux-compose` bundles. Depend on the modules you use;
+  `xmux-spatial` plus `xmux-connect-panel` cover a Quest app. Remove the unused
+  `ExperimentalXmuxApi` and `InternalXmuxApi` annotations.
 - Breaking Kotlin API change: move packages from `dev.xmux.*` to `dev.improve.xmux.*`, including
-  generated protobuf types. Embedders must update imports.
+  generated protobuf types, and give every library module its own package, equal to its Android
+  namespace. `dev.improve.xmux.core` splits into `cell.grid`, `screen.layout`, `terminal.font`,
+  `key.encoder`, `terminal.grid` and `screen.view`; `dev.improve.xmux.compose` into
+  `connect.panel`, `window.frame` and `terminal.window` (all under `dev.improve.xmux`).
+  `ScreenModels` moves out of the client into `xmux-screen-view-session`
+  (`dev.improve.xmux.screen.view.session`). Embedders must update imports and dependencies.
+- Tooling finds the Android SDK through `ANDROID_HOME` or Android Studio's default location; the
+  deprecated `ANDROID_SDK_ROOT` is no longer read.
 - `xmux-spatial`: `XmuxSpatial.hitTest(origin, direction)` and `hitTest(HitInfo)` return the window,
   pane, terminal and cell under a ray (`WindowHit`). Windows are intersected at their current pose
   and size; checked on a Quest 3 against the coordinates the Spatial SDK reports.

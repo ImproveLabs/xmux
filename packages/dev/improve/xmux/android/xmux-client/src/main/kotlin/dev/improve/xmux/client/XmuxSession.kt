@@ -1,7 +1,7 @@
 package dev.improve.xmux.client
 
-import dev.improve.xmux.core.CellGrid
-import dev.improve.xmux.core.KeyInput
+import dev.improve.xmux.cell.grid.CellGrid
+import dev.improve.xmux.key.encoder.KeyInput
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 

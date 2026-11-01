@@ -30,6 +30,5 @@ allprojects {
 }
 
 apiValidation {
-  ignoredProjects += listOf("xmux-compose", "xmux-demo-content", "xmux-android-preview", "xmux-quest-app", "xmux-quest-stress")
-  nonPublicMarkers += "dev.improve.xmux.core.InternalXmuxApi"
+  ignoredProjects += listOf("xmux-demo-content", "xmux-android-preview", "xmux-quest-app", "xmux-quest-stress")
 }

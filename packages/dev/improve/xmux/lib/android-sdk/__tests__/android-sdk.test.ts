@@ -4,11 +4,14 @@ import { resolveAndroidSdk } from "@-/dev.improve.xmux.lib.android-sdk";
 const base = { env: {}, home: "/Users/me", platform: "darwin" as const, exists: () => false };
 
 describe("resolveAndroidSdk", () => {
-  it("prefers ANDROID_HOME, then ANDROID_SDK_ROOT", () => {
+  it("prefers ANDROID_HOME and ignores the deprecated ANDROID_SDK_ROOT", () => {
+    const exists = () => true;
     expect(
-      resolveAndroidSdk({ ...base, env: { ANDROID_HOME: "/a", ANDROID_SDK_ROOT: "/b" } }),
+      resolveAndroidSdk({ ...base, env: { ANDROID_HOME: "/a", ANDROID_SDK_ROOT: "/b" }, exists }),
     ).toBe("/a");
-    expect(resolveAndroidSdk({ ...base, env: { ANDROID_SDK_ROOT: "/b" } })).toBe("/b");
+    expect(resolveAndroidSdk({ ...base, env: { ANDROID_SDK_ROOT: "/b" }, exists })).toBe(
+      "/Users/me/Library/Android/sdk",
+    );
   });
 
   it("ignores empty variables and falls back to the Android Studio default", () => {

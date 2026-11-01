@@ -7,13 +7,13 @@ import android.util.Log
 import com.meta.spatial.core.SpatialFeature
 import com.meta.spatial.toolkit.AppSystemActivity
 import com.meta.spatial.toolkit.PanelRegistration
-import dev.improve.xmux.compose.TerminalWindowState
-import dev.improve.xmux.core.CellGrid
+import dev.improve.xmux.cell.grid.CellGrid
 import dev.improve.xmux.demo.AgentScreen
 import dev.improve.xmux.spatial.Placement
 import dev.improve.xmux.spatial.SpatialConfig
 import dev.improve.xmux.spatial.WindowContent
 import dev.improve.xmux.spatial.XmuxSpatial
+import dev.improve.xmux.window.frame.TerminalWindowState
 
 /**
  * Quest rendering stress test and minimal embedding of xmux-spatial:

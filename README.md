@@ -39,7 +39,7 @@ landed, so treat the headset side as untested.
     from `.prototools`.
   - [Vite+](https://viteplus.dev/guide/) (`vp`), which runs the TypeScript tooling and the build tasks.
   - The Android SDK with platform-tools (`adb`). Android Studio installs it; xmux looks in `ANDROID_HOME`,
-    then `ANDROID_SDK_ROOT`, then the platform default (`~/Library/Android/sdk` on macOS).
+    then the platform default (`~/Library/Android/sdk` on macOS).
 
 ## Install
 
@@ -192,15 +192,13 @@ grids, configuration and placement.
 | Artifact | What |
 |---|---|
 | `dev.xmux:xmux-spatial` | Meta Spatial SDK integration: windows as compositor-layer panels, move and resize, passthrough |
-| `dev.xmux:xmux-compose` | Convenience bundle for Compose windows, connection panels, and terminal primitives |
-| `dev.xmux:xmux-core` | Convenience bundle for cell grids, rendering, screen layout, fonts, and keyboard encoding |
+| `dev.xmux:xmux-connect-panel` | Compose bridge picker and pairing screen (`ConnectPanel`) |
 | `dev.xmux:xmux-client` | Plain library: TLS connection, discovery, pairing, `XmuxSession` and terminal handles |
 | `dev.xmux:xmux-proto` | Protobuf messages for the wire schema, generated at build time |
 
-Components can also be used individually: `xmux-connect-panel`, `xmux-window-frame`,
-`xmux-terminal-window`, `xmux-terminal-grid`, `xmux-screen-view`, and `xmux-screen-view-session`.
-Supporting libraries are `xmux-cell-grid`, `xmux-screen-layout`, `xmux-terminal-font`, and
-`xmux-key-encoder`. Every artifact uses the `dev.xmux` group and the shared release version.
+The other UI components are `xmux-window-frame`, `xmux-terminal-window`, `xmux-terminal-grid`,
+`xmux-screen-view`, and `xmux-screen-view-session`. Supporting libraries are `xmux-cell-grid`,
+`xmux-screen-layout`, `xmux-terminal-font`, and `xmux-key-encoder`. Every artifact uses the `dev.xmux` group and the shared release version.
 
 ## Development
 
@@ -216,8 +214,8 @@ Gradle build (`settings.gradle.kts`) and a [Vite+](https://viteplus.dev) workspa
 | `apps/testing/xmux-quest-stress/` | Quest rendering stress-test app and embedding example |
 | `apps/xmux-macos-daemon/` | `xmux-bridged` Rust crate; builds the `xmux-bridge` CLI/service for TLS, pairing, and Bonjour |
 | `apps/xmux-cli/` | `xmux-cli` Rust crate; builds the `xmux` executable for trace recording and development tools |
-| `packages/dev/improve/xmux/android/` | Client and Spatial integrations, the `xmux-core` convenience bundle, and shared demo content |
-| `packages/dev/improve/xmux/components/` | One Gradle module per UI component, plus the `xmux-compose` convenience bundle |
+| `packages/dev/improve/xmux/android/` | Client and Spatial integrations, and shared demo content |
+| `packages/dev/improve/xmux/components/` | One Gradle module per UI component |
 | `packages/dev/improve/xmux/bridge/` | `xmux-bridge` Rust library: cmux mirror, hub, and replay |
 | `packages/dev/improve/xmux/schema/proto/xmux.proto` | The wire schema; both sides generate code from it at build time |
 | `packages/dev/improve/xmux/schema/proto/android/` | `xmux-proto` Android library: generated Java lite and Kotlin protobuf types |

@@ -1,6 +1,6 @@
 package dev.improve.xmux.client
 
-import dev.improve.xmux.core.Attr
+import dev.improve.xmux.cell.grid.Attr
 import dev.improve.xmux.proto.Checksum
 import dev.improve.xmux.proto.Row
 import dev.improve.xmux.proto.Rows
