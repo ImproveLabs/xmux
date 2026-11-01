@@ -1,0 +1,20 @@
+{
+  "name": "@-/dev.improve.xmux.configs.github.workflows._lib.steps",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#triggers": "./triggers.ts"
+  },
+  "exports": {
+    ".": "./+.ts"
+  },
+  "dependencies": {
+    "@-/dev.improve.xmux.configs.github.workflows._lib.steps.bootstrap": "workspace:*",
+    "@-/dev.improve.xmux.configs.github.workflows._lib.steps.checkout": "workspace:*",
+    "@-/dev.improve.xmux.configs.github.workflows._lib.steps.install-dependencies": "workspace:*",
+    "@-/dev.improve.xmux.configs.github.workflows._lib.steps.setup-toolchain": "workspace:*",
+    "@-/dev.improve.xmux.configs.github.workflows._lib.steps.setup-vite-plus": "workspace:*",
+    "@-/dev.improve.xmux.configs.github.workflows._lib.steps.vp-run": "workspace:*"
+  }
+}

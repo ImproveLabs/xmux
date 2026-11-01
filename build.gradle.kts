@@ -2,6 +2,7 @@ plugins {
   alias(libs.plugins.android.application) apply false
   alias(libs.plugins.android.library) apply false
   alias(libs.plugins.kotlin.android) apply false
+  alias(libs.plugins.kotlin.jvm) apply false
   alias(libs.plugins.kotlin.compose) apply false
   alias(libs.plugins.maven.publish) apply false
   alias(libs.plugins.protobuf) apply false
@@ -29,6 +30,6 @@ allprojects {
 }
 
 apiValidation {
-  ignoredProjects += listOf("xmux-demo", "preview", "app", "sample-embed")
-  nonPublicMarkers += "dev.xmux.core.InternalXmuxApi"
+  ignoredProjects += listOf("xmux-compose", "xmux-demo-content", "xmux-android-preview", "xmux-quest-app", "xmux-quest-stress")
+  nonPublicMarkers += "dev.improve.xmux.core.InternalXmuxApi"
 }

@@ -1,0 +1,14 @@
+{
+  "name": "@-/dev.improve.xmux.lib.paths",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#paths": "./paths.ts"
+  },
+  "exports": {
+    ".": "./+.ts"
+  },
+  "dependencies": {
+    "@-/com.npmjs.pathe": "workspace:*"
+  }
+}

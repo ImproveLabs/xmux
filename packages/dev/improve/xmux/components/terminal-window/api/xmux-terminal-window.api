@@ -1,0 +1,4 @@
+public final class dev/improve/xmux/compose/TerminalWindowKt {
+	public static final fun TerminalWindow (Ldev/improve/xmux/compose/TerminalWindowState;Ldev/improve/xmux/core/CellGrid;Ldev/improve/xmux/core/TerminalFont;Landroidx/compose/ui/Modifier;Ldev/improve/xmux/compose/WindowChrome;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
+}
+

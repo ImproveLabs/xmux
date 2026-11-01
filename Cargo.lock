@@ -1819,18 +1819,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "xmux-proto"
-version = "0.1.1"
-dependencies = [
- "lz4_flex",
- "prost",
- "prost-build",
- "protox",
- "thiserror",
-]
-
-[[package]]
-name = "xmux-view"
+name = "xmux-cli"
 version = "0.1.1"
 dependencies = [
  "anyhow",
@@ -1839,6 +1828,17 @@ dependencies = [
  "serde_json",
  "xmux-bridge",
  "xmux-proto",
+]
+
+[[package]]
+name = "xmux-proto"
+version = "0.1.1"
+dependencies = [
+ "lz4_flex",
+ "prost",
+ "prost-build",
+ "protox",
+ "thiserror",
 ]
 
 [[package]]

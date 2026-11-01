@@ -1,0 +1,15 @@
+{
+  "name": "@-/com.npmjs.fs-extra",
+  "private": true,
+  "type": "module",
+  "imports": {},
+  "exports": {
+    ".": "./+.ts"
+  },
+  "dependencies": {
+    "fs-extra": "catalog:"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "catalog:"
+  }
+}

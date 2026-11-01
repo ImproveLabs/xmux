@@ -1,9 +1,0 @@
-{
-  "name": "@-/dev.improve.xmux.configs.quest.device.__tests__",
-  "private": true,
-  "type": "module",
-  "devDependencies": {
-    "@-/dev.improve.xmux.configs.quest.device": "workspace:*",
-    "vitest": "catalog:"
-  }
-}

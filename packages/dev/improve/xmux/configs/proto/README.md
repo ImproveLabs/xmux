@@ -12,8 +12,8 @@ pins in agreement:
 | Rust | `rust-toolchain.toml` (read by rustup and cargo) |
 | Bun | `package.json` `packageManager` (read by Vite+) |
 
-`bin/` resolves a pinned tool's path through `proto bin` (used by `_gradle` to set `JAVA_HOME` to
-the pinned JDK).
+`../../lib/proto-bin/` resolves a pinned tool's path through `proto bin` (used by `_gradle` to set
+`JAVA_HOME` to the pinned JDK).
 
 Not managed by proto: Gradle (its wrapper pins the version) and the Android SDK (`ANDROID_HOME`, see
 `../android`).

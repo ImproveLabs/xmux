@@ -84,8 +84,8 @@ library under **Unknown Sources** as **XMUX**.
 Without the TypeScript tooling, Gradle and adb do the same job (needs JDK 17 and `ANDROID_HOME`):
 
 ```sh
-./gradlew :app:assembleRelease
-adb install -r packages/dev/improve/xmux/android/app/build/outputs/apk/release/app-release.apk
+./gradlew :xmux-quest-app:assembleRelease
+adb install -r apps/xmux-quest-app/build/outputs/apk/release/xmux-quest-app-release.apk
 ```
 
 Local release builds are signed with your Android debug key. Store builds use the keystore named by
@@ -102,6 +102,9 @@ Local release builds are signed with your Android debug key. Store builds use th
 The headset remembers the pairing. `xmux-bridge status` shows connected and paired headsets;
 `xmux-bridge unpair <name>` forgets one.
 
+On a network that keeps devices apart (guest or event Wi-Fi), connect the headset over USB instead:
+`adb reverse tcp:7272 tcp:7272`, then use the address `127.0.0.1:7272` on the headset.
+
 ### Without a headset
 
 The preview app shows the same window on a phone or an Android emulator:
@@ -116,7 +119,7 @@ Without cmux, the bridge can serve a recorded trace:
 
 ## Use xmux in your own Quest app
 
-The five Android libraries are published to [GitHub Packages](https://github.com/orgs/ImproveLabs/packages?repo_name=xmux).
+The Android and Kotlin/JVM libraries are published to [GitHub Packages](https://github.com/orgs/ImproveLabs/packages?repo_name=xmux).
 GitHub requires a username and a personal access token (classic) with `read:packages`, even for
 public Maven packages. Set `GITHUB_ACTOR` and `GITHUB_TOKEN` in your environment or `gpr.user` and
 `gpr.key` in your user-level `~/.gradle/gradle.properties` (keep credentials out of the project).
@@ -151,7 +154,10 @@ dependencies {
 
 For local development, `./gradlew publishToMavenLocal` publishes `0.1.1-SNAPSHOT`; add
 `mavenLocal()` to the consumer repositories. Or build against the checkout: `includeBuild("../xmux")` in your
-`settings.gradle.kts` replaces `dev.xmux:*` with the checkout's modules.
+`settings.gradle.kts` replaces `dev.xmux:*` (any version) with the checkout's modules, including
+`testFixtures("dev.xmux:xmux-client")` for `FakeBridge`. Apply the same Android Gradle plugin and
+Kotlin versions as xmux (`gradle/libs.versions.toml`), and run `vp install` in the checkout once:
+the terminal font is packaged from an npm dependency.
 
 Then hand your `AppSystemActivity`'s calls to `XmuxSpatial` and follow a session:
 
@@ -186,29 +192,47 @@ grids, configuration and placement.
 | Artifact | What |
 |---|---|
 | `dev.xmux:xmux-spatial` | Meta Spatial SDK integration: windows as compositor-layer panels, move and resize, passthrough |
-| `dev.xmux:xmux-compose` | Compose window chrome (traffic lights, title, spinner, slots) and the connect/pairing panel |
-| `dev.xmux:xmux-core` | Plain Android library: cell grid, `drawGlyphs` renderer, screen layout (`ScreenView`), key encoding |
+| `dev.xmux:xmux-compose` | Convenience bundle for Compose windows, connection panels, and terminal primitives |
+| `dev.xmux:xmux-core` | Convenience bundle for cell grids, rendering, screen layout, fonts, and keyboard encoding |
 | `dev.xmux:xmux-client` | Plain library: TLS connection, discovery, pairing, `XmuxSession` and terminal handles |
 | `dev.xmux:xmux-proto` | Protobuf messages for the wire schema, generated at build time |
+
+Components can also be used individually: `xmux-connect-panel`, `xmux-window-frame`,
+`xmux-terminal-window`, `xmux-terminal-grid`, `xmux-screen-view`, and `xmux-screen-view-session`.
+Supporting libraries are `xmux-cell-grid`, `xmux-screen-layout`, `xmux-terminal-font`, and
+`xmux-key-encoder`. Every artifact uses the `dev.xmux` group and the shared release version.
 
 ## Development
 
 Every toolchain is pinned in `.prototools`. The repo root is a Cargo workspace (`Cargo.toml`), a
 Gradle build (`settings.gradle.kts`) and a [Vite+](https://viteplus.dev) workspace with Bun
-(`package.json`) at once, and all code lives under `packages/`:
+(`package.json`) at once. Runnable apps live under `apps/`; shared libraries and tooling live under
+`packages/`:
 
 | Path | What |
 |---|---|
-| `packages/dev/improve/xmux/android/` | Gradle modules: the libraries above, `app` (store app), `sample-embed` (embedding sample and stress target), `preview` (phone/emulator app), `xmux-demo` (demo content) |
-| `packages/dev/improve/xmux/bridge/` | Rust crates: `proto` (wire types and framing), `lib` (cmux mirror, hub, replay), `daemon` (the `xmux-bridge` binary: TLS, pairing, Bonjour), `view` (trace recorder and dev tools) |
-| `packages/dev/improve/xmux/schema/xmux.proto` | The wire schema; both sides generate code from it at build time |
-| `packages/dev/improve/xmux/assets/fonts/` | JetBrains Mono, bundled into the app |
+| `apps/xmux-quest-app/` | Standalone Quest app |
+| `apps/xmux-android-preview/` | Phone/emulator preview app |
+| `apps/testing/xmux-quest-stress/` | Quest rendering stress-test app and embedding example |
+| `apps/xmux-macos-daemon/` | `xmux-bridged` Rust crate; builds the `xmux-bridge` CLI/service for TLS, pairing, and Bonjour |
+| `apps/xmux-cli/` | `xmux-cli` Rust crate; builds the `xmux` executable for trace recording and development tools |
+| `packages/dev/improve/xmux/android/` | Client and Spatial integrations, the `xmux-core` convenience bundle, and shared demo content |
+| `packages/dev/improve/xmux/components/` | One Gradle module per UI component, plus the `xmux-compose` convenience bundle |
+| `packages/dev/improve/xmux/bridge/` | `xmux-bridge` Rust library: cmux mirror, hub, and replay |
+| `packages/dev/improve/xmux/schema/proto/xmux.proto` | The wire schema; both sides generate code from it at build time |
+| `packages/dev/improve/xmux/schema/proto/android/` | `xmux-proto` Android library: generated Java lite and Kotlin protobuf types |
+| `packages/dev/improve/xmux/schema/proto/rust/` | `xmux-proto` Rust library: wire types, framing, compression, and checksums |
+| `packages/com/npmjs/expo-google-fonts__jetbrains-mono/` | JetBrains Mono npm dependency; Gradle packages the regular TTF and its license from `node_modules` |
 | `packages/dev/improve/xmux/testing/fixtures/` | Recorded cmux traces, the grids cmux reported for them, and the frame streams both clients replay |
-| `packages/dev/improve/xmux/packaging/` | Release packaging (the Homebrew formula template) |
-| `packages/dev/improve/xmux/configs/` | TypeScript tooling, one package per script: Gradle runner, Quest commands, CI workflow sources |
+| `packages/dev/improve/xmux/configs/packaging/` | Release packaging (the Homebrew formula template) |
+| `packages/dev/improve/xmux/configs/` | TypeScript tooling, one package per script: Gradle runner, Quest commands, CI workflow sources; area helpers under `_lib/` |
+| `packages/dev/improve/xmux/lib/` | Terminal data/layout/font/input modules and shared TypeScript tooling helpers |
+| `build-logic/` | Shared Gradle conventions for Android, Kotlin/JVM, Compose, and publication |
 
-Gradle includes every directory under `packages/` that has a `build.gradle.kts`, at any depth, as a
-project named after its directory.
+Gradle includes every directory under `apps/` or `packages/` that has a `build.gradle.kts`, at any
+depth. Component and library paths become `xmux-` names (`components/screen-view/session/` becomes
+`:xmux-screen-view-session`); other names default to directories. `schema/proto/android/` maps to
+`:xmux-proto`. `vpr android:test` runs Android unit tests, pure JVM tests, and public API checks.
 
 ```sh
 vpr check        # everything: TypeScript, bridge clippy + tests, Android tests + API check
@@ -230,9 +254,9 @@ or Wi-Fi after `adb tcpip 5555` and `adb connect <ip>:5555`). `--serial` or `QUE
 explicitly.
 
 ```sh
-vpx _quest-install sample -- --ei count 3   # build, install and launch (app or sample)
+vpx _quest-install stress -- --ei count 3   # build, install and launch (app or stress)
 vpx _quest-stress 32 --active 4             # 32 windows, 4 animating, then runtime and HWUI stats
-vpx _quest-stats sample                     # runtime (VrApi), HWUI and process stats
+vpx _quest-stats stress                     # runtime (VrApi), HWUI and process stats
 vpx _quest-capture                          # headset screenshot into results/quest (headset must be worn)
 ```
 
@@ -240,4 +264,5 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md) for conventions and [`CHANGELOG.md`](CH
 
 ## License
 
-MIT. JetBrains Mono (`packages/dev/improve/xmux/assets/fonts`) is under the SIL Open Font License.
+MIT. JetBrains Mono (from `@expo-google-fonts/jetbrains-mono`) is under the SIL Open Font License;
+Android packages the dependency's `LICENSE_FONT` as `OFL.txt` alongside the font.

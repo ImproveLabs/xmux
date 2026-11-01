@@ -10,7 +10,7 @@
 {"t":1045,"stream":"attach:term_...","item":{"kind":"patch","render":{...}}}
 ```
 
-`t` is milliseconds since the recording started. `vpr bridge:record` (`xmux-view record`) records
+`t` is milliseconds since the recording started. `vpr bridge:record` (`xmux record`) records
 them against a sandboxed cmux server (scratch home, `/bin/sh`, no dotfiles; the sandbox path is
 replaced by `/sandbox`), one fresh workspace per scenario, and stores what a fresh attachment
 reports at the end in `../expected/<name>.grid.json`. The bridge's conformance test replays every

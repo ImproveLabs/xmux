@@ -5,17 +5,21 @@ import {
   type Paths,
   toolingPaths,
   vpRun,
-} from "@-/dev.improve.xmux.configs.github.workflows._steps";
+} from "@-/dev.improve.xmux.configs.github.workflows._lib.steps";
 
 const paths: Paths = [
+  "build-logic/**",
+  "apps/xmux-quest-app/**",
+  "apps/testing/xmux-quest-stress/**",
+  "apps/xmux-android-preview/**",
   "packages/dev/improve/xmux/android/**",
+  "packages/dev/improve/xmux/components/**",
   "build.gradle.kts",
   "settings.gradle.kts",
   "gradle.properties",
   "gradle/**",
   "gradlew",
   "packages/dev/improve/xmux/schema/**",
-  "packages/dev/improve/xmux/assets/**",
   "packages/dev/improve/xmux/testing/fixtures/**",
   ...toolingPaths,
   ".github/workflows/android.yml",
@@ -33,7 +37,7 @@ const build = new NormalJob("build", { "runs-on": "ubuntu-latest" }).addSteps([
     uses: "actions/upload-artifact@v4",
     with: {
       name: "android-test-reports",
-      path: "packages/dev/improve/xmux/android/**/build/reports/tests/",
+      path: ["apps/**/build/reports/tests/", "packages/**/build/reports/tests/"].join("\n"),
     },
   }),
 ]);

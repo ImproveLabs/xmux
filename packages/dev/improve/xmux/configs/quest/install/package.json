@@ -7,15 +7,16 @@
   },
   "type": "module",
   "imports": {
-    "#install-command": "./install-command.ts"
+    "#quest-install": "./quest-install.ts",
+    "#quest-install-command": "./quest-install-command.ts"
   },
   "dependencies": {
     "@-/com.npmjs.citty-universal": "workspace:*",
     "@-/com.npmjs.consola": "workspace:*",
     "@-/com.npmjs.pathe": "workspace:*",
-    "@-/dev.improve.xmux.configs.android.gradle": "workspace:*",
-    "@-/dev.improve.xmux.configs.quest.apps": "workspace:*",
-    "@-/dev.improve.xmux.configs.quest.device": "workspace:*",
-    "@-/dev.improve.xmux.constants.paths": "workspace:*"
+    "@-/dev.improve.xmux.configs.quest._lib.apps": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest._lib.device": "workspace:*",
+    "@-/dev.improve.xmux.lib.gradle": "workspace:*",
+    "@-/dev.improve.xmux.lib.paths": "workspace:*"
   }
 }

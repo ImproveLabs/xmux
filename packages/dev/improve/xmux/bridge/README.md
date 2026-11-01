@@ -1,14 +1,14 @@
 # bridge
 
-The Mac side of xmux, in Rust. The Cargo workspace is the repository root (`/Cargo.toml`); its
-members are the crates in this directory.
+The Mac side of xmux, in Rust. The Cargo workspace is the repository root (`/Cargo.toml`); it
+includes the libraries here and the runnable apps under the repository's `apps/` directory.
 
 | Directory | Crate | What |
 |---|---|---|
-| `proto/` | `xmux-proto` | protobuf types for `../schema/xmux.proto` (generated in `build.rs` by protox + prost), 16-byte framing, LZ4, the row checksum |
-| `lib/` | `xmux-bridge` | the cmux mirror and the hub (below) |
-| `daemon/` | `xmux-bridged` | the `xmux-bridge` binary: TLS listener, pairing, Bonjour, control socket, LaunchAgent |
-| `view/` | `xmux-view` | dev tools: `record` (conformance traces), `replay`, `frames`, `probe` |
+| [`../schema/proto/rust/`](../schema/proto/rust/) | `xmux-proto` | protobuf types for `../schema/proto/xmux.proto` (generated in `build.rs` by protox + prost), 16-byte framing, LZ4, the row checksum |
+| `./` | `xmux-bridge` | the cmux mirror and the hub (below) |
+| [`apps/xmux-macos-daemon/`](../../../../../apps/xmux-macos-daemon/) (repo root) | `xmux-bridged` | the `xmux-bridge` binary: TLS listener, pairing, Bonjour, control socket, LaunchAgent |
+| [`apps/xmux-cli/`](../../../../../apps/xmux-cli/) (repo root) | `xmux-cli` | the `xmux` binary: `record` (conformance traces), `replay`, `frames`, `probe` |
 
 `xmux-bridge` (lib), by module:
 
@@ -26,7 +26,7 @@ members are the crates in this directory.
 
 Tests that read shared files (the schema, `packages/dev/improve/xmux/testing/fixtures/`) use
 `env!("XMUX_REPO_ROOT")`, set by `/.cargo/config.toml`, so they do not depend on their depth in
-the tree. `proto/build.rs` finds the schema by walking up instead, because `cargo install --git`
+the tree. `../schema/proto/rust/build.rs` finds the schema by walking up instead, because `cargo install --git`
 does not read that config file.
 
 ```sh

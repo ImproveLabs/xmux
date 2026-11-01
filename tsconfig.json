@@ -3,5 +3,5 @@
   "compilerOptions": {
     "types": ["bun"]
   },
-  "include": ["*.ts", "packages/**/*"]
+  "include": ["*.ts", "apps/**/*.ts", "packages/**/*"]
 }

@@ -1,0 +1,9 @@
+{
+  "name": "@-/dev.improve.xmux.configs.quest._lib.parse.__tests__",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@-/dev.improve.xmux.configs.quest._lib.parse": "workspace:*",
+    "vitest": "catalog:"
+  }
+}

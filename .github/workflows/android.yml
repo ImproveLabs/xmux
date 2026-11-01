@@ -7,14 +7,18 @@ name: android
 'on':
   pull_request:
     paths:
+      - build-logic/**
+      - apps/xmux-quest-app/**
+      - apps/testing/xmux-quest-stress/**
+      - apps/xmux-android-preview/**
       - packages/dev/improve/xmux/android/**
+      - packages/dev/improve/xmux/components/**
       - build.gradle.kts
       - settings.gradle.kts
       - gradle.properties
       - gradle/**
       - gradlew
       - packages/dev/improve/xmux/schema/**
-      - packages/dev/improve/xmux/assets/**
       - packages/dev/improve/xmux/testing/fixtures/**
       - .prototools
       - package.json
@@ -22,20 +26,24 @@ name: android
       - vite.config.ts
       - packages/com/**
       - packages/dev/improve/xmux/configs/**
-      - packages/dev/improve/xmux/constants/**
+      - packages/dev/improve/xmux/lib/**
       - .github/workflows/android.yml
   push:
     branches:
       - main
     paths:
+      - build-logic/**
+      - apps/xmux-quest-app/**
+      - apps/testing/xmux-quest-stress/**
+      - apps/xmux-android-preview/**
       - packages/dev/improve/xmux/android/**
+      - packages/dev/improve/xmux/components/**
       - build.gradle.kts
       - settings.gradle.kts
       - gradle.properties
       - gradle/**
       - gradlew
       - packages/dev/improve/xmux/schema/**
-      - packages/dev/improve/xmux/assets/**
       - packages/dev/improve/xmux/testing/fixtures/**
       - .prototools
       - package.json
@@ -43,7 +51,7 @@ name: android
       - vite.config.ts
       - packages/com/**
       - packages/dev/improve/xmux/configs/**
-      - packages/dev/improve/xmux/constants/**
+      - packages/dev/improve/xmux/lib/**
       - .github/workflows/android.yml
 jobs:
   build:
@@ -74,4 +82,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: android-test-reports
-          path: packages/dev/improve/xmux/android/**/build/reports/tests/
+          path: |-
+            apps/**/build/reports/tests/
+            packages/**/build/reports/tests/

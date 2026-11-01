@@ -1,6 +1,11 @@
 [workspace]
-# Rust crates live under packages/ like every other package; see packages/dev/improve/xmux/bridge.
-members = ["packages/dev/improve/xmux/bridge/*"]
+# Runnable apps live under apps/; shared Rust libraries stay under packages/.
+members = [
+  "apps/xmux-cli",
+  "apps/xmux-macos-daemon",
+  "packages/dev/improve/xmux/bridge",
+  "packages/dev/improve/xmux/schema/proto/rust",
+]
 resolver = "3"
 
 [workspace.package]
@@ -11,8 +16,8 @@ license = "MIT"
 repository = "https://github.com/ImproveLabs/xmux"
 
 [workspace.dependencies]
-xmux-proto = { path = "packages/dev/improve/xmux/bridge/proto" }
-xmux-bridge = { path = "packages/dev/improve/xmux/bridge/lib" }
+xmux-proto = { path = "packages/dev/improve/xmux/schema/proto/rust" }
+xmux-bridge = { path = "packages/dev/improve/xmux/bridge" }
 prost = "0.14"
 prost-build = "0.14"
 protox = "0.10"

@@ -5,9 +5,11 @@ import {
   type Paths,
   toolingPaths,
   vpRun,
-} from "@-/dev.improve.xmux.configs.github.workflows._steps";
+} from "@-/dev.improve.xmux.configs.github.workflows._lib.steps";
 
 const paths: Paths = [
+  "apps/xmux-cli/**",
+  "apps/xmux-macos-daemon/**",
   "packages/dev/improve/xmux/bridge/**",
   "Cargo.toml",
   "Cargo.lock",

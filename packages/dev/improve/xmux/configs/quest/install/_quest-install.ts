@@ -1,5 +1,5 @@
 #!/usr/bin/env bun
 import { runMain } from "@-/com.npmjs.citty-universal";
-import { installCommand } from "#install-command";
+import { installCommand } from "#quest-install-command";
 
 await runMain(installCommand);

@@ -7,16 +7,11 @@
   },
   "type": "module",
   "imports": {
-    "#gradle": "./gradle.ts"
-  },
-  "exports": {
-    ".": "./+.ts"
+    "#gradle": "./gradle.ts",
+    "#gradle-command": "./gradle-command.ts"
   },
   "dependencies": {
-    "@-/com.npmjs.execa": "workspace:*",
-    "@-/com.npmjs.pathe": "workspace:*",
-    "@-/dev.improve.xmux.configs.android.sdk": "workspace:*",
-    "@-/dev.improve.xmux.configs.proto.bin": "workspace:*",
-    "@-/dev.improve.xmux.constants.paths": "workspace:*"
+    "@-/com.npmjs.citty-universal": "workspace:*",
+    "@-/dev.improve.xmux.lib.gradle": "workspace:*"
   }
 }

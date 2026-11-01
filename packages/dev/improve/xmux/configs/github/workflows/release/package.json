@@ -10,7 +10,7 @@
     ".": "./+.ts"
   },
   "dependencies": {
-    "@-/dev.improve.xmux.configs.github.workflows._steps": "workspace:*",
+    "@-/dev.improve.xmux.configs.github.workflows._lib.steps": "workspace:*",
     "@github-actions-workflow-ts/lib": "catalog:"
   }
 }

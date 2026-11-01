@@ -1,0 +1,19 @@
+{
+  "name": "@-/dev.improve.xmux.lib.gradle",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#gradle": "./gradle.ts"
+  },
+  "exports": {
+    ".": "./+.ts"
+  },
+  "dependencies": {
+    "@-/com.npmjs.execa": "workspace:*",
+    "@-/com.npmjs.pathe": "workspace:*",
+    "@-/dev.improve.xmux.lib.android-sdk": "workspace:*",
+    "@-/dev.improve.xmux.lib.paths": "workspace:*",
+    "@-/dev.improve.xmux.lib.proto-bin": "workspace:*"
+  }
+}

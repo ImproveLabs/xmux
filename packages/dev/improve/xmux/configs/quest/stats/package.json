@@ -7,17 +7,13 @@
   },
   "type": "module",
   "imports": {
-    "#stats": "./stats.ts",
-    "#stats-command": "./stats-command.ts"
-  },
-  "exports": {
-    ".": "./+.ts"
+    "#quest-stats": "./quest-stats.ts",
+    "#quest-stats-command": "./quest-stats-command.ts"
   },
   "dependencies": {
-    "@-/com.npmjs.appium-adb": "workspace:*",
     "@-/com.npmjs.citty-universal": "workspace:*",
-    "@-/dev.improve.xmux.configs.quest.apps": "workspace:*",
-    "@-/dev.improve.xmux.configs.quest.device": "workspace:*",
-    "@-/dev.improve.xmux.configs.quest.parse": "workspace:*"
+    "@-/dev.improve.xmux.configs.quest._lib.apps": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest._lib.device": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest._lib.stats": "workspace:*"
   }
 }

@@ -5,7 +5,7 @@ import {
   type Paths,
   toolingPaths,
   vpRun,
-} from "@-/dev.improve.xmux.configs.github.workflows._steps";
+} from "@-/dev.improve.xmux.configs.github.workflows._lib.steps";
 
 const paths: Paths = [...toolingPaths, "tsconfig.json", "wac.config.ts", ".github/workflows/**"];
 

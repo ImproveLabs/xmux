@@ -3,8 +3,9 @@
   "private": true,
   "type": "module",
   "devDependencies": {
+    "@-/com.npmjs.fs-extra": "workspace:*",
     "@-/com.npmjs.smol-toml": "workspace:*",
-    "@-/dev.improve.xmux.constants.paths": "workspace:*",
+    "@-/dev.improve.xmux.lib.paths": "workspace:*",
     "vitest": "catalog:"
   }
 }

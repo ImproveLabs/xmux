@@ -1,8 +1,9 @@
 #!/usr/bin/env bun
 /**
  * `vpx _gradle <args...>`: the Gradle wrapper at the repo root with ANDROID_HOME and JAVA_HOME set.
- * Arguments pass through untouched (no CLI parser, so Gradle's own --help and --version work).
+ * Arguments pass through untouched, including Gradle's own --help and --version.
  */
-import { runGradle } from "#gradle";
+import { runMain } from "@-/com.npmjs.citty-universal";
+import { gradleCommand } from "#gradle-command";
 
-await runGradle(process.argv.slice(2));
+await runMain(gradleCommand);

@@ -6,12 +6,16 @@
     "_gwf": "./_gwf.ts"
   },
   "type": "module",
+  "imports": {
+    "#gwf": "./gwf.ts",
+    "#gwf-command": "./gwf-command.ts"
+  },
   "dependencies": {
     "@-/com.npmjs.citty-universal": "workspace:*",
     "@-/dev.improve.xmux.configs.github.workflows.android": "workspace:*",
     "@-/dev.improve.xmux.configs.github.workflows.rust": "workspace:*",
     "@-/dev.improve.xmux.configs.github.workflows.typescript": "workspace:*",
-    "@-/dev.improve.xmux.constants.paths": "workspace:*",
+    "@-/dev.improve.xmux.lib.paths": "workspace:*",
     "@github-actions-workflow-ts/cli": "catalog:"
   }
 }

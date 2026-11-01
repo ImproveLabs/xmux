@@ -7,13 +7,14 @@
   },
   "type": "module",
   "imports": {
-    "#stress-command": "./stress-command.ts"
+    "#quest-stress": "./quest-stress.ts",
+    "#quest-stress-command": "./quest-stress-command.ts"
   },
   "dependencies": {
     "@-/com.npmjs.citty-universal": "workspace:*",
     "@-/com.npmjs.consola": "workspace:*",
-    "@-/dev.improve.xmux.configs.quest.apps": "workspace:*",
-    "@-/dev.improve.xmux.configs.quest.device": "workspace:*",
-    "@-/dev.improve.xmux.configs.quest.stats": "workspace:*"
+    "@-/dev.improve.xmux.configs.quest._lib.apps": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest._lib.device": "workspace:*",
+    "@-/dev.improve.xmux.configs.quest._lib.stats": "workspace:*"
   }
 }

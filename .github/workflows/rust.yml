@@ -7,6 +7,8 @@ name: rust
 'on':
   pull_request:
     paths:
+      - apps/xmux-cli/**
+      - apps/xmux-macos-daemon/**
       - packages/dev/improve/xmux/bridge/**
       - Cargo.toml
       - Cargo.lock
@@ -20,12 +22,14 @@ name: rust
       - vite.config.ts
       - packages/com/**
       - packages/dev/improve/xmux/configs/**
-      - packages/dev/improve/xmux/constants/**
+      - packages/dev/improve/xmux/lib/**
       - .github/workflows/rust.yml
   push:
     branches:
       - main
     paths:
+      - apps/xmux-cli/**
+      - apps/xmux-macos-daemon/**
       - packages/dev/improve/xmux/bridge/**
       - Cargo.toml
       - Cargo.lock
@@ -39,7 +43,7 @@ name: rust
       - vite.config.ts
       - packages/com/**
       - packages/dev/improve/xmux/configs/**
-      - packages/dev/improve/xmux/constants/**
+      - packages/dev/improve/xmux/lib/**
       - .github/workflows/rust.yml
 jobs:
   test:

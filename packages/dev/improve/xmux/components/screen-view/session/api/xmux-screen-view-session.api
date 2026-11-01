@@ -1,0 +1,7 @@
+public final class dev/improve/xmux/client/ScreenModels {
+	public static final field INSTANCE Ldev/improve/xmux/client/ScreenModels;
+	public final fun panes (Ldev/improve/xmux/client/Screen;Ldev/improve/xmux/client/XmuxSession;)Ljava/util/List;
+	public final fun terminals (Ldev/improve/xmux/client/Screen;)Ljava/util/Set;
+	public final fun tree (Ldev/improve/xmux/client/LayoutNode;)Ldev/improve/xmux/core/LayoutTree;
+}
+

@@ -21,7 +21,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |-
           if ! gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
-            gh release create "$GITHUB_REF_NAME" --verify-tag --draft --prerelease --title "XMUX $GITHUB_REF_NAME" --notes-file packages/dev/improve/xmux/packaging/release-notes.md
+            gh release create "$GITHUB_REF_NAME" --verify-tag --draft --prerelease --title "XMUX $GITHUB_REF_NAME" --notes-file packages/dev/improve/xmux/configs/packaging/release-notes.md
           fi
   bridge:
     runs-on: macos-latest
@@ -61,7 +61,7 @@ jobs:
       - name: Render the Homebrew formula
         run: |-
           sha="$(cut -d " " -f 1 dist/xmux-bridge-macos-universal.tar.gz.sha256)"
-          sed -e "s/@VERSION@/${GITHUB_REF_NAME#v}/" -e "s/@SHA256@/$sha/" packages/dev/improve/xmux/packaging/homebrew/xmux-bridge.rb.in > dist/xmux-bridge.rb
+          sed -e "s/@VERSION@/${GITHUB_REF_NAME#v}/" -e "s/@SHA256@/$sha/" packages/dev/improve/xmux/configs/packaging/homebrew/xmux-bridge.rb.in > dist/xmux-bridge.rb
       - name: Attach to the release
         uses: softprops/action-gh-release@v2
         with:
@@ -102,9 +102,9 @@ jobs:
             echo "$XMUX_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/upload.jks"
             export XMUX_KEYSTORE="$RUNNER_TEMP/upload.jks"
           fi
-          vpx _gradle :app:assembleRelease -PVERSION_NAME=${GITHUB_REF_NAME#v} -PVERSION_CODE=${{ github.run_number }}
+          vpx _gradle :xmux-quest-app:assembleRelease -PVERSION_NAME=${GITHUB_REF_NAME#v} -PVERSION_CODE=${{ github.run_number }}
           mkdir -p dist
-          cp packages/dev/improve/xmux/android/app/build/outputs/apk/release/app-release.apk "dist/xmux-quest-${GITHUB_REF_NAME#v}.apk"
+          cp apps/xmux-quest-app/build/outputs/apk/release/xmux-quest-app-release.apk "dist/xmux-quest-${GITHUB_REF_NAME#v}.apk"
           (cd dist && sha256sum "xmux-quest-${GITHUB_REF_NAME#v}.apk" > "xmux-quest-${GITHUB_REF_NAME#v}.apk.sha256")
       - name: Publish the libraries to GitHub Packages
         env:

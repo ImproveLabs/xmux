@@ -1,0 +1,19 @@
+public final class dev/improve/xmux/core/TerminalGridView : android/view/View {
+	public fun <init> (Landroid/content/Context;Ldev/improve/xmux/core/CellGrid;Ldev/improve/xmux/core/TerminalFont;)V
+	public final fun cellAt (FF)Lkotlin/Pair;
+	public final fun getBodyColor ()I
+	public final fun getContentHeight ()I
+	public final fun getContentWidth ()I
+	public final fun getCursorColor ()I
+	public final fun getDrawnFrames ()J
+	public final fun getFont ()Ldev/improve/xmux/core/TerminalFont;
+	public final fun getGrid ()Ldev/improve/xmux/core/CellGrid;
+	public final fun getLastDrawCalls ()I
+	public final fun getPaddingPx ()F
+	public final fun refreshIfDirty ()V
+	public final fun setBodyColor (I)V
+	public final fun setCursorColor (I)V
+	public final fun setGrid (Ldev/improve/xmux/core/CellGrid;)V
+	public final fun setPaddingPx (F)V
+}
+

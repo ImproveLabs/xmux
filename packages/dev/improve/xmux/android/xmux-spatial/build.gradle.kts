@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-  namespace = "dev.xmux.spatial"
+  namespace = "dev.improve.xmux.spatial"
   compileSdk = 35
   defaultConfig { minSdk = 34 }
   buildFeatures { compose = true }
@@ -22,9 +22,12 @@ android {
 kotlin { explicitApi() }
 
 dependencies {
-  api(project(":xmux-core"))
-  api(project(":xmux-compose"))
+  api(project(":xmux-screen-view"))
+  api(project(":xmux-terminal-window"))
   api(project(":xmux-client"))
+  implementation(project(":xmux-key-encoder"))
+  implementation(project(":xmux-screen-view-session"))
+  implementation(libs.androidx.compose.foundation)
   // Spatial SDK types are part of this module's API (AppSystemActivity, Entity, Pose, ...).
   api(libs.meta.spatial.sdk)
   api(libs.meta.spatial.sdk.toolkit)

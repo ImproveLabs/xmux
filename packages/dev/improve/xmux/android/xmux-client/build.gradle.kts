@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-  namespace = "dev.xmux.client"
+  namespace = "dev.improve.xmux.client"
   compileSdk = 35
   defaultConfig {
     minSdk = 34
@@ -28,7 +28,8 @@ android {
 kotlin { explicitApi() }
 
 dependencies {
-  api(project(":xmux-core"))
+  api(project(":xmux-cell-grid"))
+  api(project(":xmux-key-encoder"))
   api(project(":xmux-proto"))
   api(libs.kotlinx.coroutines.core)
   // Dispatchers.Main, which sessions use by default.

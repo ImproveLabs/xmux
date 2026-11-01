@@ -1,0 +1,312 @@
+// xmux wire schema: bridge (Mac) <-> client (headset).
+// Every frame on the wire is a 16-byte header (see xmux-proto's framing.rs / FrameCodec) followed
+// by one `Frame` message, optionally LZ4 block-compressed (flagged in the header).
+// Ids are small integers assigned by the bridge for the lifetime of a connection; the cmux string
+// ids travel in Topology so embedders can cross-reference.
+// Code is generated at build time: prost + protox in Rust, the protobuf Gradle plugin in Kotlin.
+
+syntax = "proto3";
+
+package xmux.proto;
+
+option java_package = "dev.improve.xmux.proto";
+option java_multiple_files = true;
+
+enum Underline {
+  UNDERLINE_NONE = 0;
+  UNDERLINE_SINGLE = 1;
+  UNDERLINE_DOUBLE = 2;
+  UNDERLINE_CURLY = 3;
+  UNDERLINE_DOTTED = 4;
+  UNDERLINE_DASHED = 5;
+}
+
+enum CursorShape {
+  CURSOR_SHAPE_BLOCK = 0;
+  CURSOR_SHAPE_UNDERLINE = 1;
+  CURSOR_SHAPE_BAR = 2;
+}
+
+enum NodeKind {
+  NODE_KIND_SPLIT = 0;
+  NODE_KIND_LEAF = 1;
+  NODE_KIND_STACK = 2;
+  NODE_KIND_VIEWPORT = 3;
+}
+
+enum SplitDirection {
+  SPLIT_DIRECTION_HORIZONTAL = 0;
+  SPLIT_DIRECTION_VERTICAL = 1;
+}
+
+enum AttachStatus {
+  ATTACH_STATUS_ATTACHING = 0;
+  ATTACH_STATUS_ATTACHED = 1;
+  ATTACH_STATUS_STALLED = 2;
+  ATTACH_STATUS_DETACHED = 3;
+  ATTACH_STATUS_ERROR = 4;
+}
+
+enum MouseAction {
+  MOUSE_ACTION_PRESS = 0;
+  MOUSE_ACTION_RELEASE = 1;
+  MOUSE_ACTION_MOVE = 2;
+  MOUSE_ACTION_SCROLL = 3;
+}
+
+enum Direction {
+  DIRECTION_LEFT = 0;
+  DIRECTION_RIGHT = 1;
+  DIRECTION_UP = 2;
+  DIRECTION_DOWN = 3;
+}
+
+// Attribute bits in Run.attrs (mirrors dev.improve.xmux.core.Attr and the bridge's attr module):
+// BOLD=1 ITALIC=2 UNDERLINE=4 INVERSE=8 DIM=16 STRIKE=32 BLINK=64 INVISIBLE=128 WIDE_SPACER=256
+
+// A styled run of text inside one row. The bridge splits runs so that cell boundaries are
+// explicit and clients need no Unicode segmentation or width tables. `width_hint` says how the
+// text maps to cells:
+//   0: every code point is one narrow cell
+//   2: every code point is one wide cell (a lead cell, then a spacer cell)
+//   1: the whole text is one narrow cell (a grapheme of several code points)
+//   3: the whole text is one wide cell
+message Run {
+  string text = 1;
+  uint32 fg = 2;          // 0xAARRGGBB, alpha 0 = default foreground
+  uint32 bg = 3;          // 0xAARRGGBB, alpha 0 = default background
+  uint32 attrs = 4;
+  Underline underline = 5;
+  uint32 width_hint = 6;
+}
+
+message Row {
+  uint32 index = 1;
+  repeated Run runs = 2;
+}
+
+// Dirty rows for one terminal. A sequence gap or a generation change means the client must drop
+// what it has and wait for the next full snapshot (all rows, full_reset = true).
+message Rows {
+  uint32 terminal = 1;
+  uint32 generation = 2;
+  uint32 sequence = 3;
+  uint32 cols = 4;
+  uint32 rows = 5;
+  repeated Row dirty = 6;
+  bool full_reset = 7;
+  uint32 default_fg = 8;   // 0xFFRRGGBB the terminal's default colors resolve to
+  uint32 default_bg = 9;
+}
+
+message Cursor {
+  uint32 terminal = 1;
+  uint32 row = 2;
+  uint32 col = 3;
+  bool visible = 4;
+  CursorShape shape = 5;
+  bool blink = 6;
+}
+
+// First frame from the client. With a valid `token` the bridge answers Welcome{paired: true}.
+// Otherwise it answers Welcome{paired: false} and waits until the user approves `pairing_code`
+// on the Mac (`xmux-bridge pair`), then sends Welcome{paired: true, token} with a new token.
+message Hello {
+  string client = 1;
+  uint32 protocol_version = 2;
+  string token = 3;        // pairing token, empty on first contact
+  string pairing_code = 4; // six digits the headset shows while it waits for approval
+  string device_name = 5;
+}
+
+message Welcome {
+  string server = 1;
+  uint32 protocol_version = 2;
+  string session_name = 3;
+  bool paired = 4;
+  string token = 5;        // set once, when a pairing is approved; the client stores it
+}
+
+// A screen's layout tree. SPLIT: two children, `direction` HORIZONTAL puts them side by side,
+// VERTICAL stacks them; `ratio` is the first child's share. LEAF: `pane`. STACK: one LEAF child
+// per pane, `pane` is the expanded one. VIEWPORT: one child per column, `widths` gives each
+// column's width as a fraction of the screen.
+message LayoutNode {
+  NodeKind kind = 1;
+  SplitDirection direction = 2;
+  float ratio = 3;
+  repeated LayoutNode children = 4;
+  uint32 pane = 5;
+  repeated float widths = 6;
+}
+
+message Tab {
+  uint32 id = 1;
+  string cmux_id = 2;
+  string title = 3;
+  uint32 terminal = 4;
+}
+
+message Pane {
+  uint32 id = 1;
+  string cmux_id = 2;
+  repeated Tab tabs = 3;
+  uint32 active_tab = 4;
+}
+
+message Screen {
+  uint32 id = 1;
+  string cmux_id = 2;
+  string title = 3;
+  uint32 workspace = 4;
+  LayoutNode layout = 5;
+  repeated Pane panes = 6;
+  uint32 focused_pane = 7;
+}
+
+message Workspace {
+  uint32 id = 1;
+  string cmux_id = 2;
+  string title = 3;
+}
+
+message Terminal {
+  uint32 id = 1;
+  string cmux_id = 2;
+  uint32 cols = 3;
+  uint32 rows = 4;
+  string title = 5;
+  bool running = 6;
+}
+
+// Complete topology; the bridge sends a full document on every change (they are small).
+message Topology {
+  uint32 revision = 1;
+  repeated Workspace workspaces = 2;
+  repeated Screen screens = 3;
+  repeated Terminal terminals = 4;
+  uint32 active_screen = 5;
+}
+
+message AttachState {
+  uint32 terminal = 1;
+  AttachStatus status = 2;
+  string message = 3;
+}
+
+message KeyPress {
+  string key = 1;          // cmux key names: "a", "enter", "f5", ...
+  uint32 mods = 2;         // 1 shift, 2 ctrl, 4 alt, 8 meta
+}
+
+message MouseEvent {
+  MouseAction action = 1;
+  uint32 button = 2;       // 0 left, 1 middle, 2 right
+  uint32 row = 3;
+  uint32 col = 4;
+  uint32 mods = 5;
+  sint32 dx = 6;           // scroll deltas
+  sint32 dy = 7;
+}
+
+// Client -> bridge. Exactly one of text / keys / mouse is set.
+message Input {
+  uint32 terminal = 1;
+  uint64 idempotency = 2;
+  string text = 3;
+  repeated KeyPress keys = 4;
+  MouseEvent mouse = 5;
+}
+
+message Resize {
+  uint32 terminal = 1;
+  uint32 cols = 2;
+  uint32 rows = 3;
+}
+
+message FocusDirection {
+  uint32 screen = 1;
+  Direction direction = 2;
+}
+
+// State check after the Rows frame with this generation and sequence. `fnv1a` is FNV-1a 64 over
+// every row in order: for each row its index (u32 LE), then for each run the UTF-8 text, a 0
+// byte, and fg, bg, attrs, underline, width_hint (u32 LE each). A client whose own value differs
+// sends ResyncTerminal.
+message Checksum {
+  uint32 terminal = 1;
+  uint32 generation = 2;
+  uint32 sequence = 3;
+  uint64 fnv1a = 4;
+}
+
+// Client -> bridge: start receiving rows for a terminal (the bridge answers with a full snapshot).
+message AttachTerminal {
+  uint32 terminal = 1;
+}
+
+// Client -> bridge: stop receiving rows for a terminal.
+message DetachTerminal {
+  uint32 terminal = 1;
+}
+
+// Client -> bridge: the client lost track (sequence gap, checksum mismatch); send a full snapshot.
+message ResyncTerminal {
+  uint32 terminal = 1;
+}
+
+// Client -> bridge: focus this pane in cmux (and its screen), e.g. after a tap on it.
+message FocusPane {
+  uint32 pane = 1;
+}
+
+// Client -> bridge: make this tab the active one of its pane.
+message FocusTab {
+  uint32 tab = 1;
+}
+
+// Either side, right before closing the connection on purpose.
+message Bye {
+  string reason = 1;
+}
+
+message Ping {
+  uint64 nonce = 1;
+  uint64 sent_ns = 2;
+}
+
+message Pong {
+  uint64 nonce = 1;
+  uint64 sent_ns = 2;
+}
+
+message Stats {
+  uint32 rows_per_second = 1;
+  uint32 bytes_per_second = 2;
+  uint32 rtt_ms = 3;
+}
+
+message Frame {
+  // The oneof field number doubles as the header's `kind` byte.
+  oneof payload {
+    Hello hello = 1;
+    Welcome welcome = 2;
+    Topology topology = 3;
+    Rows rows = 4;
+    Cursor cursor = 5;
+    AttachState attach_state = 6;
+    Input input = 7;
+    Resize resize = 8;
+    FocusDirection focus_direction = 9;
+    Checksum checksum = 10;
+    Ping ping = 11;
+    Pong pong = 12;
+    Stats stats = 13;
+    AttachTerminal attach_terminal = 14;
+    DetachTerminal detach_terminal = 15;
+    ResyncTerminal resync_terminal = 16;
+    Bye bye = 17;
+    FocusPane focus_pane = 18;
+    FocusTab focus_tab = 19;
+  }
+}

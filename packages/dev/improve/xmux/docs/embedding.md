@@ -38,9 +38,9 @@ import android.view.KeyEvent
 import com.meta.spatial.core.SpatialFeature
 import com.meta.spatial.toolkit.AppSystemActivity
 import com.meta.spatial.toolkit.PanelRegistration
-import dev.xmux.client.BridgeTarget
-import dev.xmux.client.XmuxClient
-import dev.xmux.spatial.XmuxSpatial
+import dev.improve.xmux.client.BridgeTarget
+import dev.improve.xmux.client.XmuxClient
+import dev.improve.xmux.spatial.XmuxSpatial
 
 class MainActivity : AppSystemActivity() {
   private val xmux by lazy { XmuxSpatial(this) }
@@ -79,8 +79,13 @@ with backoff, re-attaching terminals, resyncing from snapshots) until you `close
 `session.state` is a `StateFlow<ConnectionState>`: `Connecting`, `Pairing(code)` (show the code;
 the user types it into `xmux-bridge pair` on the Mac), `Online`, `Stalled`, `Reconnecting`,
 `Closed`. The token the bridge issues is kept in the client's `PairingStore` (app-private
-SharedPreferences by default). `ConnectPanel` in `xmux-compose` is a ready-made picker and
+SharedPreferences by default). `ConnectPanel` in `xmux-connect-panel` is a ready-made picker and
 pairing screen; the XMUX app shows it in a panel with `xmux.mountPanel(...)`.
+
+Add `implementation("dev.xmux:xmux-connect-panel:<version>")` when using that picker. The
+`xmux-compose` convenience bundle also includes it. For a custom phone or Android integration,
+`xmux-screen-view-session` provides `ScreenModels` to adapt session topology and terminal grids to
+`ScreenView`; the network client itself has no view dependency.
 
 `session.topology` holds the session's workspaces, screens (layout tree, panes, tabs) and
 terminals. Beyond what `follow` does:
@@ -96,6 +101,38 @@ terminals. Beyond what `follow` does:
 Taps on a window focus the pane under them (in cmux too) and send mouse presses; tabs switch with
 a tap on their strip. Keys go to the focused window's focused pane: from a hardware keyboard
 through `dispatchKeyEvent`, from the system keyboard through the window's input connection.
+
+## Pointing at windows and sending input from code
+
+Apps that add their own input (hand gestures, voice) need to know what a ray points at and where
+text should go:
+
+| Call | What |
+|---|---|
+| `xmux.hitTest(origin, direction)` | the nearest window a world-space ray hits, as a `WindowHit`: `window`, `pane`, `terminal`, `row`/`col` of the cell (-1 off the grid, on a divider or on padding), `onHeader`, `point`. Null when the ray misses every window |
+| `xmux.hitTest(hitInfo)` | the same for a `HitInfo` from your own scene raycast or panel input listener, when it is on an xmux window |
+| `window.focusedPane`, `window.focusedTerminal` | the pane last tapped or focused from code (else cmux's focused pane) and its active terminal |
+| `xmux.focus(window, pane)` | make keyboard input go to `window` and focus `pane` in it and in cmux |
+| `xmux.focusedTerminal()` | the `TerminalHandle` keyboard input goes to right now |
+
+`hitTest` intersects the ray with every window at its current pose and size, so windows the user
+moved or resized are handled, and maps the hit to panel pixels the way the SDK's own panel input
+does. It only knows xmux windows: if your own panels can be in front, test them first. It does not
+use `Scene.lineSegmentIntersect`, which on a Quest 3 passed through screen windows. Call it on the
+main thread, for example from `onSceneTick`:
+
+```kotlin
+val hit = xmux.hitTest(rayOrigin, rayDirection)
+val target = hit?.terminal ?: xmux.focusedTerminal()?.id   // pane under the ray, else the focused one
+val session = hit?.window?.session
+if (target != null && session != null) {
+  session.terminal(target).write("git status")
+  session.terminal(target).keys(Key("enter"))
+}
+```
+
+Key names follow cmux (`enter`, `escape`, `tab`, `backspace`, `up`, `f5`, ...); add
+`Modifier.Ctrl` and friends in `Key(name, modifiers)`.
 
 ## Grid windows
 
@@ -131,6 +168,17 @@ loop (see `measurements.md`).
 `WindowContent(state, grid, chrome)` takes an optional `WindowChrome`: header height, corner radius,
 colors, the traffic-light callbacks (`onClose`, `onMinimize`, `onZoom`) and two composable header slots
 (`leadingSlot` after the traffic lights, `trailingSlot` before the spinner).
+
+cmux screen windows take one too: `mount(session, screen, placement, chrome)`, or a chrome per screen
+with `follow(session, chrome = { screen -> ... })`. Slots are composables, so an indicator that reads
+Compose state updates by itself:
+
+```kotlin
+var listeningOn by mutableStateOf<ScreenId?>(null)
+xmux.follow(session, chrome = { screen ->
+  WindowChrome(trailingSlot = { if (listeningOn == screen) Text("●", color = Color.Red) })
+})
+```
 
 ## Placement and configuration
 

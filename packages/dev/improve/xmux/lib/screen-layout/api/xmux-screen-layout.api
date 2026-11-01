@@ -1,0 +1,101 @@
+public abstract interface class dev/improve/xmux/core/LayoutTree {
+}
+
+public final class dev/improve/xmux/core/LayoutTree$Columns : dev/improve/xmux/core/LayoutTree {
+	public fun <init> (Ljava/util/List;Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;Ljava/util/List;)Ldev/improve/xmux/core/LayoutTree$Columns;
+	public static synthetic fun copy$default (Ldev/improve/xmux/core/LayoutTree$Columns;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Ldev/improve/xmux/core/LayoutTree$Columns;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getColumns ()Ljava/util/List;
+	public final fun getWidths ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/improve/xmux/core/LayoutTree$Leaf : dev/improve/xmux/core/LayoutTree {
+	public fun <init> (I)V
+	public final fun component1 ()I
+	public final fun copy (I)Ldev/improve/xmux/core/LayoutTree$Leaf;
+	public static synthetic fun copy$default (Ldev/improve/xmux/core/LayoutTree$Leaf;IILjava/lang/Object;)Ldev/improve/xmux/core/LayoutTree$Leaf;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPane ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/improve/xmux/core/LayoutTree$Split : dev/improve/xmux/core/LayoutTree {
+	public fun <init> (ZFLdev/improve/xmux/core/LayoutTree;Ldev/improve/xmux/core/LayoutTree;)V
+	public final fun component1 ()Z
+	public final fun component2 ()F
+	public final fun component3 ()Ldev/improve/xmux/core/LayoutTree;
+	public final fun component4 ()Ldev/improve/xmux/core/LayoutTree;
+	public final fun copy (ZFLdev/improve/xmux/core/LayoutTree;Ldev/improve/xmux/core/LayoutTree;)Ldev/improve/xmux/core/LayoutTree$Split;
+	public static synthetic fun copy$default (Ldev/improve/xmux/core/LayoutTree$Split;ZFLdev/improve/xmux/core/LayoutTree;Ldev/improve/xmux/core/LayoutTree;ILjava/lang/Object;)Ldev/improve/xmux/core/LayoutTree$Split;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFirst ()Ldev/improve/xmux/core/LayoutTree;
+	public final fun getHorizontal ()Z
+	public final fun getRatio ()F
+	public final fun getSecond ()Ldev/improve/xmux/core/LayoutTree;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/improve/xmux/core/LayoutTree$Stack : dev/improve/xmux/core/LayoutTree {
+	public fun <init> (Ljava/util/List;I)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()I
+	public final fun copy (Ljava/util/List;I)Ldev/improve/xmux/core/LayoutTree$Stack;
+	public static synthetic fun copy$default (Ldev/improve/xmux/core/LayoutTree$Stack;Ljava/util/List;IILjava/lang/Object;)Ldev/improve/xmux/core/LayoutTree$Stack;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getExpanded ()I
+	public final fun getPanes ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/improve/xmux/core/PxRect {
+	public fun <init> (IIII)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun contains (II)Z
+	public final fun copy (IIII)Ldev/improve/xmux/core/PxRect;
+	public static synthetic fun copy$default (Ldev/improve/xmux/core/PxRect;IIIIILjava/lang/Object;)Ldev/improve/xmux/core/PxRect;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBottom ()I
+	public final fun getHeight ()I
+	public final fun getLeft ()I
+	public final fun getRight ()I
+	public final fun getTop ()I
+	public final fun getWidth ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/improve/xmux/core/PxSize {
+	public fun <init> (II)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun copy (II)Ldev/improve/xmux/core/PxSize;
+	public static synthetic fun copy$default (Ldev/improve/xmux/core/PxSize;IIILjava/lang/Object;)Ldev/improve/xmux/core/PxSize;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getHeight ()I
+	public final fun getWidth ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class dev/improve/xmux/core/ScreenLayoutEngine {
+	public static final field DIVIDER_PX I
+	public static final field INSTANCE Ldev/improve/xmux/core/ScreenLayoutEngine;
+	public static final field STACK_HEADER_PX I
+	public final fun dividers (Ldev/improve/xmux/core/LayoutTree;Lkotlin/jvm/functions/Function1;II)Ljava/util/List;
+	public static synthetic fun dividers$default (Ldev/improve/xmux/core/ScreenLayoutEngine;Ldev/improve/xmux/core/LayoutTree;Lkotlin/jvm/functions/Function1;IIILjava/lang/Object;)Ljava/util/List;
+	public final fun measure (Ldev/improve/xmux/core/LayoutTree;Lkotlin/jvm/functions/Function1;)Ldev/improve/xmux/core/PxSize;
+	public final fun place (Ldev/improve/xmux/core/LayoutTree;Lkotlin/jvm/functions/Function1;II)Ljava/util/Map;
+	public static synthetic fun place$default (Ldev/improve/xmux/core/ScreenLayoutEngine;Ldev/improve/xmux/core/LayoutTree;Lkotlin/jvm/functions/Function1;IIILjava/lang/Object;)Ljava/util/Map;
+}
+

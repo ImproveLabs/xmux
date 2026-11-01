@@ -4,13 +4,14 @@ Helpers for running xmux on a Meta Quest over adb (USB or Wi-Fi). One package pe
 
 | Package | Bin | Does |
 |---|---|---|
-| `install` | `_quest-install [app\|sample] [--no-build] [-- am start extras]` | builds the release APK with Gradle, installs, force-stops, launches |
-| `stress` | `_quest-stress [count] --active 4 --fps 30 --settle 35` | launches the sample with N windows, waits, prints stats |
-| `stats` | `_quest-stats [app\|sample] [--json]` | runtime (VrApi), HWUI (`gfxinfo`) and process stats |
+| `install` | `_quest-install [app\|stress] [--no-build] [-- am start extras]` | builds the release APK with Gradle, installs, force-stops, launches |
+| `stress` | `_quest-stress [count] --active 4 --fps 30 --settle 35` | launches the stress-test app with N windows, waits, prints stats |
+| `stats` | `_quest-stats [app\|stress] [--json]` | runtime (VrApi), HWUI (`gfxinfo`) and process stats |
 | `capture` | `_quest-capture [--out results/quest]` | headset screenshot through Horizon OS's capture service |
 
-Shared libraries: `device` (picks and connects to the headset with appium-adb), `parse` (pure parsers
-for Horizon OS output, tested against real Quest 3 output), `apps` (installable apps).
+Helper packages live under `_lib/`: `device` (picks and connects to the headset with appium-adb),
+`parse` (pure parsers for Horizon OS output, tested against real Quest 3 output), `apps` (installable
+apps), `stats` (collects and formats runtime stats), and `capture` (captures and pulls screenshots).
 
 Device selection: `--serial`, then `QUEST_SERIAL`, then the only online device whose model is a Quest.
 `XMUX_ADB_LOG=debug` shows every adb call.

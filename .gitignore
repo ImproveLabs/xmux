@@ -5,6 +5,8 @@ node_modules/
 
 # Android / Gradle
 /build/
+build-logic/build/
+apps/**/build/
 packages/**/build/
 .gradle/
 .kotlin/

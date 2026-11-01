@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
+import fs from "@-/com.npmjs.fs-extra";
 import { parse } from "@-/com.npmjs.smol-toml";
-import { PATHS } from "@-/dev.improve.xmux.constants.paths";
-import { readFileSync } from "node:fs";
+import { PATHS } from "@-/dev.improve.xmux.lib.paths";
 import { join } from "node:path";
 
-const read = (relative: string) => readFileSync(join(PATHS.monorepoRoot, relative), "utf8");
+const read = (relative: string) => fs.readFileSync(join(PATHS.monorepoRoot, relative), "utf8");
 const prototools = parse(read(".prototools")) as Record<string, unknown>;
 
 describe(".prototools", () => {

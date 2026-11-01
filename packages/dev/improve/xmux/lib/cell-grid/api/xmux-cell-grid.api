@@ -1,0 +1,76 @@
+public final class dev/improve/xmux/core/Attr {
+	public static final field BLINK I
+	public static final field BOLD I
+	public static final field DIM I
+	public static final field INSTANCE Ldev/improve/xmux/core/Attr;
+	public static final field INVERSE I
+	public static final field INVISIBLE I
+	public static final field ITALIC I
+	public static final field STRIKE I
+	public static final field UNDERLINE I
+	public static final field WIDE_SPACER I
+}
+
+public final class dev/improve/xmux/core/CellGrid {
+	public static final field Companion Ldev/improve/xmux/core/CellGrid$Companion;
+	public static final field DEFAULT_BG I
+	public static final field DEFAULT_FG I
+	public fun <init> (II)V
+	public final fun anyDirty ()Z
+	public final fun cellText (II)Ljava/lang/String;
+	public final fun clearDirty ()V
+	public final fun fill (IIIIII)V
+	public static synthetic fun fill$default (Ldev/improve/xmux/core/CellGrid;IIIIIIILjava/lang/Object;)V
+	public final fun getAttrs ()[I
+	public final fun getBg ()[I
+	public final fun getClusters ()[Ljava/lang/String;
+	public final fun getCodepoints ()[I
+	public final fun getCols ()I
+	public final fun getCursorCol ()I
+	public final fun getCursorRow ()I
+	public final fun getCursorShape ()Ldev/improve/xmux/core/CursorShape;
+	public final fun getCursorVisible ()Z
+	public final fun getDefaultBg ()I
+	public final fun getDefaultFg ()I
+	public final fun getDirtyRows ()[Z
+	public final fun getFg ()[I
+	public final fun getRows ()I
+	public final fun index (II)I
+	public final fun markAllDirty ()V
+	public final fun markDirty (I)V
+	public final fun put (IIIIII)V
+	public static synthetic fun put$default (Ldev/improve/xmux/core/CellGrid;IIIIIIILjava/lang/Object;)V
+	public final fun putCluster (IILjava/lang/String;III)V
+	public static synthetic fun putCluster$default (Ldev/improve/xmux/core/CellGrid;IILjava/lang/String;IIIILjava/lang/Object;)V
+	public final fun rowText (I)Ljava/lang/String;
+	public final fun setCursor (II)V
+	public final fun setCursorShape (Ldev/improve/xmux/core/CursorShape;)V
+	public final fun setCursorVisible (Z)V
+	public final fun setDefaultBg (I)V
+	public final fun setDefaultFg (I)V
+	public final fun write (IILjava/lang/String;III)I
+	public static synthetic fun write$default (Ldev/improve/xmux/core/CellGrid;IILjava/lang/String;IIIILjava/lang/Object;)I
+}
+
+public final class dev/improve/xmux/core/CellGrid$Companion {
+}
+
+public final class dev/improve/xmux/core/CellStyle {
+	public static final field INSTANCE Ldev/improve/xmux/core/CellStyle;
+	public static final field STYLE_MASK I
+	public final fun effectiveBg (IIII)I
+	public final fun effectiveFg (IIIII)I
+	public final fun isDefault (I)Z
+	public final fun resolveFg (II)I
+	public final fun styleBits (I)I
+}
+
+public final class dev/improve/xmux/core/CursorShape : java/lang/Enum {
+	public static final field Bar Ldev/improve/xmux/core/CursorShape;
+	public static final field Block Ldev/improve/xmux/core/CursorShape;
+	public static final field Underline Ldev/improve/xmux/core/CursorShape;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Ldev/improve/xmux/core/CursorShape;
+	public static fun values ()[Ldev/improve/xmux/core/CursorShape;
+}
+

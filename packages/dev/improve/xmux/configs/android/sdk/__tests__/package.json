@@ -1,9 +1,0 @@
-{
-  "name": "@-/dev.improve.xmux.configs.android.sdk.__tests__",
-  "private": true,
-  "type": "module",
-  "devDependencies": {
-    "@-/dev.improve.xmux.configs.android.sdk": "workspace:*",
-    "vitest": "catalog:"
-  }
-}

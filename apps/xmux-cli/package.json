@@ -1,0 +1,13 @@
+{
+  "name": "@-/apps.xmux-cli",
+  "version": "0.0.0",
+  "private": true,
+  "bin": {
+    "_xmux": "./_xmux.ts"
+  },
+  "type": "module",
+  "dependencies": {
+    "@-/com.npmjs.execa": "workspace:*",
+    "@-/dev.improve.xmux.lib.paths": "workspace:*"
+  }
+}

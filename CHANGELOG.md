@@ -4,6 +4,30 @@ xmux follows `0.MINOR.PATCH` until 1.0: a MINOR release may break the Kotlin API
 protocol, and says so here. The Android libraries, the bridge and the wire protocol share one
 version.
 
+## Unreleased
+
+- Move runnable apps to the top-level `apps/` directory and rename the internal demo library to
+  `xmux-demo-content`. Android Gradle project names now match their app directories.
+- Rename the developer CLI crate to `xmux-cli` and its executable to `xmux`.
+- Split UI into independent Gradle modules under `components/`, with terminal primitives under
+  `lib/`. Cell grids and screen layout are plain Kotlin/JVM libraries. Keep `xmux-core` and
+  `xmux-compose` as convenience bundles, and share Gradle conventions through `build-logic/`.
+- Move `ScreenModels` out of the client into `xmux-screen-view-session`; consumers using that
+  adapter must depend on it. Kotlin source imports are unchanged. Recompile binary consumers of
+  `WindowFrame`, whose JVM facade moves from `TerminalWindowKt` to `WindowFrameKt`.
+- Breaking Kotlin API change: move packages from `dev.xmux.*` to `dev.improve.xmux.*`, including
+  generated protobuf types. Embedders must update imports.
+- `xmux-spatial`: `XmuxSpatial.hitTest(origin, direction)` and `hitTest(HitInfo)` return the window,
+  pane, terminal and cell under a ray (`WindowHit`). Windows are intersected at their current pose
+  and size; checked on a Quest 3 against the coordinates the Spatial SDK reports.
+- `xmux-spatial`: cmux screen windows take a `WindowChrome` (`mount(..., chrome)`,
+  `follow(..., chrome = { screen -> ... })`), so header slots work for them as for grid windows.
+  Grid windows with a custom header height now get a panel sized for it.
+- `xmux-spatial`: `ScreenWindow.focusedPane`, `focusedTerminal`, `chrome` and `panelSize`;
+  `XmuxSpatial.focus(window, pane)` and `focusedTerminal()` for apps that move focus by ray or
+  gesture. Recompile binary consumers of `mount(session, screen, placement)` and `follow`, which
+  gained a parameter.
+
 ## 0.1.1 — Preview
 
 - Fix fresh-runner Rust installation and Android library publication after the unpublished 0.1.0 release attempt.
@@ -21,7 +45,7 @@ version.
   Bonjour advertisement (`_xmux._tcp`), `status`, `unpair`, `service install` (LaunchAgent),
   `serve --replay` for recorded traces.
 
-### Wire protocol v1 (`packages/dev/improve/xmux/schema/xmux.proto`)
+### Wire protocol v1 (`packages/dev/improve/xmux/schema/proto/xmux.proto`)
 
 - 16-byte header, protobuf `Frame` body, optional LZ4. Runs carry explicit cell boundaries
   (`width_hint`), so clients need no Unicode tables.
@@ -48,7 +72,7 @@ version.
 
 ### Tests and tooling
 
-- Ten conformance scenarios recorded from a sandboxed cmux server (`xmux-view record`); the Rust
+- Ten conformance scenarios recorded from a sandboxed cmux server (`xmux record`); the Rust
   grid and the Kotlin `RowApplier` both replay them to the grids cmux reported.
 - Hub tests against a scripted cmux, integration tests against real cmux daemons, TLS
   end-to-end tests, session tests against `FakeBridge`.

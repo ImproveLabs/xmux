@@ -1,10 +1,10 @@
 import { NormalJob, Step, Workflow } from "@github-actions-workflow-ts/lib";
-import { bootstrapSteps } from "@-/dev.improve.xmux.configs.github.workflows._steps";
+import { bootstrapSteps } from "@-/dev.improve.xmux.configs.github.workflows._lib.steps";
 
 /** `v0.2.0` -> `0.2.0` in shell steps. */
 const VERSION = "${GITHUB_REF_NAME#v}";
 
-// Keep the release a draft until every binary and all five libraries have uploaded.
+// Keep the release a draft until every binary and all libraries have uploaded.
 const prepare = new NormalJob("prepare", {
   "runs-on": "ubuntu-latest",
   permissions: { contents: "write" },
@@ -15,7 +15,7 @@ const prepare = new NormalJob("prepare", {
     env: { GH_TOKEN: "${{ github.token }}" },
     run: [
       'if ! gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then',
-      '  gh release create "$GITHUB_REF_NAME" --verify-tag --draft --prerelease --title "XMUX $GITHUB_REF_NAME" --notes-file packages/dev/improve/xmux/packaging/release-notes.md',
+      '  gh release create "$GITHUB_REF_NAME" --verify-tag --draft --prerelease --title "XMUX $GITHUB_REF_NAME" --notes-file packages/dev/improve/xmux/configs/packaging/release-notes.md',
       "fi",
     ].join("\n"),
   }),
@@ -55,7 +55,7 @@ const bridge = new NormalJob("bridge", {
     name: "Render the Homebrew formula",
     run: [
       'sha="$(cut -d " " -f 1 dist/xmux-bridge-macos-universal.tar.gz.sha256)"',
-      `sed -e "s/@VERSION@/${VERSION}/" -e "s/@SHA256@/$sha/" packages/dev/improve/xmux/packaging/homebrew/xmux-bridge.rb.in > dist/xmux-bridge.rb`,
+      `sed -e "s/@VERSION@/${VERSION}/" -e "s/@SHA256@/$sha/" packages/dev/improve/xmux/configs/packaging/homebrew/xmux-bridge.rb.in > dist/xmux-bridge.rb`,
     ].join("\n"),
   }),
   new Step({
@@ -86,9 +86,9 @@ const android = new NormalJob("android", {
       '  echo "$XMUX_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/upload.jks"',
       '  export XMUX_KEYSTORE="$RUNNER_TEMP/upload.jks"',
       "fi",
-      `vpx _gradle :app:assembleRelease -PVERSION_NAME=${VERSION} -PVERSION_CODE=\${{ github.run_number }}`,
+      `vpx _gradle :xmux-quest-app:assembleRelease -PVERSION_NAME=${VERSION} -PVERSION_CODE=\${{ github.run_number }}`,
       "mkdir -p dist",
-      `cp packages/dev/improve/xmux/android/app/build/outputs/apk/release/app-release.apk "dist/xmux-quest-${VERSION}.apk"`,
+      `cp apps/xmux-quest-app/build/outputs/apk/release/xmux-quest-app-release.apk "dist/xmux-quest-${VERSION}.apk"`,
       `(cd dist && sha256sum "xmux-quest-${VERSION}.apk" > "xmux-quest-${VERSION}.apk.sha256")`,
     ].join("\n"),
   }),

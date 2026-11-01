@@ -1,5 +1,5 @@
 [env]
 # Absolute path of the repository root for tests that read shared files
 # (packages/dev/improve/xmux/schema/, packages/dev/improve/xmux/testing/fixtures/), so crates do
-# not depend on how deep they sit under packages/.
+# not depend on their location under apps/ or packages/.
 XMUX_REPO_ROOT = { value = ".", relative = true }
