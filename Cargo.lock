@@ -1780,7 +1780,7 @@ dependencies = [
 
 [[package]]
 name = "xmux-bridge"
-version = "0.1.1"
+version = "0.2.0"
 dependencies = [
  "cmux-sdk",
  "insta",
@@ -1797,7 +1797,7 @@ dependencies = [
 
 [[package]]
 name = "xmux-bridged"
-version = "0.1.1"
+version = "0.2.0"
 dependencies = [
  "anyhow",
  "clap",
@@ -1820,7 +1820,7 @@ dependencies = [
 
 [[package]]
 name = "xmux-cli"
-version = "0.1.1"
+version = "0.2.0"
 dependencies = [
  "anyhow",
  "clap",
@@ -1832,7 +1832,7 @@ dependencies = [
 
 [[package]]
 name = "xmux-proto"
-version = "0.1.1"
+version = "0.2.0"
 dependencies = [
  "lz4_flex",
  "prost",

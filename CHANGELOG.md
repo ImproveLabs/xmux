@@ -4,7 +4,7 @@ xmux follows `0.MINOR.PATCH` until 1.0: a MINOR release may break the Kotlin API
 protocol, and says so here. The Android libraries, the bridge and the wire protocol share one
 version.
 
-## Unreleased
+## 0.2.0 — Preview
 
 - Move runnable apps to the top-level `apps/` directory and rename the internal demo library to
   `xmux-demo-content`. Android Gradle project names now match their app directories.

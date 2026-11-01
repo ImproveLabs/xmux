@@ -12,7 +12,7 @@ android {
     minSdk = 34
     targetSdk = 34
     versionCode = (providers.gradleProperty("VERSION_CODE").orNull ?: "1").toInt()
-    versionName = providers.gradleProperty("VERSION_NAME").getOrElse("0.1.1-SNAPSHOT")
+    versionName = providers.gradleProperty("VERSION_NAME").getOrElse("0.2.0-SNAPSHOT")
     ndk { abiFilters.add("arm64-v8a") }
   }
   buildFeatures { compose = true }

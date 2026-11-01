@@ -64,7 +64,7 @@ xmux-bridge service install    # a LaunchAgent; logs in ~/Library/Logs/xmux-brid
 
 The XMUX app is not in the Meta Horizon Store yet. Download the APK from the
 [latest preview release](https://github.com/ImproveLabs/xmux/releases) and sideload it with
-`adb install -r xmux-quest-0.1.1.apk`, or build it and install it over USB:
+`adb install -r xmux-quest-0.2.0.apk`, or build it and install it over USB:
 
 ```sh
 bash <(curl -fsSL https://moonrepo.dev/install/proto.sh)   # once
@@ -148,11 +148,11 @@ android {
   }
 }
 dependencies {
-  implementation("dev.xmux:xmux-spatial:0.1.1")
+  implementation("dev.xmux:xmux-spatial:0.2.0")
 }
 ```
 
-For local development, `./gradlew publishToMavenLocal` publishes `0.1.1-SNAPSHOT`; add
+For local development, `./gradlew publishToMavenLocal` publishes `0.2.0-SNAPSHOT`; add
 `mavenLocal()` to the consumer repositories. Or build against the checkout: `includeBuild("../xmux")` in your
 `settings.gradle.kts` replaces `dev.xmux:*` (any version) with the checkout's modules, including
 `testFixtures("dev.xmux:xmux-client")` for `FakeBridge`. Apply the same Android Gradle plugin and
