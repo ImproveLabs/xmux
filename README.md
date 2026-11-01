@@ -53,8 +53,8 @@ xmux-bridge serve              # serves the cmux session "main" on port 7272
 This needs Rust 1.91 or newer and nothing else (the protobuf compiler is built in). Tagged
 releases also attach a universal macOS binary and a Homebrew formula. `xmux-bridge serve --session
 <name>` serves another cmux session; the first start creates a certificate in
-`~/Library/Application Support/dev.xmux.bridge`, and macOS may ask whether to accept incoming
-connections. To run the bridge at login instead:
+`~/Library/Application Support/dev.improve.xmux.bridge`, and macOS may ask whether to accept
+incoming connections. To run the bridge at login instead:
 
 ```sh
 xmux-bridge service install    # a LaunchAgent; logs in ~/Library/Logs/xmux-bridge.log
@@ -148,16 +148,17 @@ android {
   }
 }
 dependencies {
-  implementation("dev.xmux:xmux-spatial:0.2.0")
+  implementation("dev.improve.xmux:xmux-spatial:0.2.0")
 }
 ```
 
 For local development, `./gradlew publishToMavenLocal` publishes `0.2.0-SNAPSHOT`; add
-`mavenLocal()` to the consumer repositories. Or build against the checkout: `includeBuild("../xmux")` in your
-`settings.gradle.kts` replaces `dev.xmux:*` (any version) with the checkout's modules, including
-`testFixtures("dev.xmux:xmux-client")` for `FakeBridge`. Apply the same Android Gradle plugin and
-Kotlin versions as xmux (`gradle/libs.versions.toml`), and run `vp install` in the checkout once:
-the terminal font is packaged from an npm dependency.
+`mavenLocal()` to the consumer repositories. Or build against the checkout:
+`includeBuild("../xmux")` in your `settings.gradle.kts` replaces `dev.improve.xmux:*` (any version)
+with the checkout's modules, including `testFixtures("dev.improve.xmux:xmux-client")` for
+`FakeBridge`. Apply the same Android Gradle plugin and Kotlin versions as xmux
+(`gradle/libs.versions.toml`), and run `vp install` in the checkout once: the terminal font is
+packaged from an npm dependency.
 
 Then hand your `AppSystemActivity`'s calls to `XmuxSpatial` and follow a session:
 
@@ -191,14 +192,15 @@ grids, configuration and placement.
 
 | Artifact | What |
 |---|---|
-| `dev.xmux:xmux-spatial` | Meta Spatial SDK integration: windows as compositor-layer panels, move and resize, passthrough |
-| `dev.xmux:xmux-connect-panel` | Compose bridge picker and pairing screen (`ConnectPanel`) |
-| `dev.xmux:xmux-client` | Plain library: TLS connection, discovery, pairing, `XmuxSession` and terminal handles |
-| `dev.xmux:xmux-proto` | Protobuf messages for the wire schema, generated at build time |
+| `dev.improve.xmux:xmux-spatial` | Meta Spatial SDK integration: windows as compositor-layer panels, move and resize, passthrough |
+| `dev.improve.xmux:xmux-connect-panel` | Compose bridge picker and pairing screen (`ConnectPanel`) |
+| `dev.improve.xmux:xmux-client` | Plain library: TLS connection, discovery, pairing, `XmuxSession` and terminal handles |
+| `dev.improve.xmux:xmux-proto` | Protobuf messages for the wire schema, generated at build time |
 
 The other UI components are `xmux-window-frame`, `xmux-terminal-window`, `xmux-terminal-grid`,
 `xmux-screen-view`, and `xmux-screen-view-session`. Supporting libraries are `xmux-cell-grid`,
-`xmux-screen-layout`, `xmux-terminal-font`, and `xmux-key-encoder`. Every artifact uses the `dev.xmux` group and the shared release version.
+`xmux-screen-layout`, `xmux-terminal-font`, and `xmux-key-encoder`. Every artifact uses the
+`dev.improve.xmux` group and the shared release version.
 
 ## Development
 

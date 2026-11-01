@@ -8,7 +8,7 @@ android {
   namespace = "dev.improve.xmux.stress"
   compileSdk = 35
   defaultConfig {
-    applicationId = "dev.xmux.stress"
+    applicationId = "dev.improve.xmux.stress"
     minSdk = 34
     targetSdk = 34
     versionCode = 1

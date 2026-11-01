@@ -11,7 +11,8 @@ Reusable UI components, each with its own Gradle module and explicit dependencie
 | `screen-view/` | `:xmux-screen-view` | Native multi-pane screen view |
 | `screen-view/session/` | `:xmux-screen-view-session` | Client session to screen-view adapter (`ScreenModels`) |
 
-Each published artifact uses the Gradle module name under `dev.xmux`. Each module owns one Kotlin
-package, its Android namespace: `dev.improve.xmux.` plus the module name without `xmux-`, with dashes
-as dots (`:xmux-screen-view-session` is `dev.improve.xmux.screen.view.session`). Platform setup comes
-from the Gradle convention plugins in the root `build-logic/` directory.
+Each published artifact uses the Gradle module name under the `dev.improve.xmux` group. Each
+module owns one Kotlin package, its Android namespace: `dev.improve.xmux.` plus the module name
+without `xmux-`, with dashes as dots (`:xmux-screen-view-session` is
+`dev.improve.xmux.screen.view.session`). Platform setup comes from the Gradle convention plugins in
+the root `build-logic/` directory.

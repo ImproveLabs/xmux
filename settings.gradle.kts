@@ -21,7 +21,8 @@ rootProject.name = "xmux"
 // depth. Component and library paths map to xmux-prefixed artifact names; other projects use
 // their directory names unless explicitly mapped.
 // Names are flat (`:xmux-client`, not `:packages:dev:...`), so published libraries keep project name ==
-// artifact name and composite builds substitute `dev.xmux:<name>` without extra configuration.
+// artifact name and composite builds substitute `dev.improve.xmux:<name>` without extra
+// configuration.
 val projectNames = mapOf(
   "packages/dev/improve/xmux/schema/proto/android" to "xmux-proto",
 )

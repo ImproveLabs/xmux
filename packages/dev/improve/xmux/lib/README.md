@@ -12,6 +12,6 @@ Terminal primitives are independent Gradle modules:
 | `terminal-font/` | `:xmux-terminal-font` | Android glyph shaping, font metrics, and bundled assets |
 | `key-encoder/` | `:xmux-key-encoder` | Android keyboard-event encoding |
 
-Each module publishes as `dev.xmux:<module-name>` and owns the matching Kotlin package
+Each module publishes as `dev.improve.xmux:<module-name>` and owns the matching Kotlin package
 (`:xmux-cell-grid` is `dev.improve.xmux.cell.grid`). The cell-grid and layout tests run on the JVM
 without the Android SDK.

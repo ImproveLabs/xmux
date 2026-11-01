@@ -24,8 +24,8 @@ Janky frames (legacy): 1170 (30.07%)
 Number Missed Vsync: 0`;
 
 const TOP = `  PID USER         PR  NI VIRT  RES  SHR S[%CPU] %MEM     TIME+ ARGS
-31699 u0_a136      20   0 8.0G 252M 182M S 40.7   3.2   0:41.79 dev.xmux.quest
- 5403 u0_a135      20   0 6.0G  83M  55M S  0.0   1.0   0:00.13 dev.xmux.iwsdk.pwa`;
+31699 u0_a136      20   0 8.0G 252M 182M S 40.7   3.2   0:41.79 dev.improve.xmux.quest
+ 5403 u0_a135      20   0 6.0G  83M  55M S  0.0   1.0   0:00.13 dev.improve.xmux.iwsdk.pwa`;
 
 describe("parseVrApiLine", () => {
   it("extracts the fields the stress table reports", () => {
@@ -66,27 +66,27 @@ describe("parseGfxInfo", () => {
   });
 
   it("returns undefined when the process has no stats", () => {
-    expect(parseGfxInfo("No process found for: dev.xmux.quest")).toBeUndefined();
+    expect(parseGfxInfo("No process found for: dev.improve.xmux.quest")).toBeUndefined();
   });
 });
 
 describe("parseTopRow", () => {
   it("finds the row for a package by its last column", () => {
-    expect(parseTopRow(TOP, "dev.xmux.quest")).toEqual({
+    expect(parseTopRow(TOP, "dev.improve.xmux.quest")).toEqual({
       pid: 31699,
       cpuPercent: 40.7,
       rss: "252M",
-      name: "dev.xmux.quest",
+      name: "dev.improve.xmux.quest",
     });
-    expect(parseTopRow(TOP, "dev.xmux.stress")).toBeUndefined();
+    expect(parseTopRow(TOP, "dev.improve.xmux.stress")).toBeUndefined();
   });
 });
 
 describe("activity and system screens", () => {
   it("reads the resumed activity", () => {
     const text =
-      "      topResumedActivity=ActivityRecord{429bf55 u0 dev.xmux.quest/.MainActivity t1604}";
-    expect(parseTopResumedActivity(text)).toBe("dev.xmux.quest/.MainActivity");
+      "      topResumedActivity=ActivityRecord{429bf55 u0 dev.improve.xmux.quest/.MainActivity t1604}";
+    expect(parseTopResumedActivity(text)).toBe("dev.improve.xmux.quest/.MainActivity");
     expect(parseTopResumedActivity("nothing here")).toBeUndefined();
   });
 
@@ -97,7 +97,7 @@ describe("activity and system screens", () => {
       ),
     ).toMatch(/Guardian/);
     expect(systemScreenBlocking("com.oculus.os.clearactivity/.ClearActivity")).toMatch(/doffed/);
-    expect(systemScreenBlocking("dev.xmux.quest/.MainActivity")).toBeUndefined();
+    expect(systemScreenBlocking("dev.improve.xmux.quest/.MainActivity")).toBeUndefined();
     expect(systemScreenBlocking(undefined)).toBeUndefined();
   });
 });

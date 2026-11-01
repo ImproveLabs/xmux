@@ -6,9 +6,9 @@ Numbers from the 2026-10-30 prototype on a Quest 3, reproduced with `vpx _quest-
 HWUI frame stats for the panel's View hierarchy (record + issue time per redrawn frame):
 
 ```sh
-adb -s "$QUEST_SERIAL" shell dumpsys gfxinfo dev.xmux.quest reset
+adb -s "$QUEST_SERIAL" shell dumpsys gfxinfo dev.improve.xmux.quest reset
 sleep 30
-adb -s "$QUEST_SERIAL" shell dumpsys gfxinfo dev.xmux.quest | sed -n '/Total frames/,/deadline missed (legacy)/p'
+adb -s "$QUEST_SERIAL" shell dumpsys gfxinfo dev.improve.xmux.quest | sed -n '/Total frames/,/deadline missed (legacy)/p'
 ```
 
 2026-10-30, demo redrawing every row at 30 Hz, release build: p50 6 ms, p90 9 ms, p99 11 ms,

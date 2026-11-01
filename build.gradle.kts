@@ -10,7 +10,7 @@ plugins {
 }
 
 allprojects {
-  group = "dev.xmux"
+  group = "dev.improve.xmux"
   version = providers.gradleProperty("VERSION_NAME").getOrElse("0.2.0-SNAPSHOT")
 
   plugins.withId("maven-publish") {

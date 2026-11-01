@@ -1,13 +1,13 @@
 //! `xmux-bridge service install|uninstall`: a per-user LaunchAgent (the cmux socket is
-//! per-user), `~/Library/LaunchAgents/dev.xmux.bridge.plist`, that runs `xmux-bridge serve` at
-//! login and restarts it if it exits.
+//! per-user), `~/Library/LaunchAgents/dev.improve.xmux.bridge.plist`, that runs
+//! `xmux-bridge serve` at login and restarts it if it exits.
 
 use std::path::PathBuf;
 use std::process::Command;
 
 use anyhow::{Context, Result, bail};
 
-pub const LABEL: &str = "dev.xmux.bridge";
+pub const LABEL: &str = "dev.improve.xmux.bridge";
 
 fn home() -> PathBuf {
     std::env::var_os("HOME")

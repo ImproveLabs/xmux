@@ -22,6 +22,11 @@ version.
   `connect.panel`, `window.frame` and `terminal.window` (all under `dev.improve.xmux`).
   `ScreenModels` moves out of the client into `xmux-screen-view-session`
   (`dev.improve.xmux.screen.view.session`). Embedders must update imports and dependencies.
+- Breaking: rename the remaining `dev.xmux` identifiers to `dev.improve.xmux`. Libraries publish as
+  `dev.improve.xmux:<module>`. The apps install as `dev.improve.xmux.quest`, `.preview` and
+  `.stress`, next to older builds rather than over them, so headsets must pair again. The bridge's
+  LaunchAgent label and macOS state directory are `dev.improve.xmux.bridge`: run
+  `xmux-bridge service uninstall` before upgrading, and `service install` again after.
 - Tooling finds the Android SDK through `ANDROID_HOME` or Android Studio's default location; the
   deprecated `ANDROID_SDK_ROOT` is no longer read.
 - `xmux-spatial`: `XmuxSpatial.hitTest(origin, direction)` and `hitTest(HitInfo)` return the window,

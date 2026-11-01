@@ -4,13 +4,13 @@ export const APPS = {
     activity: "dev.improve.xmux.app.MainActivity",
     directory: "xmux-quest-app",
     module: "xmux-quest-app",
-    packageName: "dev.xmux.quest",
+    packageName: "dev.improve.xmux.quest",
   },
   stress: {
     activity: "dev.improve.xmux.stress.MainActivity",
     directory: "testing/xmux-quest-stress",
     module: "xmux-quest-stress",
-    packageName: "dev.xmux.stress",
+    packageName: "dev.improve.xmux.stress",
   },
 } as const;
 

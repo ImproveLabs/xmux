@@ -17,7 +17,7 @@ import dev.improve.xmux.window.frame.TerminalWindowState
 
 /**
  * Quest rendering stress test and minimal embedding of xmux-spatial:
- *   am start -n dev.xmux.stress/dev.improve.xmux.stress.MainActivity --ei count 32 --ei active 4 [--ei fps 30] [--ef font 15] [--ef width 0.5]
+ *   am start -n dev.improve.xmux.stress/dev.improve.xmux.stress.MainActivity --ei count 32 --ei active 4 [--ei fps 30] [--ef font 15] [--ef width 0.5]
  */
 class MainActivity : AppSystemActivity() {
   private class Demo(val state: TerminalWindowState, val grid: CellGrid, val screen: AgentScreen)

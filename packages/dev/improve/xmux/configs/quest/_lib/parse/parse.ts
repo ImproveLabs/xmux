@@ -97,7 +97,7 @@ export function parseTopRow(text: string, name: string): TopRow | undefined {
   return undefined;
 }
 
-/** The focused activity from `dumpsys activity activities`, e.g. `dev.xmux.quest/.MainActivity`. */
+/** The focused activity from `dumpsys activity activities`, e.g. `dev.improve.xmux.quest/.MainActivity`. */
 export function parseTopResumedActivity(text: string): string | undefined {
   const m = /topResumedActivity=ActivityRecord\{\S+ \S+ (\S+)/.exec(text);
   return m?.[1];

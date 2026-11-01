@@ -8,7 +8,7 @@ android {
   namespace = "dev.improve.xmux.app"
   compileSdk = 35
   defaultConfig {
-    applicationId = "dev.xmux.quest"
+    applicationId = "dev.improve.xmux.quest"
     minSdk = 34
     targetSdk = 34
     versionCode = (providers.gradleProperty("VERSION_CODE").orNull ?: "1").toInt()

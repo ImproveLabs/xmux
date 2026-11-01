@@ -8,7 +8,7 @@ android {
   namespace = "dev.improve.xmux.preview"
   compileSdk = 35
   defaultConfig {
-    applicationId = "dev.xmux.preview"
+    applicationId = "dev.improve.xmux.preview"
     minSdk = 34
     targetSdk = 34
     versionCode = 1

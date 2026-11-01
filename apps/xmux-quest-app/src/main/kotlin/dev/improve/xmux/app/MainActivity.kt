@@ -40,7 +40,7 @@ import kotlinx.coroutines.launch
  * pairing code while the Mac approves the headset, then one window per cmux screen. With no Mac
  * at hand, a demo window shows what it looks like.
  *
- * `adb shell am start -n dev.xmux.quest/dev.improve.xmux.app.MainActivity --es address 192.168.1.20:7272`
+ * `adb shell am start -n dev.improve.xmux.quest/dev.improve.xmux.app.MainActivity --es address 192.168.1.20:7272`
  * connects straight away. Over USB, `adb reverse tcp:7272 tcp:7272` and `--es address 127.0.0.1:7272`
  * reach the bridge without a network.
  */

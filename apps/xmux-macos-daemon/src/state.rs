@@ -1,6 +1,7 @@
 //! Where the bridge keeps its certificate, paired devices and control socket:
-//! `~/Library/Application Support/dev.xmux.bridge` on macOS, `$XDG_CONFIG_HOME/xmux-bridge`
-//! (or `~/.config/xmux-bridge`) elsewhere. `XMUX_BRIDGE_STATE` overrides both.
+//! `~/Library/Application Support/dev.improve.xmux.bridge` on macOS,
+//! `$XDG_CONFIG_HOME/xmux-bridge` (or `~/.config/xmux-bridge`) elsewhere. `XMUX_BRIDGE_STATE`
+//! overrides both.
 
 use std::path::{Path, PathBuf};
 
@@ -27,7 +28,7 @@ impl StateDir {
             .map(PathBuf::from)
             .unwrap_or_else(|| PathBuf::from("."));
         if cfg!(target_os = "macos") {
-            home.join("Library/Application Support/dev.xmux.bridge")
+            home.join("Library/Application Support/dev.improve.xmux.bridge")
         } else {
             std::env::var_os("XDG_CONFIG_HOME")
                 .map(PathBuf::from)

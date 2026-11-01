@@ -56,7 +56,7 @@ import kotlin.math.min
  * active one), or the demo. Density is forced to 1 so dp == px like a 160 dpi panel, and the
  * window is scaled down to fit.
  *
- * `adb shell am start -n dev.xmux.preview/dev.improve.xmux.preview.PreviewActivity --es address 10.0.2.2:7272`
+ * `adb shell am start -n dev.improve.xmux.preview/dev.improve.xmux.preview.PreviewActivity --es address 10.0.2.2:7272`
  * (the emulator's address for the Mac), or `--ez demo true`.
  */
 class PreviewActivity : ComponentActivity() {
